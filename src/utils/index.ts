@@ -1,1 +1,1 @@
-export { getWindowSize } from './getWindowSize';
+export { getWindowSize } from "./getWindowSize";

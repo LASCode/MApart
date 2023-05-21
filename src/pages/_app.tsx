@@ -1,21 +1,19 @@
-import '@/styles/global.css'
-import '@/styles/fonts.css'
-import type { AppProps } from 'next/app'
-import {wrapper} from "@/store";
-import {Provider} from "react-redux";
+import { Provider } from "react-redux";
+import type { AppProps } from "next/app";
 
-export default function MyApp({ Component, ...rest }: AppProps) {
-    const { store, props } = wrapper.useWrappedStore(rest);
-    const { pageProps } = props;
+import { wrapper } from "@/store";
 
-    return (
-        <Provider store={store}>
-            <Component {...pageProps} />
-        </Provider>
-    );
+import "@/styles/global.css";
+import "@/styles/fonts.css";
+
+function MyApp({ Component, ...rest }: AppProps) {
+  const result = wrapper.useWrappedStore(rest);
+
+  return (
+    <Provider store={result.store}>
+      <Component {...rest.pageProps} />
+    </Provider>
+  );
 }
 
-//font-family: "CormorantInfant" sans-serif;
-//     font-weight: 300;
-//     font-size: 16px;
-//     line-height: 19.38px;
+export default wrapper.withRedux(MyApp);

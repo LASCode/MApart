@@ -1,3 +1,1 @@
-export interface TestModalProps {
-
-}
+export interface TestModalProps {}

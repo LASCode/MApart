@@ -1,4 +1,5 @@
-import {useAppSelector} from "./hooks";
-import {getIsDesktop} from "@/store/modules/windowSize";
+import { getIsDesktop } from "@/store/modules/windowSize";
+
+import { useAppSelector } from "./hooks";
 
 export const useIsDesktop = () => useAppSelector(getIsDesktop);

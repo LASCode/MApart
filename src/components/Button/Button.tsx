@@ -1,16 +1,16 @@
-import {ButtonProps} from "@/components/Button/Button.types";
+import cnBind from "classnames/bind";
 
-import cnBind from 'classnames/bind';
-import styles from './Button.module.scss';
-import Image from "next/image";
+import type { ButtonProps } from "@/components/Button/Button.types";
+
+import styles from "./Button.module.scss";
+
 const cx = cnBind.bind(styles);
 
-export const Button = ({icon, children, className}: ButtonProps) => {
-
-    return (
-        <button className={cx('button', className)}>
-            {children}
-            {icon && (<Image className={cx('image')} src={icon} alt={'*'} />)}
-        </button>
-    );
-}
+export const Button = ({ icon: Icon, children, className }: ButtonProps) => {
+  return (
+    <button type="button" className={cx("button", className)}>
+      {children}
+      {Icon && <Icon className={cx("image")} />}
+    </button>
+  );
+};

@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 export interface PageLayoutProps {
-    withHeader?: boolean;
-    withFooter?: boolean;
-    children: ReactNode;
+  withHeader?: boolean;
+  withFooter?: boolean;
+  children: ReactNode;
 }
