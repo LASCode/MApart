@@ -1,0 +1,19 @@
+.header-navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  &.vertical {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.header-navigation-item {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+}
