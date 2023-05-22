@@ -1,0 +1,33 @@
+.company-rating {
+    width: 100%;
+    padding: 50px;
+    background-color: var(--base-bg);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+
+.rate-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text-rate-current {
+    color: var(--base-akcent);
+    font-weight: 300;
+    font-size: 68px;
+    line-height: 102px;
+}
+.text-rate-max {
+    color: var(--base-akcent);
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 48px;
+}
+

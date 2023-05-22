@@ -1,0 +1,100 @@
+.index-page {
+    position: relative;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    width: 100%;
+}
+
+.company-rates {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.company-new-order {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/rooms/room-template-create-order.png");
+}
+
+.top-test {
+    position: absolute;
+    width: 100%;
+    height: 790px;
+    top: 380px;
+    background-color: #e9e1c9;
+    z-index: -1;
+}
+
+.block-hero {
+    position: relative;
+    background-image: url("../../assets/rooms/room-template-hero.png");
+    background-size: cover;
+    height: 556px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.hero-title {
+    margin: 0;
+    font-weight: 300;
+    font-size: 96px;
+    line-height: 116px;
+    color: white;
+}
+.hero-description {
+    margin: 0;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    color: white;
+}
+.hero-actions {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #e9e1c9;
+    width: 110px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.block-widget {
+    background-color: white;
+    height: 260px;
+}
+
+.block-aboutus {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        background-color: white;
+        right: 30%;
+        left: 0;
+        bottom: 0;
+        top: 0;
+    }
+}
+.block-aboutus-content {
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: 600px 500px;
+}

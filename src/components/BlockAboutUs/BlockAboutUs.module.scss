@@ -1,0 +1,15 @@
+.block-about-us {
+
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 70%;
+        background-color: white;
+
+    }
+}
+
+.content {
+    height: 830px;
+}

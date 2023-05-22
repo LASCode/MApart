@@ -1,8 +1,7 @@
 import type { ReactNode } from "react";
 
-export interface PageLayoutProps {
-    withHeader?: boolean;
-    withFooter?: boolean;
+export interface SiteContentBlockProps {
+    withSafeArea?: boolean;
     className?: string;
     children: ReactNode;
 }

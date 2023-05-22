@@ -1,0 +1,19 @@
+.link {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+.content {
+    text-transform: uppercase;
+    color: var(--color);
+}
+.icon {
+    @include fill-svg-and-path(var(--icon-color));
+}
+
+.link {
+    --color: white;
+    --icon-color: white;
+}
