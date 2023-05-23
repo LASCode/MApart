@@ -29,3 +29,8 @@ $screen-desktop: 1024px;
     @content;
   }
 }
+@mixin media-min-max($min, $max) {
+    @media screen and (max-width: #{$max}) and (min-width: #{$min}) {
+        @content;
+    }
+}

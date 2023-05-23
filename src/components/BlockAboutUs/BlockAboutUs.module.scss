@@ -1,15 +1,129 @@
-.block-about-us {
+.block-about-us {}
 
+.content {
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: 1fr minmax(156px, 40%);
+    grid-template-rows: repeat(2, min-content);
+    grid-row-gap: 125px;
+    grid-column-gap: 10%;
+    grid-template-areas: "text image" "video image";
 
-    &:before {
-        content: '';
-        position: absolute;
-        width: 70%;
-        background-color: white;
-
+    @include tablet {
+        grid-template-areas: "text text" "video image";
+        grid-row-gap: 30px;
+        padding: 70px 0;
+    }
+    @include mobile {
+        grid-template-areas: "text text" "video video";
+        grid-row-gap: 30px;
+        padding: 50px 0;
+    }
+    @include media-min-max($screen-mobile, 900px) {
+        grid-template-areas: "text image" "video video";
+        grid-row-gap: 30px;
     }
 }
 
-.content {
-    height: 830px;
+.block-text {
+    margin-top: 40px;
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.block-text-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+.title {
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--base-dark);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 78px;
+
+    @include mobile {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+.subtitle {
+    margin: 0;
+    color: var(--base-dark);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+
+    @include mobile {
+        font-size: 20px;
+        line-height: 28px;
+        max-width: 194px;
+    }
+}
+.description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--base-dark);
+
+    @include mobile {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    @include media-min-max($screen-mobile, 810px) {
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+.block-video {
+    grid-area: video;
+    background-color: rgba(0, 0, 0, 0.23);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1 / 0.56;
+
+    @include mobile {
+        margin-left: calc(var(--page-safe-area-horizontal) * -1);
+    }
+}
+.block-image {
+    grid-area: image;
+}
+
+.image-mobile {
+    width: 156px;
+    height: 216px;
+    margin-right: calc(var(--page-safe-area-horizontal) * -1);
+}
+.image-desktop {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.background {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        background-color: white;
+        right: 30%;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        z-index: -1;
+
+        @include mobile {
+            right: 5%;
+        }
+    }
 }

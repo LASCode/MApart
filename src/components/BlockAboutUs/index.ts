@@ -1,0 +1,1 @@
+export { BlockAboutUs } from "./BlockAboutUs";

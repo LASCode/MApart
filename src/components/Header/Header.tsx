@@ -19,39 +19,33 @@ import styles from "./Header.module.scss";
 const cx = cnBind.bind(styles);
 
 export const Header = ({ className }: HeaderProps) => {
-  const isMobile = useIsMobile();
-  const showTelButton = useWindowSizeTo(1000);
-  const [isOpen, open, close, toggle] = useBooleanState(false);
-  const MenuImage = isOpen ? IcMenuClose : IcMenuOpen;
+    const isMobile = useIsMobile();
+    const showTelButton = useWindowSizeTo(1000);
+    const [isOpen, open, close, toggle] = useBooleanState(false);
+    const MenuImage = isOpen ? IcMenuClose : IcMenuOpen;
 
-  return (
-    <header className={cx("header", className)}>
-      <div className={cx("header-inner")}>
-        <div className={cx("content")}>
-          <div className={cx("header-container-left")}>
-            <Logo />
-            {isMobile && <MenuImage onClick={toggle} />}
-            {!isMobile && <HeaderNavigation />}
-          </div>
-          {!isMobile && (
-            <div className={cx("header-container-right")}>
-              <Socials />
-              {}
-              <Link href={`tel:${HEADER_TEL_NUMBER.trim()}`}>
-                {showTelButton ? (
-                  <IcTel className={cx("button-tel-icon")} />
-                ) : (
-                  HEADER_TEL_NUMBER
-                )}
-              </Link>
+    return (
+        <header className={cx("header", className)}>
+            <div className={cx("header-inner")}>
+                <div className={cx("content")}>
+                    <div className={cx("header-container-left")}>
+                        <Logo />
+                        {isMobile && <MenuImage onClick={toggle} />}
+                        {!isMobile && <HeaderNavigation />}
+                    </div>
+                    {!isMobile && (
+                        <div className={cx("header-container-right")}>
+                            <Socials />
+                            {}
+                            <Link href={`tel:${HEADER_TEL_NUMBER.trim()}`}>
+                                {showTelButton ? <IcTel className={cx("button-tel-icon")} /> : HEADER_TEL_NUMBER}
+                            </Link>
+                        </div>
+                    )}
+                </div>
+                <Button>Забронировать</Button>
             </div>
-          )}
-        </div>
-        <Button>Забронировать</Button>
-      </div>
-      {isMobile && isOpen && (
-        <HeaderMenuMobile isOpen={isOpen} onClose={close} />
-      )}
-    </header>
-  );
+            {isMobile && isOpen && <HeaderMenuMobile isOpen={isOpen} onClose={close} />}
+        </header>
+    );
 };

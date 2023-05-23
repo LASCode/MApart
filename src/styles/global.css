@@ -1,6 +1,6 @@
 :root {
     --page-max-width: 1204px;
-    --page-min-width: 340px;
+    --page-min-width: 300px;
     --page-safe-area-horizontal: 20px;
 
     /* COLORS */

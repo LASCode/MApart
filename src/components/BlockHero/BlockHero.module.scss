@@ -1,0 +1,82 @@
+.block-hero {
+    position: relative;
+    height: 556px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    overflow: hidden;
+
+    @include mobile {
+        height: 445px;
+    }
+    @include tablet {
+        height: 500px;
+    }
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.title {
+    margin: 0;
+    font-weight: 300;
+    font-size: 96px;
+    line-height: 116px;
+    color: white;
+}
+.description {
+    margin: 0;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    color: white;
+    text-align: center;
+}
+.actions {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #e9e1c9;
+    width: 110px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.action {
+    height: 45px;
+    width: 45px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all .3s linear;
+
+    &:hover {
+        background-color: var(--base-akcent);
+
+        & > svg {
+            @include fill-svg-and-path(white);
+        }
+    }
+}
+
+.bg-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    background-color: white;
+}
