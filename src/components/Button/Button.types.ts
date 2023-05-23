@@ -1,7 +1,7 @@
-import type { FC, ReactNode } from "react";
+import type { ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from "react";
 
-export interface ButtonProps {
+export type ButtonProps = {
     children: ReactNode;
+    ref?: React.Ref<HTMLButtonElement>;
     icon?: FC<React.SVGAttributes<SVGElement>>;
-    className?: string;
-}
+} & Omit<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, "ref">;
