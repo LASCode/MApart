@@ -1,0 +1,1 @@
+export { DoubleCarousel } from "./DoubleCarousel";

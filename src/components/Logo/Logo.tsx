@@ -8,9 +8,9 @@ import styles from "./Logo.module.scss";
 const cx = cnBind.bind(styles);
 
 export const Logo = () => {
-  return (
-    <Link className={cx("logo")} href="/">
-      <IcSiteLogo className={cx("image")} />
-    </Link>
-  );
+    return (
+        <Link className={cx("logo")} href="/">
+            <IcSiteLogo className={cx("image")} />
+        </Link>
+    );
 };
