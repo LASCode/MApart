@@ -1,5 +1,6 @@
 import cnBind from "classnames/bind";
 
+<<<<<<< HEAD
 import { IcArrowLeft, IcArrowRight } from "@/assets/icon";
 import { Button } from "@/components/Button";
 import { Carousel } from "@/components/Carousel";
@@ -7,6 +8,12 @@ import { CompanyRating } from "@/components/CompanyRating";
 import { DoubleCarousel } from "@/components/DoubleCarousel";
 import { Link } from "@/components/Link";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
+=======
+import { BlockAboutUs } from "@/components/BlockAboutUs";
+import { BlockCompanyRating } from "@/components/BlockCompanyRating";
+import { BlockHero } from "@/components/BlockHero";
+import { BlockWidget } from "@/components/BlockWidget/BlockWidget";
+>>>>>>> 7ce8aa0d0fe0a41a6a36ea9eb4225b4e32f6bd88
 import { PageLayout } from "@/layouts/PageLayout";
 import styles from "@/styles/pages/indexPage.module.scss";
 
@@ -60,37 +67,13 @@ const images = [
 
 const IndexPage = () => {
     return (
-        <PageLayout className={cx("index-page")}>
+        <PageLayout className={cx("index-page")} withHeader={false}>
             <div className={cx("top-test")} />
             <div className={cx("content")}>
-                <SiteContentBlock className={cx("block-hero")}>
-                    <div className={cx("hero-content")}>
-                        <h1 className={cx("hero-title")}>M Apart</h1>
-                        <h2 className={cx("hero-description")}>Апарт отель в одном из уютнейших уголков Петербурга</h2>
-                    </div>
-                    <Button icon={IcArrowRight}>Забронировать</Button>
-                    <div className={cx("hero-actions")}>
-                        <IcArrowLeft />
-                        <IcArrowRight />
-                    </div>
-                </SiteContentBlock>
-                <SiteContentBlock className={cx("company-rates")}>
-                    <CompanyRating companyName="Яндекс" rate={9.7} />
-                    <CompanyRating companyName="Суточно.ру" rate={9.7} />
-                    <div className={cx("company-new-order")}>
-                        <Link href="./test" label="Заказать" icon={IcArrowRight}>
-                            1
-                        </Link>
-                    </div>
-                </SiteContentBlock>
-                <SiteContentBlock className={cx("block-widget")}>Оаоаооаоаоа виджет</SiteContentBlock>
-                <SiteContentBlock className={cx("block-aboutus")}>
-                    <div className={cx("block-aboutus-content")}>
-                        <div />
-                        <div />
-                    </div>
-                </SiteContentBlock>
-                {/* <BlockAboutUs />*/}
+                <BlockHero />
+                <BlockCompanyRating />
+                <BlockWidget />
+                <BlockAboutUs />
             </div>
             <DoubleCarousel images={doubleImages} />
 

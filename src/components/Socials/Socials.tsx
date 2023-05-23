@@ -11,27 +11,22 @@ import styles from "./Socials.module.scss";
 const cx = cnBind.bind(styles);
 
 export const Socials = ({ className }: SocialsProps) => {
-  const items = useMemo(
-    () => [
-      { icon: IcWhatsUp, title: "WhatsUp", href: "" },
-      { icon: IcTelegram, title: "Телеграм", href: "https://t.me/Pepeapu" },
-      { icon: IcVkontakte, title: "Вконтакте", href: "" },
-    ],
-    [],
-  );
+    const items = useMemo(
+        () => [
+            { icon: IcWhatsUp, title: "WhatsUp", href: "" },
+            { icon: IcTelegram, title: "Телеграм", href: "https://t.me/Pepeapu" },
+            { icon: IcVkontakte, title: "Вконтакте", href: "" },
+        ],
+        [],
+    );
 
-  return (
-    <div className={cx("socials", className)}>
-      {items.map(({ icon: Icon, title, href }) => (
-        <Link
-            key={title}
-            className={cx("social-item")}
-            href={href}
-            target="_blank"
-        >
-          <Icon className={cx("social-item-icon")} />
-        </Link>
-      ))}
-    </div>
-  );
+    return (
+        <div className={cx("socials", className)}>
+            {items.map(({ icon: Icon, title, href }) => (
+                <Link key={title} className={cx("social-item")} href={href} target="_blank">
+                    <Icon className={cx("social-item-icon")} />
+                </Link>
+            ))}
+        </div>
+    );
 };

@@ -12,19 +12,17 @@ import styles from "./Footer.module.scss";
 const cx = cnBind.bind(styles);
 
 export const Footer = ({ className }: FooterProps) => {
-  const isMobile = useIsMobile();
+    const isMobile = useIsMobile();
 
-  return (
-    <footer className={cx("footer", className)}>
-      <Logo />
-      <Socials />
+    return (
+        <footer className={cx("footer", className)}>
+            <Logo />
+            <Socials />
 
-      <div className={cx("additional")}>
-        <Link href={`tel:${HEADER_TEL_NUMBER.trim()}`}>
-          {HEADER_TEL_NUMBER}
-        </Link>
-        <span>Санкт-Петербург, пр. Центральный 25</span>
-      </div>
-    </footer>
-  );
+            <div className={cx("additional")}>
+                <Link href={`tel:${HEADER_TEL_NUMBER.trim()}`}>{HEADER_TEL_NUMBER}</Link>
+                <span>Санкт-Петербург, пр. Центральный 25</span>
+            </div>
+        </footer>
+    );
 };

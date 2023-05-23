@@ -1,0 +1,1 @@
+export { BlockCompanyRating } from "./BlockCompanyRating";

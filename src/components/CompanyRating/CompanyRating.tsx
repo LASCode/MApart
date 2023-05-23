@@ -10,7 +10,7 @@ export const CompanyRating = ({ rate, maxRate = 10, companyName, className }: Co
     return (
         <div className={cx("company-rating", className)}>
             <div className={cx("content")}>
-                <span className={cx("text-company")}>{companyName}</span>
+                <h4 className={cx("text-company")}>{companyName}</h4>
 
                 <div className={cx("rate-container")}>
                     <span className={cx("text-rate-current")}>{rate.toString().replace(".", ",")}</span>

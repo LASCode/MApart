@@ -1,0 +1,1 @@
+export { BlockHero } from "./BlockHero";

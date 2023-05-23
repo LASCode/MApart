@@ -11,17 +11,17 @@ import styles from "./HeaderMenuMobile.module.scss";
 const cx = cnBind.bind(styles);
 
 export const HeaderMenuMobile = ({}: HeaderMenuMobileProps) => {
-  return (
-    <div className={cx("header-menu-mobile")}>
-      <div className={cx("content")}>
-        <HeaderNavigation className={cx("navigation")} vertical />
-        <div className={cx("additional")}>
-          <Link className={cx("tel")} href={`tel:${HEADER_TEL_NUMBER.trim()}`}>
-            {HEADER_TEL_NUMBER}
-          </Link>
-          <Socials />
+    return (
+        <div className={cx("header-menu-mobile")}>
+            <div className={cx("content")}>
+                <HeaderNavigation className={cx("navigation")} vertical />
+                <div className={cx("additional")}>
+                    <Link className={cx("tel")} href={`tel:${HEADER_TEL_NUMBER.trim()}`}>
+                        {HEADER_TEL_NUMBER}
+                    </Link>
+                    <Socials />
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
