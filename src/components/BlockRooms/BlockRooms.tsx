@@ -17,7 +17,7 @@ export const BlockRooms = () => {
     }, []);
 
     const handleRoomCardMouseLeave = useCallback(() => {
-        setBgColor('');
+        setBgColor("");
     }, []);
 
     return (
