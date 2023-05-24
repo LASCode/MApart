@@ -236,7 +236,7 @@ export const GREY_ROOM = {
 
     doublePhoto: [
         {
-            bigImageSrc: "https://lh3.google.com/u/0/d/156Ypq2p3MqH1kOtFIvNKhke-ElI1NhfH=w2236-h1430-iv1",
+            bigImageSrc: "https://lh3.google.com/u/0/d/1mrGGz0gAkpv26MG3aHf1MhmWxRCys1Zh=w2236-h1430-iv1",
             bigImageAlt: "yellow",
             smallImageSrc: "https://lh3.google.com/u/0/d/1_0ES4cPzHfXzA8Is_Ag5Oo-GbMu2-XN6=w2236-h1430-iv1",
             smallImageAlt: "yellow",

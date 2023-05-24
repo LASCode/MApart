@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import basePhoto from "@/assets/rooms/room-template-about-us.png";
 import { Button } from "@/components/Button";
 import { DoubleCarousel } from "@/components/DoubleCarousel";
-import { BLUE_ROOM, GREEN_ROOM, ROSE_ROOM, YELLOW_ROOM } from "@/constants/rooms";
+import { BLUE_ROOM, GREEN_ROOM, GREY_ROOM, ROSE_ROOM, YELLOW_ROOM } from "@/constants/rooms";
 import { PageLayout } from "@/layouts/PageLayout";
 import styles from "@/styles/pages/roomPage.module.scss";
 
@@ -14,7 +14,7 @@ const cx = cnBind.bind(styles);
 const rooms = {
     yellow: YELLOW_ROOM,
     green: GREEN_ROOM,
-    grey: GREEN_ROOM,
+    grey: GREY_ROOM,
     rose: ROSE_ROOM,
     blue: BLUE_ROOM,
 };
