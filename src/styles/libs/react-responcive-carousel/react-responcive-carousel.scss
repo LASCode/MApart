@@ -1,0 +1,30 @@
+.control-dots {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .dot {
+        width: 100% !important;
+        height: 4px;
+        border-radius: 50px !important;
+    }
+}   
+
+.carousel-status {
+    top: inherit !important;
+    bottom: 0 !important;
+    right: 0;
+
+    font-family: 'Cormorant Infant';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px !important;
+    line-height: 15px !important;
+    text-transform: uppercase;
+    text-shadow: none !important;
+
+    /* dark */
+
+    color: #A7A398 !important;
+
+}

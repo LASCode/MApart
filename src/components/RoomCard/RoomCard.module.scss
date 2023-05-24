@@ -1,0 +1,29 @@
+.room-card {
+    max-width: 489px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 20px 20px 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px 30px 20px;
+
+}
+
+.button {
+    padding: 0;
+    border: none;
+
+    &:hover {
+        border: none;
+    }
+
+    svg {
+        margin-left: 8px;
+    }
+}
