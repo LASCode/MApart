@@ -1,5 +1,19 @@
 .room-card {
-    max-width: 489px;
+    &.yellow {
+        background: var(--yellow);
+    }
+    &.rose {
+        background: var(--rose);
+    }
+    &.green {
+        background: var(--green);
+    }
+    &.grey {
+        background: var(--grey);
+    }
+    &.blue {
+        background: var(--blue);
+    }
 }
 
 .info {
@@ -7,6 +21,7 @@
     justify-content: space-between;
     padding: 14px 20px 20px 20px;
 }
+
 
 .buttons {
     display: flex;

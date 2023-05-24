@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import cnBind from "classnames/bind";
 import Link from "next/link";
 
@@ -12,9 +13,21 @@ import styles from "./RoomCard.module.scss";
 
 const cx = cnBind.bind(styles);
 
-export const RoomCard = ({ images, name, price, onMoreButtonClick }: RoomCardProps) => {
+export const RoomCard = ({
+    images,
+    name,
+    price,
+    onMoreButtonClick,
+    className,
+    onMouseEnter,
+    onMouseLeave,
+}: RoomCardProps) => {
+    const handleMouseEnter = useCallback(() => {
+        onMouseEnter?.(name);
+    }, [name, onMouseEnter]);
+
     return (
-        <div className={cx("room-card")}>
+        <div className={cx("room-card", name, className)} onMouseEnter={handleMouseEnter} onMouseLeave={onMouseLeave}>
             <Carousel className={cx("carousel")} images={images} />
             <div className={cx("info")}>
                 <div className={cx("name")}>{name}</div>
