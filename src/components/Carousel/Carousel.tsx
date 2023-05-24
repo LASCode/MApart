@@ -14,7 +14,7 @@ export const Carousel = ({ images, className, ...props }: CarouselProps) => {
     const isMobile = useIsMobile();
 
     return (
-        <div className={cx("carousel-container", className)}>
+        <div className={cx("carousel-container", className)} onTouchStart={(e) => e.stopPropagation()}>
             <ReactCarousel
                 {...props}
                 showThumbs={false}

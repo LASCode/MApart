@@ -1,3 +1,8 @@
+.carousel-container {
+    position: relative;
+    z-index: 1;
+}
+
 .img-container {
     display: flex;
     align-items: flex-start;
@@ -52,12 +57,14 @@
 .button-next {
    right: 0;
    bottom: 0;
+   cursor: pointer;
 }
 
 .button-prev {
     right: 50px;
     bottom: 0;
     z-index: 1;
+    cursor: pointer;
 }
 
 .current-slide {

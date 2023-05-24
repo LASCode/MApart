@@ -35,9 +35,9 @@ export const RoomCard = ({
             </div>
             <div className={cx("buttons")}>
                 <Button className={cx("button")} onClick={onMoreButtonClick} icon={IcArrowRight}>
-                    Подробнее
+                    Забронировать
                 </Button>
-                <Link href={`/${name}`} passHref>
+                <Link className={cx("link")} href={`room/${name}`} passHref>
                     Подробнее
                 </Link>
             </div>

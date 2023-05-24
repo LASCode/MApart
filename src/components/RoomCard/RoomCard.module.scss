@@ -19,15 +19,42 @@
 .info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 14px 20px 20px 20px;
+}
+
+.name {
+    font-family: 'Garamond';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    /* identical to box height, or 128% */
+    /* dark */
+    text-transform: capitalize;
+    color: #333027;
+}
+
+.price {
+    font-family: 'Garamond';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+
+
+    /* dark */
+
+    color: #333027;
 }
 
 
 .buttons {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0px 20px 30px 20px;
-
 }
 
 .button {
@@ -41,4 +68,17 @@
     svg {
         margin-left: 8px;
     }
+}
+
+.link {
+    font-family: 'Cormorant Infant';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    
+    /* akcent */
+    
+    color: var(--base-akcent);
 }

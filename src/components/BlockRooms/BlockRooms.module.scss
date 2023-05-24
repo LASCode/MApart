@@ -1,9 +1,5 @@
 .block-rooms {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     transition: 0.8s;
-
     padding: 80px 0;
     
     &.yellow {
@@ -20,6 +16,24 @@
     }
     &.blue {
         background: var(--blue);
+    }
+}
+
+.content-mobile {
+    display: none;
+
+    @include mobile {
+        display: block;
+    }
+}
+
+.content-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    @include mobile {
+        display: none;
     }
 }
 
@@ -40,6 +54,12 @@
 
 .room {
     margin-bottom: 80px
+}
+
+.room-mobile {
+    position: relative;
+    z-index: 100;
+    margin: 0 5px;
 }
 
 .room-rose, 

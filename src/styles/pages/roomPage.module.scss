@@ -1,0 +1,81 @@
+.room-page-layout { 
+    &.yellow {
+        background: var(--yellow);
+    }
+    &.rose {
+        background: var(--rose);
+    }
+    &.green {
+        background: var(--green);
+    }
+    &.grey {
+        background: var(--grey);
+    }
+    &.blue {
+        background: var(--blue);
+    }
+}
+
+.room-page {
+    padding: 0 var(--page-safe-area-horizontal);
+}
+
+.title {
+    font-family: 'Cormorant Infant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 78px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    /* dark */
+
+    color: #333027;
+}
+
+.info {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.base-photo {
+    max-height: 602px;
+    
+    img {
+        height: 100%;
+    }
+}
+
+.description {
+    max-width: 592px;
+    &-text {
+        min-width: 300px;
+        font-family: 'Garamond';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        /* or 150% */
+
+
+        /* dark */
+
+        color: #333027;
+    }
+
+    &-img {
+        margin-top: 92px;
+        max-width: 582px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.button {
+    margin-top: 48px;
+}
