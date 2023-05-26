@@ -1,5 +1,7 @@
 .index-page {
     position: relative;
+
+    padding-bottom: 120px;
 }
 .content {
     display: flex;
@@ -8,8 +10,6 @@
     width: 100%;
 }
 
-
-
 .top-test {
     position: absolute;
     width: 100%;
@@ -17,5 +17,9 @@
     top: 380px;
     background-color: #e9e1c9;
     z-index: -1;
+
+    @include mobile {
+        top: 330px;
+    }
 }
 

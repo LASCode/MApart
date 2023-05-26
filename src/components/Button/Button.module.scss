@@ -1,43 +1,64 @@
 .button {
-  padding: 12px 24px;
-  cursor: pointer;
-  font-family: CormorantInfant sans-serif;
-  font-size: 16px;
-  line-height: 19.38px;
-  font-weight: 600;
-  border-radius: var(--border-radius);
-  transition: all .2s linear;
-  height: fit-content;
-  text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: all 0.2s linear;
+    height: fit-content;
 
-  background-color: var(--background-color);
-  border: 1px solid var(--border-color);
-  color: var(--color);
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    color: var(--color);
 
-  &:hover {
-    background-color: var(--background-color-hover);
-    border: 1px solid var(--border-color-hover);
-    color: var(--color-hover);
-  }
-  &:active {
-    background-color: var(--background-color-active);
-    border: 1px solid var(--border-color-active);
-    color: var(--color-active);
-  }
+    @include font-cormorant();
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+
+    @include set-icon-color(var(--icon-color));
+
+    &:hover {
+        background-color: var(--background-color-hover);
+        border: 1px solid var(--border-color-hover);
+        color: var(--color-hover);
+        @include set-icon-color(var(--icon-color-hover));
+    }
+    &:active {
+        background-color: var(--background-color-active);
+        border: 1px solid var(--border-color-active);
+        color: var(--color-active);
+        @include set-icon-color(var(--icon-color-active));
+    }
+}
+.content {
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-transform: inherit;
+    color: inherit;
 }
 
 .button {
-  --border-radius: 0px;
+    --border-radius: 0px;
 
-  --color: var(--base-akcent);
-  --border-color: var(--base-akcent);
-  --background-color: transparent;
+    --color: var(--base-akcent);
+    --icon-color: var(--base-akcent);
+    --border-color: var(--base-akcent);
+    --background-color: transparent;
 
-  --color-hover: var(--base-grey);
-  --border-color-hover: var(--base-grey);
-  --background-color-hover: transparent;
+    --color-hover: var(--base-grey);
+    --icon-color-hover: var(--base-grey);
+    --border-color-hover: var(--base-grey);
+    --background-color-hover: transparent;
 
-  --color-active: var(--base-grey);
-  --border-color-active: var(--base-grey);
-  --background-color-active: transparent;
+    --color-active: var(--base-grey);
+    --icon-color-active: var(--base-grey);
+    --border-color-active: var(--base-grey);
+    --background-color-active: transparent;
 }

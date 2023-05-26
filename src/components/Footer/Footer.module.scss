@@ -1,20 +1,71 @@
 .footer {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 30px var(--page-safe-area-horizontal);
+    width: 100%;
+    //flex-direction: row;
+    //justify-content: space-between;
+    //align-items: center;
+    box-sizing: border-box;
+    padding: 30px var(--page-safe-area-horizontal);
+    border-top: 1px solid var(--base-grey);
 
-  @include mobile {
-    padding: 20px var(--page-safe-area-horizontal);
-  }
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(1, min-content);
+    grid-template-areas: "logo socials credits";
+
+    @include mobile {
+        padding: 20px var(--page-safe-area-horizontal);
+    }
+
+    @include media-min-max(0, 650px) {
+        justify-content: center;
+        justify-items: center;
+        grid-template-columns: repeat(1, min-content);
+        grid-template-rows: repeat(3, min-content);
+        grid-template-areas: "logo" "socials" "credits";
+        grid-row-gap: 20px;
+    }
+}
+.logo {
+    grid-area: logo;
+
+    @include media-min-max(0, 650px) {
+        height: 100px !important;
+        width: 100px !important;
+    }
+}
+.socials {
+    grid-area: socials;
+}
+.credits {
+    grid-area: credits;
+
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+
+    @include media-min-max(0, 650px) {
+        align-items: center;
+    }
 }
 
-.additional {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
+.tel {
+    @include font-garamond();
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 27px;
+    text-decoration: none;
+    color: var(--base-dark);
+}
+.address {
+    @include font-garamond();
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--base-dark);
 }
