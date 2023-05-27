@@ -7,6 +7,15 @@
         fill: inherit;
     }
 }
+@mixin stroke-svg-and-path($color, $transition-duration: 200ms) {
+    transition: fill $transition-duration;
+    stroke: $color;
+
+    path {
+        transition: fill $transition-duration;
+        stroke: inherit;
+    }
+}
 
 @mixin set-icon-color($color, $transition-duration: 200ms) {
     svg {

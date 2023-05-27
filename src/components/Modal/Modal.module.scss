@@ -25,6 +25,7 @@
     max-width: 500px;
     width: 100%;
     box-sizing: content-box;
+    margin: 0 20px;
 }
 .header {
     display: flex;
@@ -37,6 +38,7 @@
 }
 
 .title {
+    @include text-body();
     margin: 0;
 }
 

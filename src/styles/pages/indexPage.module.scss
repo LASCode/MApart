@@ -1,7 +1,10 @@
 .index-page {
     position: relative;
-
     padding-bottom: 120px;
+
+    @include mobile {
+        padding: 12px 0;
+    }
 }
 
 .content {

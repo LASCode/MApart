@@ -1,4 +1,14 @@
-.block-about-us {}
+.block-about-us {
+    scroll-margin-top: -50px;
+
+    @include tablet {
+        scroll-margin-top: -30px;
+    }
+
+    @include mobile {
+        scroll-margin-top: 50px;
+    }
+}
 
 .content {
     padding: 100px 0;
@@ -107,7 +117,6 @@
     height: auto;
     object-fit: contain;
 }
-
 
 .background {
     position: relative;

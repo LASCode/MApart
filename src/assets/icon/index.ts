@@ -1,5 +1,6 @@
 export { ReactComponent as IcArrowLeft, default as IcArrowLeftPath } from "./ic-arrow-left.svg";
 export { ReactComponent as IcArrowRight, default as IcArrowRightPath } from "./ic-arrow-right.svg";
+export { ReactComponent as IcArrowUp, default as IcArrowUpPath } from "./ic-arrow-up.svg";
 export { ReactComponent as IcClose, default as IcClosePath } from "./ic-close.svg";
 export { ReactComponent as IcCosmetic, default as IcCosmeticPath } from "./ic-cosmetic.svg";
 export { ReactComponent as IcHairDryer, default as IcHairDryerPath } from "./ic-hair-dryer.svg";

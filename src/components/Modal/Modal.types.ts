@@ -6,5 +6,6 @@ export interface ModalProps {
     title?: string;
     hasHeader?: boolean;
     className?: string;
+    containerClassName?: string;
     children: ReactNode;
 }

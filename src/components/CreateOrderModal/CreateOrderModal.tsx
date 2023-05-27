@@ -1,28 +1,48 @@
 import { useEffect, useRef } from "react";
 import cnBind from "classnames/bind";
 
-import { SiteContentBlock } from "@/components/SiteContentBlock";
+import type { CreateOrderModalProps } from "@/components/CreateOrderModal/CreateOrderModal.types";
+import { Modal } from "@/components/Modal";
 import useScript from "@/hooks/useScript";
-import { MainAnchorType } from "@/routes";
 
-import styles from "./BlockWidget.module.scss";
+import styles from "./CreateOrderModal.module.scss";
 
 const cx = cnBind.bind(styles);
 
-export const BlockWidget = () => {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
+export const CreateOrderModal = ({ ...props }: CreateOrderModalProps) => {
+    return (
+        <Modal {...props} hasHeader title="Заказать номер" className={cx("create-order-modal")}>
+            <CreateOrderModalContent />
+        </Modal>
+    );
+};
+
+export const CreateOrderModalContent = () => {
     const status = useScript("https://widget.reservationsteps.ru/js/bnovo.js");
     const alreadyRendered = useRef(false);
 
     useEffect(() => {
+        document.body.style.overflow = "hidden";
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, []);
+
+    useEffect(() => {
         if (status === "ready" && !alreadyRendered.current) {
             alreadyRendered.current = true;
+
             window.Bnovo_Widget.init(() => {
-                window.Bnovo_Widget.open("_test", {
-                    type: "horizontal",
+                window.Bnovo_Widget.open("booking_iframe1", {
+                    type: "vertical",
                     uid: "92cc0b2a-ae45-4b0d-b362-30773c002258",
                     lang: "ru",
                     width: "100%",
-                    width_mobile: "500",
+                    width_mobile: "100%",
                     background: "#ffffff",
                     background_mobile: "#ffffff",
                     bg_alpha: "100",
@@ -57,10 +77,5 @@ export const BlockWidget = () => {
         }
     }, [status]);
 
-    return (
-        <SiteContentBlock className={cx("block-widget")} id={MainAnchorType.ORDER}>
-            <span className={cx('title')}>Забронировать</span>
-            <div id="_test" />
-        </SiteContentBlock>
-    );
+    return <div id="booking_iframe1" className={cx("iframe-container")} />;
 };

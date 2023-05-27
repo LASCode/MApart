@@ -1,73 +1,97 @@
 .header {
-  width: 100%;
-  position: relative;
-  z-index: 1000;
-  height: var(--header-height-desktop);
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    height: var(--header-height-desktop);
 
-  @include mobile {
-    height: var(--header-height-mobile);
-  }
+    @include mobile {
+        height: var(--header-height-mobile);
+    }
 }
 
 .header-inner {
-  box-sizing: border-box;
-  height: 100%;
-  z-index: 100;
-  position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    z-index: 100;
+    position: relative;
+    padding: 16px 0;
 
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
 
-  @include mobile {
-    border-bottom: 1px solid var(--base-grey);
-  }
+    @include mobile {
+        padding: 8px 0;
+        border-bottom: 1px solid var(--base-grey);
+    }
 }
 .content {
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-
 
 .header-container-left {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
 
-  @include mobile {
-    gap: 10px;
-    flex-direction: row-reverse;
-  }
+    @include mobile {
+        gap: 10px;
+        flex-direction: row-reverse;
+    }
 }
 .logo {
-  opacity: 1;
-  height: 70px;
-  width: 70px;
+    opacity: 1;
+    height: 70px;
+    width: 70px;
 }
 
-.button-tel-icon {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  padding: 5px;
+.image-menu {
+    height: 25px;
+    width: 25px;
+}
 
-  &:hover {
-    background-color: red;
-  }
+.link-tel {
+    @include font-garamond();
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 27px;
+    text-decoration: none;
+    color: var(--base-dark);
+}
+.button-tel-icon {
+    display: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    padding: 5px;
+    box-sizing: content-box;
+    background-color: var(--base-akcent);
+
+    @include stroke-svg-and-path(var(--base-bg));
+    @include fill-svg-and-path(var(--base-bg));
 }
 
 .header-container-right {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
 }
+.button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
 
-
-
+    @include mobile {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 16px;
+    }
+}

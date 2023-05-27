@@ -10,12 +10,13 @@ export const SiteContentBlock = ({
     withSafeArea = true,
     className,
     containerClassName,
+    id,
     children,
 }: SiteContentBlockProps) => {
     return (
         <div className={cx("site-content-block", containerClassName)}>
             <div className={cx("container", { "safe-area": withSafeArea })}>
-                <div className={cx("content", className)}>{children}</div>
+                <div className={cx("content", className)} id={id}>{children}</div>
             </div>
         </div>
     );

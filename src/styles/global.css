@@ -27,6 +27,9 @@ body {
     /*background-color: red;*/
     background-color: var(--base-bg);
 }
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     box-sizing: border-box;
