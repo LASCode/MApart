@@ -2,9 +2,10 @@ import { useCallback, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import cnBind from "classnames/bind";
 
+import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
+import { RoomCard } from "@/components/RoomCard/RoomCard";
 import { BLUE_ROOM, GREEN_ROOM, GREY_ROOM, ROSE_ROOM, YELLOW_ROOM } from "@/constants/rooms";
-
-import { RoomCard } from "../RoomCard/RoomCard";
+import { useBooleanState } from "@/hooks/useBooleanState";
 
 import styles from "./BlockRooms.module.scss";
 
@@ -13,6 +14,7 @@ const cx = cnBind.bind(styles);
 const sliderItems = [BLUE_ROOM, GREEN_ROOM, GREY_ROOM, ROSE_ROOM, YELLOW_ROOM];
 
 export const BlockRooms = () => {
+    const [isCreateOrderModalOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState(false);
     const [bgColor, setBgColor] = useState("");
 
     const handleRoomCardMouseEnter = useCallback((name: string) => {
@@ -42,7 +44,7 @@ export const BlockRooms = () => {
                                 images={item.photos}
                                 name={item.name}
                                 price={item.price}
-                                onMoreButtonClick={() => undefined}
+                                onRentButtonCLick={openCreateOrderModal}
                             />
                         </div>
                     ))}
@@ -56,7 +58,7 @@ export const BlockRooms = () => {
                         images={YELLOW_ROOM.photos}
                         name={YELLOW_ROOM.name}
                         price={YELLOW_ROOM.price}
-                        onMoreButtonClick={() => undefined}
+                        onRentButtonCLick={openCreateOrderModal}
                         onMouseEnter={handleRoomCardMouseEnter}
                         onMouseLeave={handleRoomCardMouseLeave}
                     />
@@ -65,7 +67,7 @@ export const BlockRooms = () => {
                         images={BLUE_ROOM.photos}
                         name={BLUE_ROOM.name}
                         price={BLUE_ROOM.price}
-                        onMoreButtonClick={() => undefined}
+                        onRentButtonCLick={openCreateOrderModal}
                         onMouseEnter={handleRoomCardMouseEnter}
                         onMouseLeave={handleRoomCardMouseLeave}
                     />
@@ -76,7 +78,7 @@ export const BlockRooms = () => {
                         images={ROSE_ROOM.photos}
                         name={ROSE_ROOM.name}
                         price={ROSE_ROOM.price}
-                        onMoreButtonClick={() => undefined}
+                        onRentButtonCLick={openCreateOrderModal}
                         onMouseEnter={handleRoomCardMouseEnter}
                         onMouseLeave={handleRoomCardMouseLeave}
                     />
@@ -85,7 +87,7 @@ export const BlockRooms = () => {
                         images={GREEN_ROOM.photos}
                         name={GREEN_ROOM.name}
                         price={GREEN_ROOM.price}
-                        onMoreButtonClick={() => undefined}
+                        onRentButtonCLick={openCreateOrderModal}
                         onMouseEnter={handleRoomCardMouseEnter}
                         onMouseLeave={handleRoomCardMouseLeave}
                     />
@@ -94,12 +96,13 @@ export const BlockRooms = () => {
                         images={GREY_ROOM.photos}
                         name={GREY_ROOM.name}
                         price={GREY_ROOM.price}
-                        onMoreButtonClick={() => undefined}
+                        onRentButtonCLick={openCreateOrderModal}
                         onMouseEnter={handleRoomCardMouseEnter}
                         onMouseLeave={handleRoomCardMouseLeave}
                     />
                 </div>
             </div>
+            <CreateOrderModal isOpen={isCreateOrderModalOpen} onClose={closeCreateOrderModal} />
         </div>
     );
 };

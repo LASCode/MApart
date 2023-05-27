@@ -25,20 +25,12 @@
 
 .name {
     @include text-h3;
+    text-transform: capitalize;
     color: #333027;
 }
 
 .price {
-    font-family: 'Garamond';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    /* identical to box height, or 150% */
-
-
-    /* dark */
-
+    @include text-body;
     color: #333027;
 }
 
@@ -65,8 +57,5 @@
 
 .link {
     @include text-body;
-    
-    /* akcent */
-    
     color: var(--base-akcent);
 }

@@ -3,9 +3,8 @@ import cnBind from "classnames/bind";
 import Link from "next/link";
 
 import { IcArrowRight } from "@/assets/icon";
-
-import { Button } from "../Button";
-import { Carousel } from "../Carousel";
+import { Button } from "@/components/Button";
+import { Carousel } from "@/components/Carousel";
 
 import type { RoomCardProps } from "./RoomCard.types";
 
@@ -17,7 +16,7 @@ export const RoomCard = ({
     images,
     name,
     price,
-    onMoreButtonClick,
+    onRentButtonCLick,
     className,
     onMouseEnter,
     onMouseLeave,
@@ -34,7 +33,7 @@ export const RoomCard = ({
                 <div className={cx("price")}>{`от ${price} руб.`}</div>
             </div>
             <div className={cx("buttons")}>
-                <Button className={cx("button")} onClick={onMoreButtonClick} icon={IcArrowRight}>
+                <Button className={cx("button")} onClick={onRentButtonCLick} icon={IcArrowRight}>
                     Забронировать
                 </Button>
                 <Link className={cx("link")} href={`room/${name}`} passHref>

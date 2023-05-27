@@ -3,4 +3,5 @@ export interface RentBannerProps {
     weekdayPrice?: number;
     weekendsPrice?: number;
     weekPrice?: number;
+    onRentButtonClick: () => void;
 }

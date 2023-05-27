@@ -5,9 +5,11 @@ import { useRouter } from "next/router";
 import basePhoto from "@/assets/rooms/room-template-about-us.png";
 import { BlockRoomAmenities } from "@/components/BlockRoomAmenities";
 import { Button } from "@/components/Button";
+import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
 import { DoubleCarousel } from "@/components/DoubleCarousel";
 import { RentBanner } from "@/components/RentBanner";
 import { BLUE_ROOM, GREEN_ROOM, GREY_ROOM, ROSE_ROOM, YELLOW_ROOM } from "@/constants/rooms";
+import { useBooleanState } from "@/hooks/useBooleanState";
 import { useIsDesktop } from "@/hooks/useIsDesktop";
 import { PageLayout } from "@/layouts/PageLayout";
 import styles from "@/styles/pages/roomPage.module.scss";
@@ -27,11 +29,12 @@ export default function Page() {
     const roomName = (router.query.room as keyof typeof rooms) ?? "yellow";
     const isDesktop = useIsDesktop();
 
-    // TODO добавить хеадер футер
+    const [isCreateOrderModalOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState();
+
     return (
         <PageLayout
-            withHeader={false}
-            withFooter={false}
+            withHeader
+            withFooter
             layoutClassName={cx("room-page-layout", roomName)}
             className={cx("room-page")}
         >
@@ -47,7 +50,9 @@ export default function Page() {
                 )}
                 <div className={cx("description")}>
                     <p className={cx("description-text")}>{rooms[roomName].description}</p>
-                    <Button className={cx("button")}>Забронировать</Button>
+                    <Button className={cx("button")} onClick={openCreateOrderModal}>
+                        Забронировать
+                    </Button>
                     <div className={cx("description-img")}>
                         {!isDesktop && <img className={cx("shadow-img")} src={basePhoto.src} alt="flowers" />}
                         <img src={rooms[roomName].phonePhoto.src} alt={rooms[roomName].phonePhoto.src} />
@@ -56,8 +61,15 @@ export default function Page() {
             </div>
             <BlockRoomAmenities withMap={false} containerClassName={cx("room-amenities")} />
             <div className={cx("rent-banner-wrapper")}>
-                <RentBanner className={cx("rent-banner")} />
+                <RentBanner
+                    className={cx("rent-banner")}
+                    weekdayPrice={rooms[roomName].weekdayPrice}
+                    weekendsPrice={rooms[roomName].weekendsPrice}
+                    weekPrice={rooms[roomName].weekPrice}
+                    onRentButtonClick={openCreateOrderModal}
+                />
             </div>
+            <CreateOrderModal isOpen={isCreateOrderModalOpen} onClose={closeCreateOrderModal} />
         </PageLayout>
     );
 }
