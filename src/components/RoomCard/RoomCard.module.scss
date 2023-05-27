@@ -24,14 +24,7 @@
 }
 
 .name {
-    font-family: 'Garamond';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 46px;
-    /* identical to box height, or 128% */
-    /* dark */
-    text-transform: capitalize;
+    @include text-h3;
     color: #333027;
 }
 
@@ -71,12 +64,7 @@
 }
 
 .link {
-    font-family: 'Cormorant Infant';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    text-transform: uppercase;
+    @include text-body;
     
     /* akcent */
     

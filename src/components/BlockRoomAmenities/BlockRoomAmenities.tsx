@@ -10,7 +10,7 @@ import type { BlockRoomAmenitiesProps } from "./BlockRoomAmenities.types";
 import styles from "./BlockRoomAmenities.module.scss";
 
 const cx = cnBind.bind(styles);
-export const BlockRoomAmenities = ({ withMap }: BlockRoomAmenitiesProps) => {
+export const BlockRoomAmenities = ({ withMap, className, containerClassName }: BlockRoomAmenitiesProps) => {
     const items = useMemo<{ icon: FC<SVGAttributes<SVGElement>>; title: string }[]>(
         () => [
             { icon: IcWifi, title: "Wi-Fi" },
@@ -24,7 +24,7 @@ export const BlockRoomAmenities = ({ withMap }: BlockRoomAmenitiesProps) => {
     );
 
     return (
-        <SiteContentBlock className={cx("block-room-amenities")}>
+        <SiteContentBlock className={cx("block-room-amenities", className)} containerClassName={containerClassName}>
             <div className={cx("content")}>
                 <div>
                     <span className={cx("title")}>В каждом номере есть</span>
