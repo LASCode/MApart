@@ -3,7 +3,6 @@ import cnBind from "classnames/bind";
 import { useRouter } from "next/router";
 
 import { IcArrowRight } from "@/assets/icon";
-import { Button } from "@/components/Button";
 import { CompanyRating } from "@/components/CompanyRating";
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
 import { SiteContentBlock } from "@/components/SiteContentBlock";

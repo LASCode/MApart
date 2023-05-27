@@ -4,6 +4,7 @@ import { BlockAboutUs } from "@/components/BlockAboutUs";
 import { BlockCompanyRating } from "@/components/BlockCompanyRating";
 import { BlockHero } from "@/components/BlockHero";
 import { BlockRoomAmenities } from "@/components/BlockRoomAmenities";
+import { BlockRooms } from "@/components/BlockRooms/BlockRooms";
 import { BlockWidget } from "@/components/BlockWidget/BlockWidget";
 import { ScrollToTopFab } from "@/components/ScrollToTopFab";
 import { useWindowSizeFrom } from "@/hooks/useWindowSizeFrom";
@@ -23,6 +24,7 @@ const IndexPage = () => {
                 <BlockCompanyRating />
                 {showWidget && <BlockWidget />}
                 <BlockAboutUs />
+                <BlockRooms />
                 <BlockRoomAmenities withMap />
             </div>
             <ScrollToTopFab />

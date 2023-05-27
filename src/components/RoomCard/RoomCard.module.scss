@@ -1,18 +1,45 @@
 .room-card {
-    max-width: 489px;
+    &.yellow {
+        background: var(--yellow);
+    }
+    &.rose {
+        background: var(--rose);
+    }
+    &.green {
+        background: var(--green);
+    }
+    &.grey {
+        background: var(--grey);
+    }
+    &.blue {
+        background: var(--blue);
+    }
 }
 
 .info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 14px 20px 20px 20px;
 }
+
+.name {
+    @include text-h3;
+    text-transform: capitalize;
+    color: #333027;
+}
+
+.price {
+    @include text-body;
+    color: #333027;
+}
+
 
 .buttons {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0px 20px 30px 20px;
-
 }
 
 .button {
@@ -26,4 +53,9 @@
     svg {
         margin-left: 8px;
     }
+}
+
+.link {
+    @include text-body;
+    color: var(--base-akcent);
 }

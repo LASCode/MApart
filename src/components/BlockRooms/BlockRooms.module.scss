@@ -1,0 +1,63 @@
+.block-rooms {
+    transition: 0.8s;
+    padding: 80px 0;
+    
+    &.yellow {
+        background: var(--yellow);
+    }
+    &.rose {
+        background: var(--rose);
+    }
+    &.green {
+        background: var(--green);
+    }
+    &.grey {
+        background: var(--grey);
+    }
+    &.blue {
+        background: var(--blue);
+    }
+}
+
+.content-mobile {
+    display: none;
+
+    @include mobile {
+        display: block;
+    }
+}
+
+.content-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.title {
+    @include text-h2;
+    color: #333027;
+}
+
+.room {
+    margin-bottom: 80px
+}
+
+.room-mobile {
+    position: relative;
+    z-index: 100;
+    margin: 0 5px;
+}
+
+.room-rose, 
+.room-green,
+.room-grey {
+    max-width: 592px;
+}
+
+.room-yellow {
+    max-width: 543px;
+}

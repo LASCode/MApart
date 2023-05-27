@@ -14,7 +14,7 @@ export const Carousel = ({ images, className, ...props }: CarouselProps) => {
     const isMobile = useIsMobile();
 
     return (
-        <div className={cx("carousel-container", className)}>
+        <div className={cx("carousel-container", className)} onTouchStart={(e) => e.stopPropagation()}>
             <ReactCarousel
                 {...props}
                 showThumbs={false}
@@ -25,8 +25,8 @@ export const Carousel = ({ images, className, ...props }: CarouselProps) => {
                 emulateTouch
             >
                 {images.map((image) => (
-                    <div key={image.href}>
-                        <img src={image.href} alt={image.alt} />
+                    <div className={cx("image-container")} key={image.src}>
+                        <img className={cx("image")} src={image.src} alt={image.alt} />
                     </div>
                 ))}
             </ReactCarousel>

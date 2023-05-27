@@ -59,7 +59,7 @@ export const BlockWidget = () => {
 
     return (
         <SiteContentBlock className={cx("block-widget")} id={MainAnchorType.ORDER}>
-            <span className={cx('title')}>Забронировать</span>
+            <span className={cx("title")}>Забронировать</span>
             <div id="_test" />
         </SiteContentBlock>
     );

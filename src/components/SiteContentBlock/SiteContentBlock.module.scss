@@ -2,7 +2,7 @@
 .container {
     width: 100%;
     max-width: calc(var(--page-max-width) + (var(--page-safe-area-horizontal) * 2));
-    min-width: calc(var(--page-min-width) + (var(--page-safe-area-horizontal) * 2));
+    min-width: calc(var(--page-min-width) + (var(--page-safe-area-horizontal)));
     margin: 0 auto;
 
     &.safe-area {

@@ -11,14 +11,18 @@ import styles from "./PageLayout.module.scss";
 
 const cx = cnBind.bind(styles);
 
-export const PageLayout = ({ children, withFooter = true, withHeader = true, className }: PageLayoutProps) => {
+export const PageLayout = ({
+    children,
+    withFooter = true,
+    withHeader = true,
+    className,
+    layoutClassName,
+}: PageLayoutProps) => {
     useAppWindowSize();
 
     return (
-        <div className={cx("page-layout")}>
-            {withHeader && (
-                <Header className={cx("header")} />
-            )}
+        <div className={cx("page-layout", layoutClassName)}>
+            {withHeader && <Header className={cx("header")} />}
 
             <main className={cx("main", className)}>{children}</main>
 
