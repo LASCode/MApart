@@ -22,9 +22,7 @@ export const PageLayout = ({
 
     return (
         <div className={cx("page-layout", layoutClassName)}>
-            {withHeader && (
-                <Header className={cx("header")} />
-            )}
+            {withHeader && <Header className={cx("header")} />}
 
             <main className={cx("main", className)}>{children}</main>
 
