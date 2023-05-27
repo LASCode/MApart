@@ -1,0 +1,105 @@
+
+
+.content {
+    display: grid;
+    grid-template-columns: 250px minmax(150px, 793px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: space-between;
+
+
+    @include media-min-max($screen-mobile, 1000px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 1fr;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 1fr;
+    }
+}
+.title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    text-transform: uppercase;
+
+    @include mobile {
+        display: block;
+        width: 250px;
+    }
+}
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-row-gap: 50px;
+    grid-column-gap: 14px;
+
+    @include media-min-max($screen-mobile, 1000px) {
+        grid-template-rows: min-content 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+    }
+    @include mobile {
+        grid-template-rows: min-content 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+    }
+}
+.item {
+    display: flex;
+    column-gap: 10px;
+    row-gap: 20px;
+    flex-direction: column;
+
+    @include mobile {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.item-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+
+    @include mobile {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    @include media-min-max($screen-mobile, 1000px) {
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+.item-icon {
+    height: 52px;
+    width: 52px;
+    @include fill-svg-and-path(var(--base-akcent));
+
+    @include mobile {
+        height: 35px;
+        width: 35px;
+    }
+
+    @include media-min-max($screen-mobile, 1000px) {
+        height: 42px;
+        width: 42px;
+    }
+}
+
+
+.map-wrapper {
+    margin-top: 120px;
+
+    @include mobile {
+        margin-top: 100px;
+    }
+}
+.map {
+    @include mobile {
+        height: 546px;
+    }
+}

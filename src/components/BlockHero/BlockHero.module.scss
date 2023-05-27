@@ -14,6 +14,17 @@
     @include tablet {
         height: 500px;
     }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #E9E1C9;
+        z-index: -1;
+    }
 }
 .content {
     display: flex;
@@ -22,17 +33,13 @@
     gap: 12px;
 }
 .title {
+    @include text-h1();
     margin: 0;
-    font-weight: 300;
-    font-size: 96px;
-    line-height: 116px;
     color: white;
 }
 .description {
+    @include text-h4();
     margin: 0;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 36px;
     color: white;
     text-align: center;
 }
@@ -58,7 +65,7 @@
     border-radius: 5px;
     cursor: pointer;
     background-color: transparent;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
 
     &:hover {
         background-color: var(--base-akcent);
@@ -67,6 +74,19 @@
             @include fill-svg-and-path(white);
         }
     }
+}
+
+.button-order {
+    --background-color: #ffffff;
+    --background-color-hover: var(--base-akcent);
+    --background-color-active: #b9b9b9;
+    --color: var(--base-akcent);
+    --color-hover: #ffffff;
+    --color-active: #ffffff;
+    --border-color-hover: transparent;
+    --icon-color: var(--base-akcent);
+    --icon-color-hover: #ffffff;
+    --icon-color-active: #ffffff;
 }
 
 .bg-image {

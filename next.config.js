@@ -17,19 +17,19 @@ const nextConfig = {
                 {
                     loader: "@svgr/webpack",
                     options: {
+                        prettier: false,
+                        svgo: true,
                         svgoConfig: {
                             plugins: [
                                 {
-                                    name: "removeViewBox",
-                                    active: false,
+                                    name: 'preset-default',
+                                    params: {
+                                        overrides: { removeViewBox: false },
+                                    },
                                 },
                             ],
                         },
-                        memo: true,
-                        // svgProps: {
-                        //     width: "24px",
-                        //     height: "24px",
-                        // },
+                        titleProp: true,
                     },
                 },
                 "url-loader",

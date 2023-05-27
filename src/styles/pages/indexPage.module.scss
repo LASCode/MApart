@@ -1,5 +1,7 @@
 .index-page {
     position: relative;
+
+    padding-bottom: 120px;
 }
 
 .content {
@@ -16,5 +18,9 @@
     top: 380px;
     background-color: #e9e1c9;
     z-index: -1;
+
+    @include mobile {
+        top: 330px;
+    }
 }
 

@@ -36,7 +36,9 @@ export const BlockHero = () => {
                 <h1 className={cx("title")}>M Apart</h1>
                 <h2 className={cx("description")}>Апарт отель в одном из уютнейших уголков Петербурга</h2>
             </div>
-            <Button icon={IcArrowRight}>Забронировать</Button>
+            <Button className={cx("button-order")} icon={IcArrowRight}>
+                Забронировать
+            </Button>
             <div className={cx("actions")}>
                 <button type="button" className={cx("action")} onClick={setPrevImage}>
                     <IcArrowLeft />

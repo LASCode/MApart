@@ -1,1 +1,2 @@
-export { ReactComponent as IcSiteLogo, default as IcSiteLogoPath } from "./apart_vertical.svg";
+export { ReactComponent as IcSiteLogoHorizontal, default as IcSiteLogoHorizontalPath } from "./apart_horizontal.svg";
+export { ReactComponent as IcSiteLogoVertical, default as IcSiteLogoVerticalPath } from "./apart_vertical.svg";

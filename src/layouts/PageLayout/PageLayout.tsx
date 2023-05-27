@@ -1,5 +1,6 @@
 import cnBind from "classnames/bind";
 
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
 import { useAppWindowSize } from "@/hooks/useAppWindowSize";
@@ -29,7 +30,11 @@ export const PageLayout = ({
 
             <main className={cx("main", className)}>{children}</main>
 
-            {/* {withFooter && <Footer className={cx("footer")} />}*/}
+            {withFooter && (
+                <SiteContentBlock className={cx("footer-wrapper")}>
+                    <Footer className={cx("footer")} />
+                </SiteContentBlock>
+            )}
         </div>
     );
 };

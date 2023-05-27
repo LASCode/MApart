@@ -7,3 +7,108 @@
         fill: inherit;
     }
 }
+
+@mixin set-icon-color($color, $transition-duration: 200ms) {
+    svg {
+        @include fill-svg-and-path($color, $transition-duration);
+    }
+}
+
+@mixin text-h1 {
+    font-family: "Cormorant Infant", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 116px;
+    text-transform: uppercase;
+
+    @include mobile {
+        font-size: 55px;
+        line-height: 67px;
+    }
+
+    @include tablet {
+        font-size: 76px;
+        line-height: 98px;
+    }
+}
+
+@mixin text-h2 {
+    font-family: "Cormorant Infant", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 78px;
+    text-transform: uppercase;
+
+    @include mobile {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @include tablet {
+        font-size: 48px;
+        line-height: 54px;
+    }
+}
+
+@mixin text-h3 {
+    font-family: "Garamond", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+
+    @include mobile {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    @include tablet {
+        font-size: 26px;
+        line-height: 34px;
+    }
+}
+
+@mixin text-h4 {
+    font-family: "Garamond", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+
+    @include mobile {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    @include tablet {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+@mixin text-body {
+    font-family: "Garamond", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+
+    @include mobile {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    @include tablet {
+        font-size: 15px;
+        line-height: 26px;
+    }
+}
+
+@mixin font-garamond {
+    font-family: "Garamond", serif;
+}
+@mixin font-cormorant {
+    font-family: "Cormorant Infant", sans-serif;
+}

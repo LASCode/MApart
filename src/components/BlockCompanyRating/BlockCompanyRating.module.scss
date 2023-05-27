@@ -4,12 +4,6 @@
     grid-template-areas: "block1 block2 order";
     gap: 20px;
 
-
-    @include media-min-max(0px, 400px) {
-        grid-template-columns: repeat(1, 1fr) !important;
-        grid-template-rows: repeat(3, 1fr) !important;
-        grid-template-areas: "block1" "block2" "order" !important;
-    }
     @include media-min-max($screen-tablet, 900px) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -47,4 +41,5 @@
     align-items: center;
     justify-content: center;
     background-image: url("../../assets/rooms/room-template-create-order.png");
+    background-size: cover;
 }
