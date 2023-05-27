@@ -1,3 +1,5 @@
+import roomRose from 'assets/rooms/room-rose.jpg'
+
 export const ROSE_ROOM = {
     name: "rose",
     price: 600,
