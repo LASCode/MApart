@@ -5,17 +5,12 @@ import type { FooterProps } from "@/components/Footer/Footer.types";
 import { HEADER_TEL_NUMBER } from "@/components/Header/Header.constants";
 import { Logo } from "@/components/Logo";
 import { Socials } from "@/components/Socials";
-import { useIsMobile } from "@/hooks/useIsMobile";
-import { useIsTablet } from "@/hooks/useIsTablet";
 
 import styles from "./Footer.module.scss";
 
 const cx = cnBind.bind(styles);
 
 export const Footer = ({ className }: FooterProps) => {
-    const isMobile = useIsMobile();
-    const isTablet = useIsTablet();
-
     return (
         <footer className={cx("footer", className)}>
             <Logo className={cx("logo")} />

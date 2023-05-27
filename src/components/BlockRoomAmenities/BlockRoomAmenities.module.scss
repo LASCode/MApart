@@ -1,4 +1,6 @@
-
+.block-room-amenities {
+    scroll-margin-top: 50px;
+}
 
 .content {
     display: grid;
@@ -93,6 +95,7 @@
 
 .map-wrapper {
     margin-top: 120px;
+    scroll-margin-top: 50px;
 
     @include mobile {
         margin-top: 100px;

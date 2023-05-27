@@ -1,0 +1,21 @@
+.scroll-to-top-fab {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    transition: transform .4s linear;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

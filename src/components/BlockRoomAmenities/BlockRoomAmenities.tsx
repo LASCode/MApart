@@ -4,12 +4,14 @@ import cnBind from "classnames/bind";
 
 import { IcCosmetic, IcHairDryer, IcKitchen, IcTowel, IcTv, IcWifi } from "@/assets/icon";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
+import { MainAnchorType } from "@/routes";
 
 import type { BlockRoomAmenitiesProps } from "./BlockRoomAmenities.types";
 
 import styles from "./BlockRoomAmenities.module.scss";
 
 const cx = cnBind.bind(styles);
+
 export const BlockRoomAmenities = ({ withMap }: BlockRoomAmenitiesProps) => {
     const items = useMemo<{ icon: FC<SVGAttributes<SVGElement>>; title: string }[]>(
         () => [
@@ -24,7 +26,7 @@ export const BlockRoomAmenities = ({ withMap }: BlockRoomAmenitiesProps) => {
     );
 
     return (
-        <SiteContentBlock className={cx("block-room-amenities")}>
+        <SiteContentBlock className={cx("block-room-amenities")} id={MainAnchorType.ADVANTAGES}>
             <div className={cx("content")}>
                 <div>
                     <span className={cx("title")}>В каждом номере есть</span>
@@ -39,7 +41,7 @@ export const BlockRoomAmenities = ({ withMap }: BlockRoomAmenitiesProps) => {
                 </div>
             </div>
             {withMap && (
-                <div className={cx("map-wrapper")}>
+                <div className={cx("map-wrapper")} id={MainAnchorType.LOCATION}>
                     <iframe
                         className={cx("map")}
                         src="https://yandex.ru/map-widget/v1/?um=constructor%3A1539f7e7a294d20b2b6f1f3f06cc98f294b5792bf768dc3def8cbae130f8ad72&amp;source=constructor"

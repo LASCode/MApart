@@ -8,7 +8,7 @@ import styles from "./Modal.module.scss";
 
 const cx = cnBind.bind(styles);
 
-export const Modal = ({ isOpen, onClose, children, hasHeader, title, className }: ModalProps) => {
+export const Modal = ({ isOpen, onClose, children, hasHeader, title, className, containerClassName }: ModalProps) => {
     if (!isOpen) {
         return null;
     }
@@ -17,7 +17,7 @@ export const Modal = ({ isOpen, onClose, children, hasHeader, title, className }
         <Portal type="div">
             <div className={cx("modal")}>
                 <div className={cx("backdrop")} onClick={onClose} />
-                <div className={cx("container", className)}>
+                <div className={cx("container", containerClassName)}>
                     {hasHeader && (
                         <div className={cx("header")}>
                             <h3 className={cx("title")}>{title}</h3>
@@ -28,7 +28,7 @@ export const Modal = ({ isOpen, onClose, children, hasHeader, title, className }
                             </div>
                         </div>
                     )}
-                    <div className={cx("content")}>{children}</div>
+                    <div className={cx("content", className)}>{children}</div>
                 </div>
             </div>
         </Portal>

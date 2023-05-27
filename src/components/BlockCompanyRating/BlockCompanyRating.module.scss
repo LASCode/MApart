@@ -42,4 +42,25 @@
     justify-content: center;
     background-image: url("../../assets/rooms/room-template-create-order.png");
     background-size: cover;
+    user-select: none;
+    cursor: pointer;
+    transition: transform .5s linear;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.button-order {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    @include font-cormorant();
+    @include set-icon-color(white);
 }

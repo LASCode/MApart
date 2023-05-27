@@ -5,6 +5,7 @@ import { IcVideoPlay } from "@/assets/icon";
 import RoomImage from "@/assets/rooms/room-template-about-us.png";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { MainAnchorType } from "@/routes";
 
 import styles from "./BlockAboutUs.module.scss";
 
@@ -14,7 +15,11 @@ export const BlockAboutUs = () => {
     const isMobile = useIsMobile();
 
     return (
-        <SiteContentBlock className={cx("block-about-us")} containerClassName={cx("background")}>
+        <SiteContentBlock
+            className={cx("block-about-us")}
+            containerClassName={cx("background")}
+            id={MainAnchorType.ABOUT_US}
+        >
             <div className={cx("content")}>
                 <div className={cx("block-text")}>
                     <div className={cx("block-text-header")}>

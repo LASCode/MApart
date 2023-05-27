@@ -4,5 +4,6 @@ export interface SiteContentBlockProps {
     withSafeArea?: boolean;
     className?: string;
     containerClassName?: string;
+    id?: string;
     children: ReactNode;
 }
