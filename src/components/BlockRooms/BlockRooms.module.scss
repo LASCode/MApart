@@ -30,6 +30,7 @@
 .content-desktop {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-evenly;
 
     @include mobile {
