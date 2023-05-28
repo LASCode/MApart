@@ -12,6 +12,10 @@
     flex-direction: column;
     gap: 120px;
     width: 100%;
+
+    @include mobile {
+        gap: 60px;
+    }
 }
 
 .top-test {

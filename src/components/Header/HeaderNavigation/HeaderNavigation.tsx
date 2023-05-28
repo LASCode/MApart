@@ -15,7 +15,13 @@ export const HeaderNavigation = ({ vertical, onClick, className }: HeaderNavigat
     return (
         <nav className={cx("header-navigation", { vertical }, className)}>
             {items.map(({ title, href }) => (
-                <Link key={title} href={href} className={cx("header-navigation-item")} scroll={false} onClick={onClick}>
+                <Link
+                    key={title}
+                    href={`/${href}`}
+                    className={cx("header-navigation-item")}
+                    scroll={false}
+                    onClick={onClick}
+                >
                     {title.toUpperCase()}
                 </Link>
             ))}

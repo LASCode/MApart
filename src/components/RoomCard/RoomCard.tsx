@@ -5,6 +5,7 @@ import Link from "next/link";
 import { IcArrowRight } from "@/assets/icon";
 import { Button } from "@/components/Button";
 import { Carousel } from "@/components/Carousel";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 import type { RoomCardProps } from "./RoomCard.types";
 
@@ -21,6 +22,8 @@ export const RoomCard = ({
     onMouseEnter,
     onMouseLeave,
 }: RoomCardProps) => {
+    const isMobile = useIsMobile();
+
     const handleMouseEnter = useCallback(() => {
         onMouseEnter?.(name);
     }, [name, onMouseEnter]);
@@ -33,7 +36,7 @@ export const RoomCard = ({
                 <div className={cx("price")}>{`от ${price} руб.`}</div>
             </div>
             <div className={cx("buttons")}>
-                <Button className={cx("button")} onClick={onRentButtonCLick} icon={IcArrowRight}>
+                <Button className={cx("button")} onClick={onRentButtonCLick} icon={isMobile ? undefined : IcArrowRight}>
                     Забронировать
                 </Button>
                 <Link className={cx("link")} href={`room/${name}`} passHref>

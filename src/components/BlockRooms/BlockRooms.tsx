@@ -6,6 +6,8 @@ import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal
 import { RoomCard } from "@/components/RoomCard/RoomCard";
 import { BLUE_ROOM, GREEN_ROOM, GREY_ROOM, ROSE_ROOM, YELLOW_ROOM } from "@/constants/rooms";
 import { useBooleanState } from "@/hooks/useBooleanState";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import { MainAnchorType } from "@/routes";
 
 import styles from "./BlockRooms.module.scss";
 
@@ -14,6 +16,7 @@ const cx = cnBind.bind(styles);
 const sliderItems = [BLUE_ROOM, GREEN_ROOM, GREY_ROOM, ROSE_ROOM, YELLOW_ROOM];
 
 export const BlockRooms = () => {
+    const isMobile = useIsMobile();
     const [isCreateOrderModalOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState(false);
     const [bgColor, setBgColor] = useState("");
 
@@ -26,7 +29,8 @@ export const BlockRooms = () => {
     }, []);
 
     return (
-        <div className={cx("block-rooms", bgColor)}>
+        <div className={cx("block-rooms", bgColor)} id={MainAnchorType.ROOMS}>
+            {isMobile && <h2 className={cx("title")}>номера</h2>}
             <div className={cx("content-mobile")}>
                 <Carousel
                     centerMode
