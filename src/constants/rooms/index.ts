@@ -1,3 +1,8 @@
+import roomBlue from "@/assets/rooms/room-blue.jpg";
+import roomBlue_1 from "@/assets/rooms/room-blue-1.jpg";
+import roomBlue_2 from "@/assets/rooms/room-blue-2.jpg";
+import roomBlue_3 from "@/assets/rooms/room-blue-3.jpg";
+import roomBlue_4 from "@/assets/rooms/room-blue-4.jpg";
 import roomGreen from "@/assets/rooms/room-green.jpg";
 import roomGreen_1 from "@/assets/rooms/room-green-1.jpg";
 import roomGreen_2 from "@/assets/rooms/room-green-2.jpg";
@@ -21,11 +26,6 @@ import roomYellow_1 from "@/assets/rooms/room-yellow-1.jpg";
 import roomYellow_2 from "@/assets/rooms/room-yellow-2.jpg";
 import roomYellow_3 from "@/assets/rooms/room-yellow-3.jpg";
 import roomYellow_4 from "@/assets/rooms/room-yellow-4.jpg";
-import roomBlue from "@/assets/rooms/room-blue.jpg";
-import roomBlue_1 from "@/assets/rooms/room-blue-1.jpg";
-import roomBlue_2 from "@/assets/rooms/room-blue-2.jpg";
-import roomBlue_3 from "@/assets/rooms/room-blue-3.jpg";
-import roomBlue_4 from "@/assets/rooms/room-blue-4.jpg";
 
 export const ROSE_ROOM = {
     name: "rose",
@@ -263,7 +263,7 @@ export const GREY_ROOM = {
     ],
 
     phonePhoto: {
-        src: roomGrey_2,
+        src: roomGrey_2.src,
         alt: "yellow",
     },
 
