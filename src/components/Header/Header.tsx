@@ -29,9 +29,10 @@ export const Header = ({ className }: HeaderProps) => {
     const isMobile = useIsMobile();
     const isTablet = useIsTablet();
     const showSocials = useWindowSizeFrom(1120);
+    const showTelButton = useWindowSizeTo(1000);
     const needToOpenModal = useWindowSizeTo(850);
+    const headerMobileView = useWindowSizeTo(820);
     const router = useRouter();
-    const showTelButton = isMobile || isTablet;
     const [isOpen, , close, toggle] = useBooleanState(false);
     const [createOrderModalIsOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState(false);
     const MenuImage = isOpen ? IcMenuClose : IcMenuOpen;
@@ -45,8 +46,8 @@ export const Header = ({ className }: HeaderProps) => {
     }, [needToOpenModal, openCreateOrderModal, router]);
 
     useEffect(() => {
-        document.body.style.overflow = isOpen && isMobile ? "hidden" : "auto";
-    }, [isMobile, isOpen]);
+        document.body.style.overflow = isOpen && headerMobileView ? "hidden" : "auto";
+    }, [headerMobileView, isMobile, isOpen]);
 
     useEffect(() => {
         window.scrollTo({ top: 0 });
@@ -58,8 +59,8 @@ export const Header = ({ className }: HeaderProps) => {
                 <div className={cx("content")}>
                     <div className={cx("header-container-left")}>
                         <Logo />
-                        {(isMobile || isTablet) && <MenuImage className={cx("image-menu")} onClick={toggle} />}
-                        {!isMobile && !isTablet && <HeaderNavigation />}
+                        {headerMobileView && <MenuImage className={cx("image-menu")} onClick={toggle} />}
+                        {!headerMobileView && <HeaderNavigation />}
                     </div>
                     {!isMobile && (
                         <div className={cx("header-container-right")}>
@@ -74,7 +75,7 @@ export const Header = ({ className }: HeaderProps) => {
                     Забронировать
                 </Button>
             </SiteContentBlock>
-            <HeaderMenuMobile isOpen={(isMobile || isTablet) && isOpen} onClose={close} />
+            <HeaderMenuMobile isOpen={headerMobileView && isOpen} onClose={close} />
             <CreateOrderModal isOpen={createOrderModalIsOpen} onClose={closeCreateOrderModal} />
         </header>
     );
