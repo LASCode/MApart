@@ -14,7 +14,6 @@ import { SiteContentBlock } from "@/components/SiteContentBlock";
 import { Socials } from "@/components/Socials/Socials";
 import { useBooleanState } from "@/hooks/useBooleanState";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import { useIsTablet } from "@/hooks/useIsTablet";
 import { useWindowSizeFrom } from "@/hooks/useWindowSizeFrom";
 import { useWindowSizeTo } from "@/hooks/useWindowSizeTo";
 import { appRoute, MainAnchorType } from "@/routes";
@@ -27,7 +26,6 @@ const cx = cnBind.bind(styles);
 
 export const Header = ({ className }: HeaderProps) => {
     const isMobile = useIsMobile();
-    const isTablet = useIsTablet();
     const showSocials = useWindowSizeFrom(1120);
     const showTelButton = useWindowSizeTo(1000);
     const needToOpenModal = useWindowSizeTo(850);
