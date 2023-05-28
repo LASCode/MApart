@@ -16,7 +16,6 @@ const windowSizeSlice = createSlice({
     initialState,
     reducers: {
         setWidth: (state, { payload }: PayloadAction<number>) => {
-            console.log(1);
             state.width = payload;
         },
         setHeight: (state, { payload }: PayloadAction<number>) => {
