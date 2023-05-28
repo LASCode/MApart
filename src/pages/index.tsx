@@ -2,6 +2,7 @@ import cnBind from "classnames/bind";
 
 import { BlockAboutUs } from "@/components/BlockAboutUs";
 import { BlockCompanyRating } from "@/components/BlockCompanyRating";
+import { BlockGallery } from "@/components/BlockGallery";
 import { BlockHero } from "@/components/BlockHero";
 import { BlockRoomAmenities } from "@/components/BlockRoomAmenities";
 import { BlockRooms } from "@/components/BlockRooms/BlockRooms";
@@ -26,6 +27,7 @@ const IndexPage = () => {
                 <BlockAboutUs />
                 <BlockRooms />
                 <BlockRoomAmenities withMap />
+                <BlockGallery />
             </div>
             <ScrollToTopFab />
         </PageLayout>

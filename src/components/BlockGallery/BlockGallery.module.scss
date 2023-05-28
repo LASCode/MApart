@@ -1,0 +1,14 @@
+.title {
+    margin: 0 auto 20px;
+
+    @include text-h2;
+}
+
+.button {
+    margin: 20px auto;
+    border: none;
+
+    &:hover {
+        border: none;
+    }
+}
