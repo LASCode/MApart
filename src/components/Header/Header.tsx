@@ -32,7 +32,7 @@ export const Header = ({ className }: HeaderProps) => {
     const needToOpenModal = useWindowSizeTo(850);
     const router = useRouter();
     const showTelButton = isMobile || isTablet;
-    const [isOpen, open, close, toggle] = useBooleanState(false);
+    const [isOpen, , close, toggle] = useBooleanState(false);
     const [createOrderModalIsOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState(false);
     const MenuImage = isOpen ? IcMenuClose : IcMenuOpen;
 
