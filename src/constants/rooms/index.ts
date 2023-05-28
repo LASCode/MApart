@@ -1,34 +1,63 @@
+import roomGreen from "@/assets/rooms/room-green.jpg";
+import roomGreen_1 from "@/assets/rooms/room-green-1.jpg";
+import roomGreen_2 from "@/assets/rooms/room-green-2.jpg";
+import roomGreen_3 from "@/assets/rooms/room-green-3.jpg";
+import roomGreen_4 from "@/assets/rooms/room-green-4.jpg";
+import roomGreen_5 from "@/assets/rooms/room-green-5.jpg";
+import roomGreen_6 from "@/assets/rooms/room-green-6.jpg";
+import roomGrey from "@/assets/rooms/room-grey.jpg";
+import roomGrey_1 from "@/assets/rooms/room-grey-1.jpg";
+import roomGrey_2 from "@/assets/rooms/room-grey-2.jpg";
+import roomGrey_3 from "@/assets/rooms/room-grey-3.jpg";
+import roomGrey_4 from "@/assets/rooms/room-grey-4.jpg";
+import roomGrey_5 from "@/assets/rooms/room-grey-5.jpg";
+import roomRose_1 from "@/assets/rooms/room-rose-1.jpg";
+import roomRose_2 from "@/assets/rooms/room-rose-2.jpg";
+import roomRose_3 from "@/assets/rooms/room-rose-3.jpg";
+import roomRose_4 from "@/assets/rooms/room-rose-4.jpg";
+import roomRose_5 from "@/assets/rooms/room-rose-5.jpg";
+import roomYellow from "@/assets/rooms/room-yellow.jpg";
+import roomYellow_1 from "@/assets/rooms/room-yellow-1.jpg";
+import roomYellow_2 from "@/assets/rooms/room-yellow-2.jpg";
+import roomYellow_3 from "@/assets/rooms/room-yellow-3.jpg";
+import roomYellow_4 from "@/assets/rooms/room-yellow-4.jpg";
+import roomBlue from "@/assets/rooms/room-blue.jpg";
+import roomBlue_1 from "@/assets/rooms/room-blue-1.jpg";
+import roomBlue_2 from "@/assets/rooms/room-blue-2.jpg";
+import roomBlue_3 from "@/assets/rooms/room-blue-3.jpg";
+import roomBlue_4 from "@/assets/rooms/room-blue-4.jpg";
+
 export const ROSE_ROOM = {
     name: "rose",
     price: 600,
     photos: [
         {
-            src: "https://lh3.google.com/u/0/d/1dljTgIc81c7kmeNjHOBMfeWUjtSfBHy1=w1972-h1398-iv1",
+            src: roomRose_2.src,
             alt: "rose",
         },
         {
-            src: "https://lh3.google.com/u/0/d/1RtXI5t28rmQNhbZXY0L_eT3RM7P5ITVi=w1972-h1398-iv1",
+            src: roomRose_5.src,
             alt: "rose",
         },
     ],
 
     doublePhoto: [
         {
-            bigImageSrc: "https://lh3.google.com/u/0/d/1dljTgIc81c7kmeNjHOBMfeWUjtSfBHy1=w1972-h1398-iv1",
+            bigImageSrc: roomRose_2.src,
             bigImageAlt: "rose",
-            smallImageSrc: "https://lh3.google.com/u/0/d/1wEQ8QdQ_5gtATCxW0geZraZ5rvo3bXOk=w1972-h1398-iv1",
+            smallImageSrc: roomRose_4.src,
             smallImageAlt: "rose",
         },
         {
-            bigImageSrc: "https://lh3.google.com/u/0/d/1RtXI5t28rmQNhbZXY0L_eT3RM7P5ITVi=w1972-h1398-iv1",
+            bigImageSrc: roomRose_5.src,
             bigImageAlt: "rose",
-            smallImageSrc: "https://lh3.google.com/u/0/d/1UPeJ1UKKbhjfo7UiLWIw5cV5QZheTGZt=w2616-h1430-iv1",
+            smallImageSrc: roomRose_1.src,
             smallImageAlt: "rose",
         },
     ],
 
     phonePhoto: {
-        src: "https://lh3.google.com/u/0/d/1yFklv6cjSkzD4AuYwZ2Q6uzj8X6VUS7r=w2236-h1430-iv1",
+        src: roomRose_3.src,
         alt: "reose",
     },
 
@@ -45,40 +74,40 @@ export const YELLOW_ROOM = {
     price: 600,
     photos: [
         {
-            src: "https://lh3.google.com/u/0/d/156Ypq2p3MqH1kOtFIvNKhke-ElI1NhfH=w2236-h1430-iv1",
+            src: roomYellow_1.src,
             alt: "yellow",
         },
         {
-            src: "https://lh3.google.com/u/0/d/1_0ES4cPzHfXzA8Is_Ag5Oo-GbMu2-XN6=w2236-h1430-iv1",
+            src: roomYellow_2.src,
             alt: "yellow",
         },
         {
-            src: "https://lh3.google.com/u/0/d/1ex3Zy1LQzYhd_Vy6KStgQqoOhamLh7_B=w2236-h1430-iv1",
+            src: roomYellow_3.src,
             alt: "yellow",
         },
         {
-            src: "https://lh3.google.com/u/0/d/1yHdowvevp6ZxMa4xUU5jdWognmNRjxoF=w2236-h1430-iv1",
+            src: roomYellow_4.src,
             alt: "yellow",
         },
     ],
 
     doublePhoto: [
         {
-            bigImageSrc: "https://lh3.google.com/u/0/d/156Ypq2p3MqH1kOtFIvNKhke-ElI1NhfH=w2236-h1430-iv1",
+            bigImageSrc: roomYellow_1.src,
             bigImageAlt: "yellow",
-            smallImageSrc: "https://lh3.google.com/u/0/d/1_0ES4cPzHfXzA8Is_Ag5Oo-GbMu2-XN6=w2236-h1430-iv1",
+            smallImageSrc: roomYellow_2.src,
             smallImageAlt: "yellow",
         },
         {
-            bigImageSrc: "https://lh3.google.com/u/0/d/1_0ES4cPzHfXzA8Is_Ag5Oo-GbMu2-XN6=w2236-h1430-iv1",
+            bigImageSrc: roomYellow_3.src,
             bigImageAlt: "yellow",
-            smallImageSrc: "https://lh3.google.com/u/0/d/1kGspGJQW8ppI5bCnEvNnNhMnOWY0NlcT=w2236-h1430-iv1",
+            smallImageSrc: roomYellow.src,
             smallImageAlt: "yellow",
         },
     ],
 
     phonePhoto: {
-        src: "https://lh3.google.com/u/0/d/1yHdowvevp6ZxMa4xUU5jdWognmNRjxoF=w2236-h1430-iv1",
+        src: roomYellow_4.src,
         alt: "yellow",
     },
 
@@ -95,40 +124,40 @@ export const BLUE_ROOM = {
     price: 600,
     photos: [
         {
-            src: "https://lh3.google.com/u/0/d/1QT91lqGxSjfrXRf9bjn-kBDwixECh68L=w2236-h1430-iv1",
+            src: roomBlue_1.src,
             alt: "blue",
         },
         {
-            src: "https://lh3.google.com/u/0/d/1dYacJuLcDq9CmHxRcyGeQNyxEK802B2h=w2236-h1430-iv1",
+            src: roomBlue_2.src,
             alt: "blue",
         },
         {
-            src: "https://lh3.google.com/u/0/d/1HPg3Ra2Jm1lycv91CxHmzGZZVs02km3n=w2236-h1430-iv1",
+            src: roomBlue_3.src,
             alt: "blue",
         },
         {
-            src: "https://lh3.google.com/u/0/d/1S8oDpN7dv9HknW5AI_KrKb1XBYrOI7-s=w2236-h1430-iv1",
+            src: roomBlue_4.src,
             alt: "blue",
         },
     ],
 
     doublePhoto: [
         {
-            bigImageSrc: "https://lh3.google.com/u/0/d/1QT91lqGxSjfrXRf9bjn-kBDwixECh68L=w2236-h1430-iv1",
+            bigImageSrc: roomBlue_1.src,
             bigImageAlt: "blue",
-            smallImageSrc: "https://lh3.google.com/u/0/d/1Wz8RNUwessgzgqNDKLvPz0BUNe9GgcfH=w2236-h1430-iv1",
+            smallImageSrc: roomBlue.src,
             smallImageAlt: "blue",
         },
         {
-            bigImageSrc: "https://lh3.google.com/u/0/d/1dYacJuLcDq9CmHxRcyGeQNyxEK802B2h=w2236-h1430-iv1",
+            bigImageSrc: roomBlue_2.src,
             bigImageAlt: "blue",
-            smallImageSrc: "https://lh3.google.com/u/0/d/1HPg3Ra2Jm1lycv91CxHmzGZZVs02km3n=w2236-h1430-iv1",
+            smallImageSrc: roomBlue_3.src,
             smallImageAlt: "blue",
         },
     ],
 
     phonePhoto: {
-        src: "https://lh3.google.com/u/0/d/1S8oDpN7dv9HknW5AI_KrKb1XBYrOI7-s=w2236-h1430-iv1",
+        src: roomBlue_4.src,
         alt: "blue",
     },
 
@@ -145,46 +174,46 @@ export const GREEN_ROOM = {
     price: 600,
     photos: [
         {
-            src: "https://lh3.google.com/u/0/d/1hg1YZOI7E2n1TYAjR9JP7075pE6Ht6qD=w2236-h1430-iv1",
+            src: roomGreen_6.src,
             alt: "green",
         },
         {
-            src: "https://lh3.google.com/u/0/d/1SJXqw5ZXZeMnbshbgkIcZmHsaRh2yBNC=w2236-h1430-iv1",
+            src: roomGreen_5.src,
             alt: "green",
         },
         {
-            src: "https://lh3.google.com/u/0/d/1HtmGZFbKnJku0dikfeOHX2K_4nrVPqBD=w2236-h1430-iv1",
+            src: roomGreen_4.src,
             alt: "green",
         },
         {
-            src: "https://lh3.google.com/u/0/d/18eOn6x4ttDZ0er0gnbIGxYMYXjBbV60F=w2236-h1430-iv1",
+            src: roomGreen_2.src,
             alt: "green",
         },
     ],
 
     doublePhoto: [
         {
-            bigImageSrc: "https://lh3.google.com/u/0/d/1hg1YZOI7E2n1TYAjR9JP7075pE6Ht6qD=w2236-h1430-iv1",
+            bigImageSrc: roomGreen_6.src,
             bigImageAlt: "green",
-            smallImageSrc: "https://lh3.google.com/u/0/d/1VaNyb2EUqvX5k75npp4ezFrp1kE84DxW=w2236-h1430-iv1",
+            smallImageSrc: roomGreen_3.src,
             smallImageAlt: "green",
         },
         {
-            bigImageSrc: "https://lh3.google.com/u/0/d/1SJXqw5ZXZeMnbshbgkIcZmHsaRh2yBNC=w2236-h1430-iv1",
+            bigImageSrc: roomGreen_5.src,
             bigImageAlt: "green",
-            smallImageSrc: "https://lh3.google.com/u/0/d/1Zv0a4fnS3jES_JXIqpUWNLJuPdXY3UyQ=w2236-h1430-iv1",
+            smallImageSrc: roomGreen_1.src,
             smallImageAlt: "green",
         },
         {
-            bigImageSrc: "https://lh3.google.com/u/0/d/1HtmGZFbKnJku0dikfeOHX2K_4nrVPqBD=w2236-h1430-iv1",
+            bigImageSrc: roomGreen_2.src,
             bigImageAlt: "green",
-            smallImageSrc: "https://lh3.google.com/u/0/d/1a_wGPZBO7M2Kh9kAP8xOu4maeD2QqLnj=w2236-h1430-iv1",
+            smallImageSrc: roomGreen.src,
             smallImageAlt: "green",
         },
     ],
 
     phonePhoto: {
-        src: "https://lh3.google.com/u/0/d/18eOn6x4ttDZ0er0gnbIGxYMYXjBbV60F=w2236-h1430-iv1",
+        src: roomGreen_4.src,
         alt: "green",
     },
 
@@ -201,40 +230,40 @@ export const GREY_ROOM = {
     price: 600,
     photos: [
         {
-            src: "https://lh3.google.com/u/0/d/1mrGGz0gAkpv26MG3aHf1MhmWxRCys1Zh=w2236-h1430-iv1",
+            src: roomGrey_4.src,
             alt: "grey",
         },
         {
-            src: "https://lh3.google.com/u/0/d/1mFc2PlE4hCP5cRn_jPbBTsWx0Errm0QB=w2236-h1430-iv1",
+            src: roomGrey_2.src,
             alt: "grey",
         },
         {
-            src: "https://lh3.google.com/u/0/d/1oQfHFQognCcRF3RLxlOKlmfGwLbrRTky=w2236-h1430-iv1",
+            src: roomGrey_3.src,
             alt: "grey",
         },
         {
-            src: "https://lh3.google.com/u/0/d/11ukjPvsTZV6A8shsGtIIUUQDgGNNPyMa=w2236-h1430-iv1",
+            src: roomGrey_1.src,
             alt: "grey",
         },
     ],
 
     doublePhoto: [
         {
-            bigImageSrc: "https://lh3.google.com/u/0/d/1mrGGz0gAkpv26MG3aHf1MhmWxRCys1Zh=w2236-h1430-iv1",
+            bigImageSrc: roomGrey_4.src,
             bigImageAlt: "yellow",
-            smallImageSrc: "https://lh3.google.com/u/0/d/1_0ES4cPzHfXzA8Is_Ag5Oo-GbMu2-XN6=w2236-h1430-iv1",
+            smallImageSrc: roomGrey_5.src,
             smallImageAlt: "yellow",
         },
         {
-            bigImageSrc: "https://lh3.google.com/u/0/d/1_0ES4cPzHfXzA8Is_Ag5Oo-GbMu2-XN6=w2236-h1430-iv1",
+            bigImageSrc: roomGrey_5.src,
             bigImageAlt: "yellow",
-            smallImageSrc: "https://lh3.google.com/u/0/d/1kGspGJQW8ppI5bCnEvNnNhMnOWY0NlcT=w2236-h1430-iv1",
+            smallImageSrc: roomGrey.src,
             smallImageAlt: "yellow",
         },
     ],
 
     phonePhoto: {
-        src: "https://lh3.google.com/u/0/d/1oQfHFQognCcRF3RLxlOKlmfGwLbrRTky=w2236-h1430-iv1",
+        src: roomGrey_2,
         alt: "yellow",
     },
 
