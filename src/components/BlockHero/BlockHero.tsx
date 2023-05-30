@@ -38,17 +38,30 @@ export const BlockHero = () => {
     }, [needToOpenModal, openCreateOrderModal, router]);
 
     const setNextImage = useCallback(
-        () => setCurrentImage((prevState) => valueInRange(0, items.length - 1, prevState + 1)),
+        () =>
+            setCurrentImage((prevState) =>
+                prevState + 1 > items.length - 1 ? 0 : valueInRange(0, items.length - 1, prevState + 1),
+            ),
         [items.length],
     );
     const setPrevImage = useCallback(
-        () => setCurrentImage((prevState) => valueInRange(0, items.length - 1, prevState - 1)),
+        () =>
+            setCurrentImage((prevState) =>
+                prevState - 1 < 0 ? items.length - 1 : valueInRange(0, items.length - 1, prevState - 1),
+            ),
         [items.length],
     );
 
     return (
         <SiteContentBlock className={cx("block-hero")}>
-            <Image className={cx("bg-image")} src={items[currentImage]} alt="room image" width={1200} height={560} />
+            <Image
+                className={cx("bg-image")}
+                src={items[currentImage]}
+                alt="room image"
+                placeholder="blur"
+                width={1200}
+                height={560}
+            />
             <div className={cx("content")}>
                 <h1 className={cx("title")}>M Apart</h1>
                 <h2 className={cx("description")}>Апарт отель в одном из уютнейших уголков Петербурга</h2>
