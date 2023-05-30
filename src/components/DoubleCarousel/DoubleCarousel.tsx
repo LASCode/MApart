@@ -55,15 +55,15 @@ export const DoubleCarousel = ({ images, className, ...props }: DoubleCarouselPr
                             className={cx("image-big")}
                             src={image.bigImageSrc}
                             alt={image.bigImageAlt}
-                            width={842}
-                            height={545}
+                            width={816}
+                            height={400}
                         />
                         <Image
                             className={cx("image")}
                             src={image.smallImageSrc}
                             alt={image.smallImageAlt}
-                            width={310}
-                            height={382}
+                            width={309}
+                            height={120}
                         />
                     </div>
                 ))}
