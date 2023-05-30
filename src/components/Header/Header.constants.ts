@@ -10,7 +10,7 @@ export const HEADER_NAVIGATION_ITEMS: HeaderNavigationItem[] = [
         href: appRoute.mainAnchor(MainAnchorType.ADVANTAGES),
     },
     { title: "Расположение", href: appRoute.mainAnchor(MainAnchorType.LOCATION) },
-    { title: "Галлерея", href: appRoute.mainAnchor(MainAnchorType.GALLERY) },
+    { title: "Галерея", href: appRoute.mainAnchor(MainAnchorType.GALLERY) },
 ];
 
 export const HEADER_SOCIAL_ITEMS: SocialItem[] = [];

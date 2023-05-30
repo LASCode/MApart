@@ -27,13 +27,7 @@ export const Carousel = ({ images, className, ...props }: CarouselProps) => {
             >
                 {images.map((image) => (
                     <div className={cx("image-container")} key={image.src}>
-                        <Image
-                            className={cx("image")}
-                            src={image.src}
-                            alt={image.alt}
-                            width={500}
-                            height={300}
-                        />
+                        <Image className={cx("image")} src={image.src} alt={image.alt} width={500} height={300} />
                     </div>
                 ))}
             </ReactCarousel>

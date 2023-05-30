@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import cnBind from "classnames/bind";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 import basePhoto from "@/assets/rooms/room-template-about-us.png";
@@ -45,7 +46,7 @@ export default function Page() {
             <div className={cx("info")}>
                 {isDesktop && (
                     <div className={cx("base-photo")}>
-                        <img src={basePhoto.src} alt="flowers" />
+                        <Image src={basePhoto.src} alt="flowers" width={400} height={600} />
                     </div>
                 )}
                 <div className={cx("description")}>
@@ -54,8 +55,21 @@ export default function Page() {
                         Забронировать
                     </Button>
                     <div className={cx("description-img")}>
-                        {!isDesktop && <img className={cx("shadow-img")} src={basePhoto.src} alt="flowers" />}
-                        <img src={rooms[roomName].phonePhoto.src} alt={rooms[roomName].phonePhoto.src} />
+                        {!isDesktop && (
+                            <Image
+                                className={cx("shadow-img")}
+                                src={basePhoto.src}
+                                alt="flowers"
+                                width={400}
+                                height={600}
+                            />
+                        )}
+                        <Image
+                            src={rooms[roomName].phonePhoto.src}
+                            alt={rooms[roomName].phonePhoto.src}
+                            width={400}
+                            height={600}
+                        />
                     </div>
                 </div>
             </div>
