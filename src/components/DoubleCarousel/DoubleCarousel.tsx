@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Carousel as ReactCarousel } from "react-responsive-carousel";
 import cnBind from "classnames/bind";
+import Image from "next/image";
 
 import { IcArrowLeft, IcArrowRight } from "@/assets/icon";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -50,8 +51,20 @@ export const DoubleCarousel = ({ images, className, ...props }: DoubleCarouselPr
             >
                 {images.map((image) => (
                     <div className={cx("img-container")} key={image.bigImageSrc}>
-                        <img className={cx("image-big")} src={image.bigImageSrc} alt={image.bigImageAlt} />
-                        <img className={cx("image")} src={image.smallImageSrc} alt={image.smallImageAlt} />
+                        <Image
+                            className={cx("image-big")}
+                            src={image.bigImageSrc}
+                            alt={image.bigImageAlt}
+                            width={816}
+                            height={400}
+                        />
+                        <Image
+                            className={cx("image")}
+                            src={image.smallImageSrc}
+                            alt={image.smallImageAlt}
+                            width={309}
+                            height={120}
+                        />
                     </div>
                 ))}
             </ReactCarousel>

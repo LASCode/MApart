@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Carousel as ReactCarousel } from "react-responsive-carousel";
 import cnBind from "classnames/bind";
+import Image from "next/image";
 
 import { useIsMobile } from "@/hooks/useIsMobile";
 
@@ -26,7 +27,13 @@ export const Carousel = ({ images, className, ...props }: CarouselProps) => {
             >
                 {images.map((image) => (
                     <div className={cx("image-container")} key={image.src}>
-                        <img className={cx("image")} src={image.src} alt={image.alt} />
+                        <Image
+                            className={cx("image")}
+                            src={image.src}
+                            alt={image.alt}
+                            width={500}
+                            height={300}
+                        />
                     </div>
                 ))}
             </ReactCarousel>

@@ -42,6 +42,8 @@ export const BlockGallery = () => {
                             swipeable
                             showStatus={false}
                             showIndicators={false}
+                            centerSlidePercentage={80}
+                            centerMode
                         >
                             {galleryPhotos.map((image, index) => (
                                 <div key={index}>
@@ -50,7 +52,7 @@ export const BlockGallery = () => {
                                         width={170}
                                         height={220}
                                         alt="room"
-                                        style={{ objectFit: "cover" }}
+                                        style={{ objectFit: "cover", padding: "0 5px" }}
                                     />
                                 </div>
                             ))}
