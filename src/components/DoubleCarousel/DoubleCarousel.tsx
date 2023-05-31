@@ -55,6 +55,8 @@ export const DoubleCarousel = ({ images, className, ...props }: DoubleCarouselPr
                             className={cx("image-big")}
                             src={image.bigImageSrc}
                             alt={image.bigImageAlt}
+                            placeholder="blur"
+                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcXQ8AAbsBHLLDr5MAAAAASUVORK5CYII="
                             width={816}
                             height={400}
                         />
@@ -62,6 +64,8 @@ export const DoubleCarousel = ({ images, className, ...props }: DoubleCarouselPr
                             className={cx("image")}
                             src={image.smallImageSrc}
                             alt={image.smallImageAlt}
+                            placeholder="blur"
+                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcXQ8AAbsBHLLDr5MAAAAASUVORK5CYII="
                             width={309}
                             height={120}
                         />

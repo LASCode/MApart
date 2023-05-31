@@ -25,7 +25,11 @@ export const BlockRoomAmenities = ({ withMap, className, containerClassName }: B
     );
 
     return (
-        <SiteContentBlock className={cx("block-room-amenities", className)} containerClassName={containerClassName}>
+        <SiteContentBlock
+            className={cx("block-room-amenities", className)}
+            containerClassName={containerClassName}
+            id={MainAnchorType.ADVANTAGES}
+        >
             <div className={cx("content")}>
                 <div>
                     <span className={cx("title")}>В каждом номере есть</span>

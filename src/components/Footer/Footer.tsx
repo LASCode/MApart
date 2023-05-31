@@ -19,7 +19,7 @@ export const Footer = ({ className }: FooterProps) => {
                 <Link className={cx("tel")} href={`tel:${HEADER_TEL_NUMBER.trim()}`}>
                     {HEADER_TEL_NUMBER}
                 </Link>
-                <span className={cx("address")}>Санкт-Петербург, пр. Центральный 25</span>
+                <span className={cx("address")}>Санкт-Петербург, Кременчугская улица, 13к1</span>
             </div>
         </footer>
     );

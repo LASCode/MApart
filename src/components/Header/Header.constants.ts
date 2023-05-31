@@ -15,4 +15,4 @@ export const HEADER_NAVIGATION_ITEMS: HeaderNavigationItem[] = [
 
 export const HEADER_SOCIAL_ITEMS: SocialItem[] = [];
 
-export const HEADER_TEL_NUMBER = "+7 911 769 5712";
+export const HEADER_TEL_NUMBER = "+7 931 355 5551";

@@ -9,11 +9,11 @@
     --base-dark: #333027;
     --base-grey: #a7a398;
     --base-bg: #fefcf4;
-    --yellow: #FEF6CE;
-    --rose: #F8E4F0;
-    --green: #D0DFD2;
-    --blue: #DDEDFF;
-    --grey: #EFEFEF;
+    --yellow: #fef6ce;
+    --rose: #f8e4f0;
+    --green: #d0dfd2;
+    --blue: #ddedff;
+    --grey: #efefef;
 
     --header-height-mobile: 68px;
     --header-height-desktop: 86px;
@@ -23,9 +23,9 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    /*height: 100vh;*/
-    /*background-color: red;*/
     background-color: var(--base-bg);
+    @include font-cormorant();
+    @include text-body();
 }
 html {
     scroll-behavior: smooth;
@@ -33,8 +33,5 @@ html {
 
 * {
     box-sizing: border-box;
-}
-
-a {
     text-decoration: none;
 }

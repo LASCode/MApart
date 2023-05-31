@@ -6,4 +6,8 @@
 .image {
     height: 100%;
     width: 100%;
+
+    &.vertical {
+        scale: 1.2;
+    }
 }

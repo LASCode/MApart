@@ -59,6 +59,7 @@ export const BlockHero = () => {
                 src={items[currentImage]}
                 alt="room image"
                 placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcXQ8AAbsBHLLDr5MAAAAASUVORK5CYII="
                 width={1200}
                 height={560}
             />

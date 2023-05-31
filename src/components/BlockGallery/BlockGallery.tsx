@@ -52,6 +52,8 @@ export const BlockGallery = () => {
                                         width={170}
                                         height={220}
                                         alt="room"
+                                        placeholder="blur"
+                                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcXQ8AAbsBHLLDr5MAAAAASUVORK5CYII="
                                         style={{ objectFit: "cover", padding: "0 5px" }}
                                     />
                                 </div>
