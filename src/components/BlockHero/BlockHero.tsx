@@ -1,4 +1,5 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo } from "react";
+import { Carousel } from "react-responsive-carousel";
 import cnBind from "classnames/bind";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -11,7 +12,6 @@ import { BLUR_IMAGE } from "@/constants/stubs";
 import { useBooleanState } from "@/hooks/useBooleanState";
 import { useWindowSizeTo } from "@/hooks/useWindowSizeTo";
 import { appRoute, MainAnchorType } from "@/routes";
-import { valueInRange } from "@/utils";
 
 import styles from "./BlockHero.module.scss";
 
@@ -19,7 +19,6 @@ const cx = cnBind.bind(styles);
 
 export const BlockHero = () => {
     const needToOpenModal = useWindowSizeTo(850);
-    const [currentImage, setCurrentImage] = useState(0);
     const router = useRouter();
     const [createOrderModalIsOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState(false);
     const items = useMemo<string[]>(
@@ -42,32 +41,41 @@ export const BlockHero = () => {
         }
     }, [needToOpenModal, openCreateOrderModal, router]);
 
-    const setNextImage = useCallback(
-        () =>
-            setCurrentImage((prevState) =>
-                prevState + 1 > items.length - 1 ? 0 : valueInRange(0, items.length - 1, prevState + 1),
-            ),
-        [items.length],
-    );
-    const setPrevImage = useCallback(
-        () =>
-            setCurrentImage((prevState) =>
-                prevState - 1 < 0 ? items.length - 1 : valueInRange(0, items.length - 1, prevState - 1),
-            ),
-        [items.length],
-    );
-
     return (
         <SiteContentBlock className={cx("block-hero")}>
-            <Image
-                className={cx("bg-image")}
-                src={items[currentImage]}
-                alt="room image"
-                placeholder="blur"
-                blurDataURL={BLUR_IMAGE}
-                width={1200}
-                height={560}
-            />
+            <Carousel
+                className={cx("carousel")}
+                showThumbs={false}
+                showIndicators={false}
+                animationHandler="fade"
+                infiniteLoop
+                autoPlay
+                showStatus={false}
+                swipeable={false}
+                renderArrowNext={(callback) => (
+                    <button type="button" className={cx("action", "next")} onClick={callback}>
+                        <IcArrowRight />
+                    </button>
+                )}
+                renderArrowPrev={(callback) => (
+                    <button type="button" className={cx("action", "prev")} onClick={callback}>
+                        <IcArrowLeft />
+                    </button>
+                )}
+            >
+                {items.map((el) => (
+                    <Image
+                        key={el}
+                        src={el}
+                        className={cx("image")}
+                        alt="room image"
+                        placeholder="blur"
+                        blurDataURL={BLUR_IMAGE}
+                        width={1200}
+                        height={560}
+                    />
+                ))}
+            </Carousel>
             <div className={cx("content")}>
                 <h1 className={cx("title")}>M Apart</h1>
                 <h2 className={cx("description")}>Апарт отель в одном из уютнейших уголков Петербурга</h2>
@@ -75,14 +83,6 @@ export const BlockHero = () => {
             <Button className={cx("button-order")} icon={IcArrowRight} onClick={handleClick}>
                 Забронировать
             </Button>
-            <div className={cx("actions")}>
-                <button type="button" className={cx("action")} onClick={setPrevImage}>
-                    <IcArrowLeft />
-                </button>
-                <button type="button" className={cx("action")} onClick={setNextImage}>
-                    <IcArrowRight />
-                </button>
-            </div>
             <CreateOrderModal isOpen={createOrderModalIsOpen} onClose={closeCreateOrderModal} />
         </SiteContentBlock>
     );
