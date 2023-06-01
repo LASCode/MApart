@@ -68,4 +68,8 @@
     font-size: 18px;
     line-height: 20px;
     color: var(--base-dark);
+
+    @include mobile {
+        text-align: center;
+    }
 }
