@@ -45,11 +45,11 @@ export const YELLOW_ROOM = {
     price: 600,
     photos: [
         {
-            src: "https://i.ibb.co/98bNWPt/room-yellow-1.jpg",
+            src: "https://images2.imgbox.com/a6/90/5OgjRqLk_o.jpg",
             alt: "yellow",
         },
         {
-            src: "https://i.ibb.co/9ZQYQ2F/room-yellow-2.jpg",
+            src: "https://images2.imgbox.com/ed/74/Aee9ymNk_o.jpg",
             alt: "yellow",
         },
         {
@@ -57,28 +57,28 @@ export const YELLOW_ROOM = {
             alt: "yellow",
         },
         {
-            src: "https://i.ibb.co/CvG2JWV/room-yellow-4.jpg",
+            src: "https://images2.imgbox.com/8c/69/1uPNnic9_o.jpg",
             alt: "yellow",
         },
     ],
 
     doublePhoto: [
         {
-            bigImageSrc: "https://i.ibb.co/98bNWPt/room-yellow-1.jpg",
+            bigImageSrc: "https://images2.imgbox.com/a6/90/5OgjRqLk_o.jpg",
             bigImageAlt: "yellow",
-            smallImageSrc: "https://i.ibb.co/9ZQYQ2F/room-yellow-2.jpg",
+            smallImageSrc: "https://images2.imgbox.com/ed/74/Aee9ymNk_o.jpg",
             smallImageAlt: "yellow",
         },
         {
             bigImageSrc: "https://images2.imgbox.com/0a/52/HzNQy28i_o.jpg",
             bigImageAlt: "yellow",
-            smallImageSrc: "https://i.ibb.co/RSpc0gv/room-yellow.jpg",
+            smallImageSrc: "https://images2.imgbox.com/0a/cd/5S5ZgCGz_o.jpg",
             smallImageAlt: "yellow",
         },
     ],
 
     phonePhoto: {
-        src: "https://i.ibb.co/CvG2JWV/room-yellow-4.jpg",
+        src: "https://images2.imgbox.com/8c/69/1uPNnic9_o.jpg",
         alt: "yellow",
     },
 
@@ -103,11 +103,11 @@ export const BLUE_ROOM = {
             alt: "blue",
         },
         {
-            src: "https://i.ibb.co/DkTFjDB/room-blue-3.jpg",
+            src: "https://images2.imgbox.com/db/40/wn6CaYE9_o.jpg",
             alt: "blue",
         },
         {
-            src: "https://i.ibb.co/MVBYndZ/room-blue-4.jpg",
+            src: "https://images2.imgbox.com/58/2b/eWYp9URY_o.jpg",
             alt: "blue",
         },
     ],
@@ -116,19 +116,19 @@ export const BLUE_ROOM = {
         {
             bigImageSrc: "https://images2.imgbox.com/8d/35/zsgy6h6f_o.jpg",
             bigImageAlt: "blue",
-            smallImageSrc: "https://i.ibb.co/MVBYndZ/room-blue-4.jpg",
+            smallImageSrc: "https://images2.imgbox.com/58/2b/eWYp9URY_o.jpg",
             smallImageAlt: "blue",
         },
         {
             bigImageSrc: "https://images2.imgbox.com/8b/ed/egNo5NxC_o.jpg",
             bigImageAlt: "blue",
-            smallImageSrc: "https://i.ibb.co/DkTFjDB/room-blue-3.jpg",
+            smallImageSrc: "https://images2.imgbox.com/db/40/wn6CaYE9_o.jpg",
             smallImageAlt: "blue",
         },
     ],
 
     phonePhoto: {
-        src: "https://i.ibb.co/MVBYndZ/room-blue-4.jpg",
+        src: "https://images2.imgbox.com/58/2b/eWYp9URY_o.jpg",
         alt: "blue",
     },
 
@@ -145,7 +145,7 @@ export const GREEN_ROOM = {
     price: 600,
     photos: [
         {
-            src: "https://i.ibb.co/QQ0djDY/room-green-6.jpg",
+            src: "https://images2.imgbox.com/e0/af/mqvlYpdQ_o.jpg",
             alt: "green",
         },
         {
@@ -153,38 +153,38 @@ export const GREEN_ROOM = {
             alt: "green",
         },
         {
-            src: "https://i.ibb.co/LhPznMr/room-green-4.jpg",
+            src: "https://images2.imgbox.com/18/c9/86p0VLow_o.jpg",
             alt: "green",
         },
         {
-            src: "https://i.ibb.co/pxXCGGx/room-green-2.jpg",
+            src: "https://images2.imgbox.com/55/34/ZzirUZ1H_o.jpg",
             alt: "green",
         },
     ],
 
     doublePhoto: [
         {
-            bigImageSrc: "https://i.ibb.co/QQ0djDY/room-green-6.jpg",
+            bigImageSrc: "https://images2.imgbox.com/e0/af/mqvlYpdQ_o.jpg",
             bigImageAlt: "green",
-            smallImageSrc: "https://i.ibb.co/syw3tdF/room-green-3.jpg",
+            smallImageSrc: "https://images2.imgbox.com/cf/0b/LIJ5IT9d_o.jpg",
             smallImageAlt: "green",
         },
         {
             bigImageSrc: "https://images2.imgbox.com/de/f4/0hI94O6W_o.jpg",
             bigImageAlt: "green",
-            smallImageSrc: "https://i.ibb.co/FhwKdY3/room-green-1.jpg",
+            smallImageSrc: "https://images2.imgbox.com/b0/3d/NiN7QpCr_o.jpg",
             smallImageAlt: "green",
         },
         {
-            bigImageSrc: "https://i.ibb.co/pxXCGGx/room-green-2.jpg",
+            bigImageSrc: "https://images2.imgbox.com/55/34/ZzirUZ1H_o.jpg",
             bigImageAlt: "green",
-            smallImageSrc: "https://i.ibb.co/BfgSh4y/room-green.jpg",
+            smallImageSrc: "https://images2.imgbox.com/eb/f9/76CMhaCu_o.jpg",
             smallImageAlt: "green",
         },
     ],
 
     phonePhoto: {
-        src: "https://i.ibb.co/LhPznMr/room-green-4.jpg",
+        src: "https://images2.imgbox.com/18/c9/86p0VLow_o.jpg",
         alt: "green",
     },
 
@@ -201,26 +201,26 @@ export const GREY_ROOM = {
     price: 600,
     photos: [
         {
-            src: "https://i.ibb.co/FnWrPVp/room-grey-4.jpg",
+            src: "https://images2.imgbox.com/5e/b8/iMrtYHPq_o.jpg",
             alt: "grey",
         },
         {
-            src: "https://i.ibb.co/0nRtQp3/room-grey-2.jpg",
+            src: "https://images2.imgbox.com/41/35/yzaNbSWK_o.jpg",
             alt: "grey",
         },
         {
-            src: "https://i.ibb.co/RH5gY1n/room-grey-3.jpg",
+            src: "https://images2.imgbox.com/8a/1a/M7u0Rwbr_o.jpg",
             alt: "grey",
         },
         {
-            src: "https://i.ibb.co/tQ6KN2T/room-grey-1.jpg",
+            src: "https://images2.imgbox.com/79/8b/VrhpqTE8_o.jpg",
             alt: "grey",
         },
     ],
 
     doublePhoto: [
         {
-            bigImageSrc: "https://i.ibb.co/FnWrPVp/room-grey-4.jpg",
+            bigImageSrc: "https://images2.imgbox.com/5e/b8/iMrtYHPq_o.jpg",
             bigImageAlt: "yellow",
             smallImageSrc: "https://images2.imgbox.com/09/4e/JDjTDuU5_o.jpg",
             smallImageAlt: "yellow",
@@ -228,13 +228,13 @@ export const GREY_ROOM = {
         {
             bigImageSrc: "https://images2.imgbox.com/09/4e/JDjTDuU5_o.jpg",
             bigImageAlt: "yellow",
-            smallImageSrc: "https://i.ibb.co/F7dC3Hx/room-grey.jpg",
+            smallImageSrc: "https://images2.imgbox.com/53/6a/8xOedWJv_o.jpg",
             smallImageAlt: "yellow",
         },
     ],
 
     phonePhoto: {
-        src: "https://i.ibb.co/0nRtQp3/room-grey-2.jpg",
+        src: "https://images2.imgbox.com/41/35/yzaNbSWK_o.jpg",
         alt: "yellow",
     },
 
