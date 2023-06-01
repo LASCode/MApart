@@ -30,7 +30,7 @@ export const BlockAboutUs = () => {
                         {isMobile && (
                             <Image
                                 className={cx("image-mobile")}
-                                src="https://downloader.disk.yandex.ru/preview/678304a98f3c8b9099a67eabfe872bcfd90feed7693ba92dd2af594d08bb7991/64782744/xAxN69xWCMnXMMu-oBq3MQkCfAoWj1eSU4sv3EHJOpGiFZRpYliAAMv_-zX6QUt0bl6bbmk6klzbYYVrdqe72g%3D%3D?uid=0&filename=room-template-about-us.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048"
+                                src="https://i.ibb.co/KLPycBz/room-template-about-us.png"
                                 alt="1"
                                 width={156}
                                 height={216}
@@ -50,7 +50,7 @@ export const BlockAboutUs = () => {
                     <div className={cx("block-image")}>
                         <Image
                             className={cx("image-desktop")}
-                            src="https://downloader.disk.yandex.ru/preview/678304a98f3c8b9099a67eabfe872bcfd90feed7693ba92dd2af594d08bb7991/64782744/xAxN69xWCMnXMMu-oBq3MQkCfAoWj1eSU4sv3EHJOpGiFZRpYliAAMv_-zX6QUt0bl6bbmk6klzbYYVrdqe72g%3D%3D?uid=0&filename=room-template-about-us.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048"
+                            src="https://i.ibb.co/KLPycBz/room-template-about-us.png"
                             alt="1"
                             width={500}
                             height={740}
