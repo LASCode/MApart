@@ -3,12 +3,12 @@ import { Carousel as ReactCarousel } from "react-responsive-carousel";
 import cnBind from "classnames/bind";
 import Image from "next/image";
 
+import { BLUR_IMAGE } from "@/constants/stubs";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 import type { CarouselProps } from "./Carousel.types";
 
 import styles from "./Carousel.module.scss";
-import {BLUR_IMAGE} from "@/constants/stubs";
 
 const cx = cnBind.bind(styles);
 
@@ -24,7 +24,7 @@ export const Carousel = ({ images, className, ...props }: CarouselProps) => {
                 swipeable
                 showStatus={false}
                 infiniteLoop
-                emulateTouch
+                emulateTouch={!isMobile}
             >
                 {images.map((image) => (
                     <div className={cx("image-container")} key={image.src}>

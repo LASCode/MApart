@@ -1,10 +1,11 @@
 import cnBind from "classnames/bind";
 import Image from "next/image";
 
+import { BLUR_IMAGE } from "@/constants/stubs";
+
 import type { PhotosBlockProps } from "./PhotosBlock.types";
 
 import styles from "./PhotosBlock.module.scss";
-import {BLUR_IMAGE} from "@/constants/stubs";
 
 const cx = cnBind.bind(styles);
 

@@ -2,7 +2,6 @@ import cnBind from "classnames/bind";
 import Image from "next/image";
 
 import { IcVideoPlay } from "@/assets/icon";
-import RoomImage from "@/assets/rooms/room-template-about-us.png";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { MainAnchorType } from "@/routes";
@@ -29,7 +28,13 @@ export const BlockAboutUs = () => {
                         </div>
 
                         {isMobile && (
-                            <Image className={cx("image-mobile")} src={RoomImage} alt="1" width={156} height={216} />
+                            <Image
+                                className={cx("image-mobile")}
+                                src="https://downloader.disk.yandex.ru/preview/678304a98f3c8b9099a67eabfe872bcfd90feed7693ba92dd2af594d08bb7991/64782744/xAxN69xWCMnXMMu-oBq3MQkCfAoWj1eSU4sv3EHJOpGiFZRpYliAAMv_-zX6QUt0bl6bbmk6klzbYYVrdqe72g%3D%3D?uid=0&filename=room-template-about-us.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048"
+                                alt="1"
+                                width={156}
+                                height={216}
+                            />
                         )}
                     </div>
                     <span className={cx("description")}>
@@ -43,7 +48,13 @@ export const BlockAboutUs = () => {
                 </div>
                 {!isMobile && (
                     <div className={cx("block-image")}>
-                        <Image className={cx("image-desktop")} src={RoomImage} alt="1" width={500} height={740} />
+                        <Image
+                            className={cx("image-desktop")}
+                            src="https://downloader.disk.yandex.ru/preview/678304a98f3c8b9099a67eabfe872bcfd90feed7693ba92dd2af594d08bb7991/64782744/xAxN69xWCMnXMMu-oBq3MQkCfAoWj1eSU4sv3EHJOpGiFZRpYliAAMv_-zX6QUt0bl6bbmk6klzbYYVrdqe72g%3D%3D?uid=0&filename=room-template-about-us.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048"
+                            alt="1"
+                            width={500}
+                            height={740}
+                        />
                     </div>
                 )}
             </div>

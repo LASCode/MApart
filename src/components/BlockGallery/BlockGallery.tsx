@@ -7,6 +7,7 @@ import { IcArrowRight } from "@/assets/icon";
 import { Button } from "@/components/Button";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
 import { galleryPhotos } from "@/constants/gallery";
+import { BLUR_IMAGE } from "@/constants/stubs";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { MainAnchorType } from "@/routes";
 import { makeNestedArray } from "@/utils";
@@ -14,7 +15,6 @@ import { makeNestedArray } from "@/utils";
 import { PhotosBlock } from "./PhotosBlock/PhotosBlock";
 
 import styles from "./BlockGallery.module.scss";
-import {BLUR_IMAGE} from "@/constants/stubs";
 
 const cx = cnBind.bind(styles);
 
