@@ -22,7 +22,7 @@ export const ROSE_ROOM = {
         {
             bigImageSrc: "https://i.ibb.co/GpghrTT/room-rose-5.jpg",
             bigImageAlt: "rose",
-            smallImageSrc: "https://i.ibb.co/vqWrGjJ/room-rose-1.jpg",
+            smallImageSrc: "https://images2.imgbox.com/50/12/ovgw7FQZ_o.jpg",
             smallImageAlt: "rose",
         },
     ],
@@ -53,7 +53,7 @@ export const YELLOW_ROOM = {
             alt: "yellow",
         },
         {
-            src: "https://i.ibb.co/whSgX2L/room-yellow-3.jpg",
+            src: "https://images2.imgbox.com/0a/52/HzNQy28i_o.jpg",
             alt: "yellow",
         },
         {
@@ -70,7 +70,7 @@ export const YELLOW_ROOM = {
             smallImageAlt: "yellow",
         },
         {
-            bigImageSrc: "https://i.ibb.co/whSgX2L/room-yellow-3.jpg",
+            bigImageSrc: "https://images2.imgbox.com/0a/52/HzNQy28i_o.jpg",
             bigImageAlt: "yellow",
             smallImageSrc: "https://i.ibb.co/RSpc0gv/room-yellow.jpg",
             smallImageAlt: "yellow",
@@ -99,7 +99,7 @@ export const BLUE_ROOM = {
             alt: "blue",
         },
         {
-            src: "https://i.ibb.co/b5PDjjN/room-blue-2.jpg",
+            src: "https://images2.imgbox.com/8b/ed/egNo5NxC_o.jpg",
             alt: "blue",
         },
         {
@@ -120,7 +120,7 @@ export const BLUE_ROOM = {
             smallImageAlt: "blue",
         },
         {
-            bigImageSrc: "https://i.ibb.co/b5PDjjN/room-blue-2.jpg",
+            bigImageSrc: "https://images2.imgbox.com/8b/ed/egNo5NxC_o.jpg",
             bigImageAlt: "blue",
             smallImageSrc: "https://i.ibb.co/DkTFjDB/room-blue-3.jpg",
             smallImageAlt: "blue",
@@ -149,7 +149,7 @@ export const GREEN_ROOM = {
             alt: "green",
         },
         {
-            src: "https://i.ibb.co/X5JSWjk/room-green-5.jpg",
+            src: "https://images2.imgbox.com/de/f4/0hI94O6W_o.jpg",
             alt: "green",
         },
         {
@@ -170,7 +170,7 @@ export const GREEN_ROOM = {
             smallImageAlt: "green",
         },
         {
-            bigImageSrc: "https://i.ibb.co/X5JSWjk/room-green-5.jpg",
+            bigImageSrc: "https://images2.imgbox.com/de/f4/0hI94O6W_o.jpg",
             bigImageAlt: "green",
             smallImageSrc: "https://i.ibb.co/FhwKdY3/room-green-1.jpg",
             smallImageAlt: "green",
@@ -222,11 +222,11 @@ export const GREY_ROOM = {
         {
             bigImageSrc: "https://i.ibb.co/FnWrPVp/room-grey-4.jpg",
             bigImageAlt: "yellow",
-            smallImageSrc: "https://i.ibb.co/Hd6BSxy/room-grey-5.jpg",
+            smallImageSrc: "https://images2.imgbox.com/09/4e/JDjTDuU5_o.jpg",
             smallImageAlt: "yellow",
         },
         {
-            bigImageSrc: "https://i.ibb.co/Hd6BSxy/room-grey-5.jpg",
+            bigImageSrc: "https://images2.imgbox.com/09/4e/JDjTDuU5_o.jpg",
             bigImageAlt: "yellow",
             smallImageSrc: "https://i.ibb.co/F7dC3Hx/room-grey.jpg",
             smallImageAlt: "yellow",

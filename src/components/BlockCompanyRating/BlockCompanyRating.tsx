@@ -33,7 +33,7 @@ export const BlockCompanyRating = () => {
             <CompanyRating className={cx("item")} companyName="Суточно.ру" rate={9.7} />
             <div className={cx("company-new-order", "item")} onClick={handleClick}>
                 <Image
-                    src="https://i.ibb.co/Hd6BSxy/room-grey-5.jpg"
+                    src="https://images2.imgbox.com/09/4e/JDjTDuU5_o.jpg"
                     alt="Создание заказа"
                     width={900}
                     height={300}
