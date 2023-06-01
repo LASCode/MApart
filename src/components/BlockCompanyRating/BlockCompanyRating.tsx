@@ -10,6 +10,7 @@ import { SiteContentBlock } from "@/components/SiteContentBlock";
 import { useBooleanState } from "@/hooks/useBooleanState";
 import { useWindowSizeTo } from "@/hooks/useWindowSizeTo";
 import { appRoute, MainAnchorType } from "@/routes";
+import { getGoogleImageUrl } from "@/utils/getGoogleImageUrl";
 
 import styles from "./BlockCompanyRating.module.scss";
 
@@ -33,7 +34,8 @@ export const BlockCompanyRating = () => {
             <CompanyRating className={cx("item")} companyName="Суточно.ру" rate={9.7} />
             <div className={cx("company-new-order", "item")} onClick={handleClick}>
                 <Image
-                    src="https://downloader.disk.yandex.ru/preview/2fb2b03797c0f6eae8e16dc3f637794c7a8d794c589d83b44c49707549024387/64780a9a/j1YhHhVRONsvZEMm7pV4-nPgLYSroeIMeHVR-T2dqFckIF8001eR0mojkpI5F3wFocqT1z6hNTL1AgB6py_EIw%3D%3D?uid=0&filename=room-grey-5.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048"
+                    src={getGoogleImageUrl("12WNeEWe_v37kvN1f7oCYe78DVhz1lgnE")}
+                    // src="https://downloader.disk.yandex.ru/preview/2fb2b03797c0f6eae8e16dc3f637794c7a8d794c589d83b44c49707549024387/64780a9a/j1YhHhVRONsvZEMm7pV4-nPgLYSroeIMeHVR-T2dqFckIF8001eR0mojkpI5F3wFocqT1z6hNTL1AgB6py_EIw%3D%3D?uid=0&filename=room-grey-5.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048"
                     alt="Создание заказа"
                     width={900}
                     height={300}

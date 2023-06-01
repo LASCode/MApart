@@ -27,6 +27,7 @@
     }
 }
 .content {
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,6 +49,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 2;
     background-color: #e9e1c9;
     width: 110px;
     height: 50px;
@@ -57,6 +59,10 @@
     justify-content: space-around;
 }
 .action {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    bottom: 0;
     height: 45px;
     width: 45px;
     padding: 0;
@@ -75,9 +81,14 @@
             @include fill-svg-and-path(white);
         }
     }
+
+    &.prev {
+        right: calc(45px + 15px );
+    }
 }
 
 .button-order {
+    z-index: 2;
     --background-color: #ffffff;
     --background-color-hover: var(--base-akcent);
     --background-color-active: #b9b9b9;
@@ -101,3 +112,30 @@
     object-fit: cover;
     background-color: white;
 }
+.carousel {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: #e9e1c9;
+        width: 110px;
+        height: 50px;
+        right: 0;
+        bottom: 0;
+    }
+
+    :global {
+        .carousel-slider {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.image {
+    object-fit: cover;
+}
+
