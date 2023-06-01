@@ -3,24 +3,24 @@ export const ROSE_ROOM = {
     price: 600,
     photos: [
         {
-            src: "https://i.ibb.co/ZL5MqXz/room-rose-2.jpg",
+            src: "https://images2.imgbox.com/99/49/r6HCcoLa_o.jpg",
             alt: "rose",
         },
         {
-            src: "https://i.ibb.co/GpghrTT/room-rose-5.jpg",
+            src: "https://images2.imgbox.com/a8/8b/lyshS1vs_o.jpg",
             alt: "rose",
         },
     ],
 
     doublePhoto: [
         {
-            bigImageSrc: "https://i.ibb.co/ZL5MqXz/room-rose-2.jpg",
+            bigImageSrc: "https://images2.imgbox.com/99/49/r6HCcoLa_o.jpg",
             bigImageAlt: "rose",
-            smallImageSrc: "https://i.ibb.co/QnY1bb1/room-rose-4.jpg",
+            smallImageSrc: "https://images2.imgbox.com/7e/90/skBWZpWq_o.jpg",
             smallImageAlt: "rose",
         },
         {
-            bigImageSrc: "https://i.ibb.co/GpghrTT/room-rose-5.jpg",
+            bigImageSrc: "https://images2.imgbox.com/a8/8b/lyshS1vs_o.jpg",
             bigImageAlt: "rose",
             smallImageSrc: "https://images2.imgbox.com/50/12/ovgw7FQZ_o.jpg",
             smallImageAlt: "rose",
@@ -28,7 +28,7 @@ export const ROSE_ROOM = {
     ],
 
     phonePhoto: {
-        src: "https://i.ibb.co/ZL5MqXz/room-rose-2.jpg",
+        src: "https://images2.imgbox.com/99/49/r6HCcoLa_o.jpg",
         alt: "reose",
     },
 
@@ -95,7 +95,7 @@ export const BLUE_ROOM = {
     price: 600,
     photos: [
         {
-            src: "https://i.ibb.co/MhQBW5m/room-blue-1.jpg",
+            src: "https://images2.imgbox.com/8d/35/zsgy6h6f_o.jpg",
             alt: "blue",
         },
         {
@@ -114,7 +114,7 @@ export const BLUE_ROOM = {
 
     doublePhoto: [
         {
-            bigImageSrc: "https://i.ibb.co/MhQBW5m/room-blue-1.jpg",
+            bigImageSrc: "https://images2.imgbox.com/8d/35/zsgy6h6f_o.jpg",
             bigImageAlt: "blue",
             smallImageSrc: "https://i.ibb.co/MVBYndZ/room-blue-4.jpg",
             smallImageAlt: "blue",
