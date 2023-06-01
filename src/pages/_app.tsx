@@ -1,5 +1,6 @@
 import { Provider } from "react-redux";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 
 import { wrapper } from "@/store";
 
@@ -12,9 +13,14 @@ function MyApp({ Component, ...rest }: AppProps) {
     const result = wrapper.useWrappedStore(rest);
 
     return (
-        <Provider store={result.store}>
-            <Component {...rest.pageProps} />
-        </Provider>
+        <>
+            <Head>
+                <title>M-Apart | Апартаменты в центре Петербурга</title>
+            </Head>
+            <Provider store={result.store}>
+                <Component {...rest.pageProps} />
+            </Provider>
+        </>
     );
 }
 

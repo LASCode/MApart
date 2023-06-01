@@ -1,5 +1,6 @@
 import { useCallback, useEffect } from "react";
 import cnBind from "classnames/bind";
+import { noop } from "lodash";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -24,7 +25,7 @@ import styles from "./Header.module.scss";
 
 const cx = cnBind.bind(styles);
 
-export const Header = ({ className }: HeaderProps) => {
+export const Header = ({ onlyModal, className }: HeaderProps) => {
     const isMobile = useIsMobile();
     const showSocials = useWindowSizeFrom(1120);
     const showTelButton = useWindowSizeTo(1000);
@@ -36,12 +37,12 @@ export const Header = ({ className }: HeaderProps) => {
     const MenuImage = isOpen ? IcMenuClose : IcMenuOpen;
 
     const handleClick = useCallback(() => {
-        if (needToOpenModal) {
+        if (onlyModal || needToOpenModal) {
             openCreateOrderModal();
         } else {
-            void router.push(appRoute.mainAnchor(MainAnchorType.ORDER), undefined, { scroll: false });
+            void router.push(`/${appRoute.mainAnchor(MainAnchorType.ORDER)}`, undefined, { scroll: false });
         }
-    }, [needToOpenModal, openCreateOrderModal, router]);
+    }, [needToOpenModal, onlyModal, openCreateOrderModal, router]);
 
     useEffect(() => {
         document.body.style.overflow = isOpen && headerMobileView ? "hidden" : "auto";
@@ -69,9 +70,17 @@ export const Header = ({ className }: HeaderProps) => {
                         </div>
                     )}
                 </div>
-                <Button className={cx("button")} onClick={handleClick}>
-                    Забронировать
-                </Button>
+                {needToOpenModal ? (
+                    <Link href={appRoute.mainAnchor(MainAnchorType.ORDER)} scroll={false}>
+                        <Button className={cx("button")} onClick={noop}>
+                            Забронировать
+                        </Button>
+                    </Link>
+                ) : (
+                    <Button className={cx("button")} onClick={handleClick}>
+                        Забронировать
+                    </Button>
+                )}
             </SiteContentBlock>
             <HeaderMenuMobile isOpen={headerMobileView && isOpen} onClose={close} />
             <CreateOrderModal isOpen={createOrderModalIsOpen} onClose={closeCreateOrderModal} />

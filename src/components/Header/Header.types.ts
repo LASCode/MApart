@@ -13,5 +13,6 @@ export interface HeaderSocialItem {
 }
 
 export interface HeaderProps {
+    onlyModal?: boolean;
     className?: string;
 }

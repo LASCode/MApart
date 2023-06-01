@@ -15,6 +15,7 @@ export const PageLayout = ({
     children,
     withFooter = true,
     withHeader = true,
+    headerProps,
     className,
     layoutClassName,
 }: PageLayoutProps) => {
@@ -22,7 +23,7 @@ export const PageLayout = ({
 
     return (
         <div className={cx("page-layout", layoutClassName)}>
-            {withHeader && <Header className={cx("header")} />}
+            {withHeader && <Header className={cx("header")} {...headerProps} />}
 
             <main className={cx("main", className)}>{children}</main>
 
