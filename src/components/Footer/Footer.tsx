@@ -16,13 +16,24 @@ export const Footer = ({ className }: FooterProps) => {
 
     return (
         <footer className={cx("footer", className)}>
-            <Logo className={cx("logo")} />
-            <Socials className={cx("socials")} />
-            <div className={cx("credits")}>
-                <Link className={cx("tel")} href={`tel:${HEADER_TEL_NUMBER.trim()}`}>
-                    {HEADER_TEL_NUMBER}
-                </Link>
-                <span className={cx("address")}>Санкт-Петербург,{isMobile && <br />} Кременчугская улица, 13к1</span>
+            <div className={cx("content")}>
+                <Logo className={cx("logo")} />
+                <Socials className={cx("socials")} />
+
+                <div className={cx("credits")}>
+                    <Link className={cx("tel")} href={`tel:${HEADER_TEL_NUMBER.trim()}`}>
+                        {HEADER_TEL_NUMBER}
+                    </Link>
+                    <span className={cx("address")}>
+                        Санкт-Петербург,{isMobile && <br />} Кременчугская улица, 13к1
+                    </span>
+                </div>
+            </div>
+            <div className={cx("source")}>
+                <span>M-Apart © Все права защищены. 2023.</span>
+                <span>
+                    Разработка: Веб-студия <a href="https://levsha-web.ru/">Левша</a>
+                </span>
             </div>
         </footer>
     );

@@ -1,11 +1,13 @@
 .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.content {
     width: 100%;
-    //flex-direction: row;
-    //justify-content: space-between;
-    //align-items: center;
     box-sizing: border-box;
-    padding: 30px var(--page-safe-area-horizontal);
-    border-top: 1px solid var(--base-grey);
+    padding: 34px var(--page-safe-area-horizontal);
+    border-bottom: 1px solid var(--base-grey);
 
     display: grid;
     align-items: center;
@@ -71,5 +73,30 @@
 
     @include mobile {
         text-align: center;
+    }
+}
+.source {
+    font-size: 16px;
+    margin-top: -20px;
+    padding: 0 var(--page-safe-area-horizontal);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+        text-decoration: underline;
+        color: var(--base-akcent);
+    }
+
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
     }
 }
