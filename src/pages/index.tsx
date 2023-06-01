@@ -1,5 +1,4 @@
 import cnBind from "classnames/bind";
-import Head from "next/head";
 
 import { BlockAboutUs } from "@/components/BlockAboutUs";
 import { BlockCompanyRating } from "@/components/BlockCompanyRating";
@@ -20,7 +19,6 @@ const IndexPage = () => {
 
     return (
         <PageLayout className={cx("index-page")} withHeader withFooter>
-
             <div className={cx("top-test")} />
             <div className={cx("content")}>
                 <BlockHero />
