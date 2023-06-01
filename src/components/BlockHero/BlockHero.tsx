@@ -24,12 +24,12 @@ export const BlockHero = () => {
     const [createOrderModalIsOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState(false);
     const items = useMemo<string[]>(
         () => [
-            "https://i.ibb.co/qYQnJqR/room-template-hero.png",
-            "https://i.ibb.co/Hd6BSxy/room-grey-5.jpg",
-            "https://i.ibb.co/whSgX2L/room-yellow-3.jpg",
-            "https://i.ibb.co/vqWrGjJ/room-rose-1.jpg",
-            "https://i.ibb.co/X5JSWjk/room-green-5.jpg",
-            "https://i.ibb.co/b5PDjjN/room-blue-2.jpg",
+            "https://images2.imgbox.com/d0/33/BknJHQF7_o.png",
+            "https://images2.imgbox.com/09/4e/JDjTDuU5_o.jpg",
+            "https://images2.imgbox.com/0a/52/HzNQy28i_o.jpg",
+            "https://images2.imgbox.com/50/12/ovgw7FQZ_o.jpg",
+            "https://images2.imgbox.com/de/f4/0hI94O6W_o.jpg",
+            "https://images2.imgbox.com/8b/ed/egNo5NxC_o.jpg",
         ],
         [],
     );
