@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { PhotosBlockProps } from "./PhotosBlock.types";
 
 import styles from "./PhotosBlock.module.scss";
+import {BLUR_IMAGE} from "@/constants/stubs";
 
 const cx = cnBind.bind(styles);
 
@@ -19,7 +20,7 @@ export const PhotosBlock = ({ images }: PhotosBlockProps) => {
                         width={500}
                         height={400}
                         placeholder="blur"
-                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcXQ8AAbsBHLLDr5MAAAAASUVORK5CYII="
+                        blurDataURL={BLUR_IMAGE}
                     />
                 </div>
             ))}

@@ -28,7 +28,9 @@ export const BlockAboutUs = () => {
                             <h4 className={cx("subtitle")}>Апарт отель в одном из уютнейших уголков Петербурга</h4>
                         </div>
 
-                        {isMobile && <Image className={cx("image-mobile")} src={RoomImage} alt="1" />}
+                        {isMobile && (
+                            <Image className={cx("image-mobile")} src={RoomImage} alt="1" width={156} height={216} />
+                        )}
                     </div>
                     <span className={cx("description")}>
                         MApart - компактные студии в центре Петербурга по привлекательной цене. В небольшом пространстве
@@ -41,7 +43,7 @@ export const BlockAboutUs = () => {
                 </div>
                 {!isMobile && (
                     <div className={cx("block-image")}>
-                        <Image className={cx("image-desktop")} src={RoomImage} alt="1" />
+                        <Image className={cx("image-desktop")} src={RoomImage} alt="1" width={500} height={740} />
                     </div>
                 )}
             </div>

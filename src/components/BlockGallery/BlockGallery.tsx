@@ -14,6 +14,7 @@ import { makeNestedArray } from "@/utils";
 import { PhotosBlock } from "./PhotosBlock/PhotosBlock";
 
 import styles from "./BlockGallery.module.scss";
+import {BLUR_IMAGE} from "@/constants/stubs";
 
 const cx = cnBind.bind(styles);
 
@@ -53,7 +54,7 @@ export const BlockGallery = () => {
                                         height={220}
                                         alt="room"
                                         placeholder="blur"
-                                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcXQ8AAbsBHLLDr5MAAAAASUVORK5CYII="
+                                        blurDataURL={BLUR_IMAGE}
                                         style={{ objectFit: "cover", padding: "0 5px" }}
                                     />
                                 </div>

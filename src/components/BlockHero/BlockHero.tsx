@@ -13,6 +13,7 @@ import R3 from "@/assets/rooms/room-yellow-3.jpg";
 import { Button } from "@/components/Button";
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
+import {BLUR_IMAGE} from "@/constants/stubs";
 import { useBooleanState } from "@/hooks/useBooleanState";
 import { useWindowSizeTo } from "@/hooks/useWindowSizeTo";
 import { appRoute, MainAnchorType } from "@/routes";
@@ -59,7 +60,7 @@ export const BlockHero = () => {
                 src={items[currentImage]}
                 alt="room image"
                 placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcXQ8AAbsBHLLDr5MAAAAASUVORK5CYII="
+                blurDataURL={BLUR_IMAGE}
                 width={1200}
                 height={560}
             />

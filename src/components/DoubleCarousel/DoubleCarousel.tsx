@@ -4,6 +4,7 @@ import cnBind from "classnames/bind";
 import Image from "next/image";
 
 import { IcArrowLeft, IcArrowRight } from "@/assets/icon";
+import { BLUR_IMAGE } from "@/constants/stubs";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 import type { DoubleCarouselProps } from "./DoubleCarousel.types";
@@ -24,7 +25,7 @@ export const DoubleCarousel = ({ images, className, ...props }: DoubleCarouselPr
                 animationHandler="fade"
                 infiniteLoop
                 autoPlay
-                swipeable
+                swipeable={false}
                 statusFormatter={(current, total) =>
                     isMobile
                         ? ((
@@ -56,7 +57,7 @@ export const DoubleCarousel = ({ images, className, ...props }: DoubleCarouselPr
                             src={image.bigImageSrc}
                             alt={image.bigImageAlt}
                             placeholder="blur"
-                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcXQ8AAbsBHLLDr5MAAAAASUVORK5CYII="
+                            blurDataURL={BLUR_IMAGE}
                             width={816}
                             height={400}
                         />
@@ -65,7 +66,7 @@ export const DoubleCarousel = ({ images, className, ...props }: DoubleCarouselPr
                             src={image.smallImageSrc}
                             alt={image.smallImageAlt}
                             placeholder="blur"
-                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcXQ8AAbsBHLLDr5MAAAAASUVORK5CYII="
+                            blurDataURL={BLUR_IMAGE}
                             width={309}
                             height={120}
                         />

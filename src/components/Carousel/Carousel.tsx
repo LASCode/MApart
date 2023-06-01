@@ -8,6 +8,7 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import type { CarouselProps } from "./Carousel.types";
 
 import styles from "./Carousel.module.scss";
+import {BLUR_IMAGE} from "@/constants/stubs";
 
 const cx = cnBind.bind(styles);
 
@@ -34,7 +35,7 @@ export const Carousel = ({ images, className, ...props }: CarouselProps) => {
                             width={500}
                             height={300}
                             placeholder="blur"
-                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcXQ8AAbsBHLLDr5MAAAAASUVORK5CYII="
+                            blurDataURL={BLUR_IMAGE}
                         />
                     </div>
                 ))}
