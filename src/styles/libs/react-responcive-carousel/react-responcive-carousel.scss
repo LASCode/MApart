@@ -26,5 +26,16 @@
     /* dark */
 
     color: #A7A398 !important;
+}
 
+.carousel .control-dots .dot:hover  {
+    @include mobile {
+        opacity: 0.3;
+    }
+}
+
+.carousel .control-dots .dot.selected {
+    @include mobile {
+        opacity: 1;
+    }
 }

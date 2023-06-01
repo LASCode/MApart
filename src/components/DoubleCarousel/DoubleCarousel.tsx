@@ -24,7 +24,7 @@ export const DoubleCarousel = ({ images, className, ...props }: DoubleCarouselPr
                 animationHandler="fade"
                 infiniteLoop
                 autoPlay
-                swipeable
+                swipeable={false}
                 statusFormatter={(current, total) =>
                     isMobile
                         ? ((

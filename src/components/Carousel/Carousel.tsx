@@ -23,7 +23,7 @@ export const Carousel = ({ images, className, ...props }: CarouselProps) => {
                 swipeable
                 showStatus={false}
                 infiniteLoop
-                emulateTouch
+                emulateTouch={!isMobile}
             >
                 {images.map((image) => (
                     <div className={cx("image-container")} key={image.src}>

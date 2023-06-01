@@ -3,7 +3,6 @@ import cnBind from "classnames/bind";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import basePhoto from "@/assets/rooms/room-template-about-us.png";
 import { BlockRoomAmenities } from "@/components/BlockRoomAmenities";
 import { Button } from "@/components/Button";
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
@@ -46,7 +45,12 @@ export default function Page() {
             <div className={cx("info")}>
                 {isDesktop && (
                     <div className={cx("base-photo")}>
-                        <Image src={basePhoto.src} alt="flowers" width={400} height={600} />
+                        <Image
+                            src="https://downloader.disk.yandex.ru/preview/678304a98f3c8b9099a67eabfe872bcfd90feed7693ba92dd2af594d08bb7991/64782744/xAxN69xWCMnXMMu-oBq3MQkCfAoWj1eSU4sv3EHJOpGiFZRpYliAAMv_-zX6QUt0bl6bbmk6klzbYYVrdqe72g%3D%3D?uid=0&filename=room-template-about-us.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048"
+                            alt="flowers"
+                            width={400}
+                            height={600}
+                        />
                     </div>
                 )}
                 <div className={cx("description")}>
@@ -58,7 +62,7 @@ export default function Page() {
                         {!isDesktop && (
                             <Image
                                 className={cx("shadow-img")}
-                                src={basePhoto.src}
+                                src="https://downloader.disk.yandex.ru/preview/678304a98f3c8b9099a67eabfe872bcfd90feed7693ba92dd2af594d08bb7991/64782744/xAxN69xWCMnXMMu-oBq3MQkCfAoWj1eSU4sv3EHJOpGiFZRpYliAAMv_-zX6QUt0bl6bbmk6klzbYYVrdqe72g%3D%3D?uid=0&filename=room-template-about-us.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048"
                                 alt="flowers"
                                 width={400}
                                 height={600}
