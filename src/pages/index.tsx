@@ -12,7 +12,6 @@ import { useWindowSizeFrom } from "@/hooks/useWindowSizeFrom";
 import { PageLayout } from "@/layouts/PageLayout";
 import styles from "@/styles/pages/indexPage.module.scss";
 
-
 const cx = cnBind.bind(styles);
 
 const IndexPage = () => {
