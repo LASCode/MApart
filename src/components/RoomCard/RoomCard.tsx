@@ -28,8 +28,16 @@ export const RoomCard = ({
         onMouseEnter?.(name);
     }, [name, onMouseEnter]);
 
+    const handleMouseLeave = useCallback(() => {
+        onMouseLeave?.(name);
+    }, [name, onMouseLeave]);
+
     return (
-        <div className={cx("room-card", name, className)} onMouseEnter={handleMouseEnter} onMouseLeave={onMouseLeave}>
+        <div
+            className={cx("room-card", name, className)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
             <Carousel className={cx("carousel")} images={images} />
             <div className={cx("info")}>
                 <div className={cx("name")}>{name}</div>
