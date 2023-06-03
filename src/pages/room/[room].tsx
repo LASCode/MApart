@@ -7,7 +7,8 @@ import { useRouter } from "next/router";
 import { BlockRoomAmenities } from "@/components/BlockRoomAmenities";
 import { Button } from "@/components/Button";
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
-import { DoubleCarousel } from "@/components/DoubleCarousel";
+import { Fancybox } from "@/components/Fancy";
+import { FancyCarousel } from "@/components/FancyCarousel";
 import { RentBanner } from "@/components/RentBanner";
 import { BLUE_ROOM, GREEN_ROOM, GREY_ROOM, ROSE_ROOM, YELLOW_ROOM } from "@/constants/rooms";
 import { useBooleanState } from "@/hooks/useBooleanState";
@@ -50,9 +51,15 @@ export default function Page() {
             {isValidRoom ? (
                 <>
                     <h1 className={cx("title")}>{roomName}</h1>
-                    <div className={cx("carousel-wrapper")}>
-                        <DoubleCarousel images={rooms[roomName].doublePhoto} />
-                    </div>
+                    <Fancybox>
+                        <FancyCarousel withThumbs={!isDesktop}>
+                            {rooms[roomName].photos.map(({ src, alt }) => (
+                                <div key={src} className="f-carousel__slide" data-thumb-src={src}>
+                                    <Image src={src} width={600} height={400} alt={alt} data-fancybox data-rsc={src} />
+                                </div>
+                            ))}
+                        </FancyCarousel>
+                    </Fancybox>
                     <div className={cx("info")}>
                         {isDesktop && (
                             <div className={cx("base-photo")}>

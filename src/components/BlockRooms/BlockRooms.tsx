@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import cnBind from "classnames/bind";
 
@@ -20,16 +20,18 @@ export const BlockRooms = () => {
     const [isCreateOrderModalOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState(false);
     const [bgColor, setBgColor] = useState("");
 
+    const blockRef = useRef<HTMLDivElement>(null);
+
     const handleRoomCardMouseEnter = useCallback((name: string) => {
-        setBgColor(name);
+        blockRef.current?.classList.add(name);
     }, []);
 
-    const handleRoomCardMouseLeave = useCallback(() => {
-        setBgColor("");
+    const handleRoomCardMouseLeave = useCallback((name: string) => {
+        blockRef.current?.classList.remove(name);
     }, []);
 
     return (
-        <div className={cx("block-rooms", bgColor)} id={MainAnchorType.ROOMS}>
+        <div className={cx("block-rooms", isMobile ? bgColor : "")} id={MainAnchorType.ROOMS} ref={blockRef}>
             {isMobile && <h2 className={cx("title")}>номера</h2>}
             <div className={cx("content-mobile")}>
                 <Carousel

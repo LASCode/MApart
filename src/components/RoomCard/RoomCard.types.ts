@@ -6,6 +6,6 @@ export interface RoomCardProps {
     price: number;
     onRentButtonCLick?: () => void;
     onMouseEnter?: (name: string) => void;
-    onMouseLeave?: () => void;
+    onMouseLeave?: (name: string) => void;
     className?: string;
 }

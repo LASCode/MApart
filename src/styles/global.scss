@@ -35,3 +35,55 @@ html {
     box-sizing: border-box;
     text-decoration: none;
 }
+
+.yellow {
+    background: var(--yellow);
+}
+.rose {
+    background: var(--rose);
+}
+.green {
+    background: var(--green);
+}
+.grey {
+    background: var(--grey);
+}
+.blue {
+    background: var(--blue);
+}
+
+.f-carousel {
+    margin: 0 auto;
+}
+
+.f-carousel__slide {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 10px;
+
+    @include desktop {
+        width: 33% !important;
+        height: 350px !important;
+        padding: 0 2px !important;
+
+        img {
+            height: 100% !important;
+            object-fit: cover;
+        }
+    }
+}
+
+.f-carousel__slide img {
+    width: 100% !important;
+    height: auto;
+}
+
+.f-thumbs.f-carousel__thumbs.is-classic {
+    .f-thumbs__slide {
+        width: 33% !important;
+        height: 200px !important;
+    }
+}
