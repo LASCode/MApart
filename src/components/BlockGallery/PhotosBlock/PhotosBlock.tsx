@@ -9,9 +9,9 @@ import styles from "./PhotosBlock.module.scss";
 
 const cx = cnBind.bind(styles);
 
-export const PhotosBlock = ({ images }: PhotosBlockProps) => {
+export const PhotosBlock = ({ images, isVisible }: PhotosBlockProps) => {
     return (
-        <div className={cx("container")}>
+        <div className={cx("container", { visible: isVisible })}>
             {images.map((image, index) => (
                 <div className={cx(`div${index + 1}`)} key={image}>
                     <Image
@@ -22,6 +22,8 @@ export const PhotosBlock = ({ images }: PhotosBlockProps) => {
                         height={400}
                         placeholder="blur"
                         blurDataURL={BLUR_IMAGE}
+                        data-fancybox
+                        data-rsc={image}
                     />
                 </div>
             ))}

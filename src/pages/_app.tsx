@@ -8,6 +8,9 @@ import "@/styles/global.scss";
 import "@/styles/fonts.css";
 import "react-responsive-carousel/lib/styles/carousel.css";
 import "@/styles/libs/react-responcive-carousel/react-responcive-carousel.scss";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import "@fancyapps/ui/dist/carousel/carousel.thumbs.css";
+import "@fancyapps/ui/dist/carousel/carousel.css";
 
 function MyApp({ Component, ...rest }: AppProps) {
     const result = wrapper.useWrappedStore(rest);
