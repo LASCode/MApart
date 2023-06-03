@@ -11,7 +11,7 @@ export { ReactComponent as IcTel, default as IcTelPath } from "./ic-tel.svg";
 export { ReactComponent as IcTowel, default as IcTowelPath } from "./ic-towel.svg";
 export { ReactComponent as IcTv, default as IcTvPath } from "./ic-tv.svg";
 export { ReactComponent as IcVideoPlay, default as IcVideoPlayPath } from "./ic-video-play.svg";
+export { ReactComponent as IcWhatsUp, default as IcWhatsUpPath } from "./ic-whatsapp.svg";
 export { ReactComponent as IcWifi, default as IcWifiPath } from "./ic-wifi.svg";
 export { ReactComponent as IcTelegram, default as IcTelegramPath } from "./telegram.svg";
 export { ReactComponent as IcVkontakte, default as IcVkontaktePath } from "./vk.svg";
-export { ReactComponent as IcWhatsUp, default as IcWhatsUpPath } from "./whatsapp.svg";

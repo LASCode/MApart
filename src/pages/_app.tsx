@@ -16,6 +16,7 @@ function MyApp({ Component, ...rest }: AppProps) {
         <>
             <Head>
                 <title>M-Apart | Апартаменты в центре Петербурга</title>
+                <meta name="theme-color" content="#000000" />
             </Head>
             <Provider store={result.store}>
                 <Component {...rest.pageProps} />

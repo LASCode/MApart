@@ -1,7 +1,6 @@
 import cnBind from "classnames/bind";
 
 import { BlockAboutUs } from "@/components/BlockAboutUs";
-import { BlockCompanyRating } from "@/components/BlockCompanyRating";
 import { BlockGallery } from "@/components/BlockGallery";
 import { BlockHero } from "@/components/BlockHero";
 import { BlockRoomAmenities } from "@/components/BlockRoomAmenities";
@@ -22,7 +21,7 @@ const IndexPage = () => {
             <div className={cx("top-test")} />
             <div className={cx("content")}>
                 <BlockHero />
-                <BlockCompanyRating />
+                {/* <BlockCompanyRating />*/}
                 {showWidget && <BlockWidget />}
                 <BlockAboutUs />
                 <BlockRooms />

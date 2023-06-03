@@ -13,9 +13,9 @@ const cx = cnBind.bind(styles);
 export const Socials = ({ className }: SocialsProps) => {
     const items = useMemo(
         () => [
-            { icon: IcWhatsUp, title: "WhatsUp", href: "" },
-            { icon: IcTelegram, title: "Телеграм", href: "https://t.me/Pepeapu" },
-            { icon: IcVkontakte, title: "Вконтакте", href: "" },
+            { icon: IcWhatsUp, title: "WhatsUp", href: "https://wa.me/79313555551" },
+            { icon: IcTelegram, title: "Телеграм", href: "https://t.me/m_apartments" },
+            { icon: IcVkontakte, title: "Вконтакте", href: "https://vk.com/" },
         ],
         [],
     );

@@ -35,7 +35,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px var(--page-safe-area-horizontal);
+    padding: 32px var(--page-safe-area-horizontal) 64px var(--page-safe-area-horizontal);
 }
 
 .navigation {
