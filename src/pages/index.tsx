@@ -25,8 +25,8 @@ const IndexPage = () => {
                 {showWidget && <BlockWidget />}
                 <BlockAboutUs />
                 <BlockRooms />
-                <BlockGallery />
                 <BlockRoomAmenities withMap />
+                <BlockGallery />
             </div>
             <ScrollToTopFab />
         </PageLayout>

@@ -1,6 +1,6 @@
 .rent-banner {
-    max-width: 1204px;
-    padding: 100px;
+    max-width: 600px;
+    padding: 30px 50px;
     background: var(--base-akcent);
 
     @include tablet {
@@ -20,24 +20,23 @@
 }
 
 .price {
-    margin-top: 50px;
     &-item {
         color: var(--base-white);
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid var(--base-white);
-        padding: 20px 0;
+        padding: 10px 0;
 
-        @include text-h3;
+        @include text-h4;
     }
 
     &-item-value {
-        @include text-h4;
+        @include text-body;
     }
 }
 
 .button-wrapper {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
 }
 

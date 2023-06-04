@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React, { useEffect, useRef } from "react";
 import { Carousel as NativeCarousel } from "@fancyapps/ui";
-import { Thumbs } from "@fancyapps/ui/dist/carousel/carousel.thumbs.umd";
+import { Thumbs } from "@fancyapps/ui/dist/carousel/carousel.thumbs.umd.js";
 import type { ComponentOptionsType } from "@fancyapps/ui/types/Fancybox/options";
 
 export const FancyCarousel = ({
@@ -31,7 +31,7 @@ export const FancyCarousel = ({
         return () => {
             instance.destroy();
         };
-    });
+    }, [props.options, withThumbs]);
 
     return (
         <div className="f-carousel" ref={containerRef}>

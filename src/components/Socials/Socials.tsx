@@ -3,7 +3,7 @@ import * as React from "react";
 import cnBind from "classnames/bind";
 import Link from "next/link";
 
-import { IcTelegram, IcVkontakte, IcWhatsUp } from "@/assets/icon";
+import { IcTelegram, IcWhatsUp } from "@/assets/icon";
 import type { SocialsProps } from "@/components/Socials/Socials.types";
 
 import styles from "./Socials.module.scss";
@@ -15,7 +15,7 @@ export const Socials = ({ className }: SocialsProps) => {
         () => [
             { icon: IcWhatsUp, title: "WhatsUp", href: "https://wa.me/79313555551" },
             { icon: IcTelegram, title: "Телеграм", href: "https://t.me/m_apartments" },
-            { icon: IcVkontakte, title: "Вконтакте", href: "https://vk.com/" },
+            // { icon: IcVkontakte, title: "Вконтакте", href: "https://vk.com/" },
         ],
         [],
     );

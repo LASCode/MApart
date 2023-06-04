@@ -23,8 +23,8 @@ export const BlockHero = () => {
     const [createOrderModalIsOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState(false);
     const items = useMemo<string[]>(
         () => [
-            "https://images2.imgbox.com/d0/33/BknJHQF7_o.png",
             "https://images2.imgbox.com/09/4e/JDjTDuU5_o.jpg",
+            "https://images2.imgbox.com/d0/33/BknJHQF7_o.png",
             "https://images2.imgbox.com/0a/52/HzNQy28i_o.jpg",
             "https://images2.imgbox.com/50/12/ovgw7FQZ_o.jpg",
             "https://images2.imgbox.com/de/f4/0hI94O6W_o.jpg",
@@ -49,7 +49,7 @@ export const BlockHero = () => {
                 showIndicators={false}
                 animationHandler="fade"
                 infiniteLoop
-                autoPlay
+                // autoPlay
                 showStatus={false}
                 swipeable={false}
                 renderArrowNext={(callback) => (

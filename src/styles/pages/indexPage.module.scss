@@ -10,7 +10,7 @@
 .content {
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 80px;
     width: 100%;
 
     @include mobile {
@@ -21,13 +21,14 @@
 .top-test {
     position: absolute;
     width: 100%;
-    height: 790px;
+    height: 720px;
     top: 380px;
     background-color: #e9e1c9;
     z-index: -1;
 
     @include mobile {
-        top: 330px;
+        top: 310px;
+        height: 910px;
     }
 }
 

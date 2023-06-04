@@ -1,18 +1,21 @@
-/* eslint-disable @next/next/no-img-element */
 import { useEffect } from "react";
 import cnBind from "classnames/bind";
+import type { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
+import { IcArrowRight } from "@/assets/icon";
 import { BlockRoomAmenities } from "@/components/BlockRoomAmenities";
 import { Button } from "@/components/Button";
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
 import { Fancybox } from "@/components/Fancy";
 import { FancyCarousel } from "@/components/FancyCarousel";
 import { RentBanner } from "@/components/RentBanner";
+import { SiteContentBlock } from "@/components/SiteContentBlock";
 import { BLUE_ROOM, GREEN_ROOM, GREY_ROOM, ROSE_ROOM, YELLOW_ROOM } from "@/constants/rooms";
 import { useBooleanState } from "@/hooks/useBooleanState";
 import { useIsDesktop } from "@/hooks/useIsDesktop";
+import { useWindowSizeTo } from "@/hooks/useWindowSizeTo";
 import { PageLayout } from "@/layouts/PageLayout";
 import styles from "@/styles/pages/roomPage.module.scss";
 
@@ -26,19 +29,25 @@ const rooms = {
     blue: BLUE_ROOM,
 };
 
-export default function Page() {
+interface RoomPageProps {
+    roomName: string;
+    isValid: boolean;
+    roomData: (typeof rooms)[keyof typeof rooms] | null;
+}
+export default function Page({ isValid, roomData, roomName }: RoomPageProps) {
     const router = useRouter();
-    const roomName = (router.query.room as keyof typeof rooms) ?? "yellow";
-    const isValidRoom = Object.keys(rooms).includes(router.query.room as string) || router.query.room === undefined;
     const isDesktop = useIsDesktop();
+    const showDefaultButton = useWindowSizeTo(950);
 
     const [isCreateOrderModalOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState();
 
     useEffect(() => {
-        if (!isValidRoom) {
+        if (!isValid) {
             void router.push("/");
         }
-    }, [isValidRoom, router]);
+    }, [isValid, router]);
+
+    if (!isValid) return null;
 
     return (
         <PageLayout
@@ -48,60 +57,80 @@ export default function Page() {
             layoutClassName={cx("room-page-layout", roomName)}
             className={cx("room-page")}
         >
-            {isValidRoom ? (
+            {isValid && roomData ? (
                 <>
                     <h1 className={cx("title")}>{roomName}</h1>
                     <Fancybox>
                         <FancyCarousel withThumbs={!isDesktop}>
-                            {rooms[roomName].photos.map(({ src, alt }) => (
+                            {roomData.photos.map(({ src, alt }) => (
                                 <div key={src} className="f-carousel__slide" data-thumb-src={src}>
                                     <Image src={src} width={600} height={400} alt={alt} data-fancybox data-rsc={src} />
                                 </div>
                             ))}
                         </FancyCarousel>
                     </Fancybox>
-                    <div className={cx("info")}>
-                        {isDesktop && (
-                            <div className={cx("base-photo")}>
-                                <Image
-                                    src="https://i.ibb.co/KLPycBz/room-template-about-us.png"
-                                    alt="flowers"
-                                    width={400}
-                                    height={600}
-                                />
-                            </div>
-                        )}
-                        <div className={cx("description")}>
-                            <p className={cx("description-text")}>{rooms[roomName].description}</p>
+                    <SiteContentBlock className={cx("about-us")} containerClassName={cx("about-us-container")}>
+                        <p className={cx("description-text")}>{roomData.description}</p>
+                        {showDefaultButton ? (
                             <Button className={cx("button")} onClick={openCreateOrderModal}>
                                 Забронировать
                             </Button>
-                            <div className={cx("description-img")}>
-                                {!isDesktop && (
-                                    <Image
-                                        className={cx("shadow-img")}
-                                        src="https://i.ibb.co/KLPycBz/room-template-about-us.png"
-                                        alt="flowers"
-                                        width={400}
-                                        height={600}
-                                    />
-                                )}
+                        ) : (
+                            <div className={cx("company-new-order", "item")} onClick={openCreateOrderModal}>
                                 <Image
-                                    src={rooms[roomName].phonePhoto.src}
-                                    alt={rooms[roomName].phonePhoto.src}
-                                    width={400}
-                                    height={600}
+                                    src="https://images2.imgbox.com/09/4e/JDjTDuU5_o.jpg"
+                                    alt="Создание заказа"
+                                    width={900}
+                                    height={300}
+                                    className={cx("bg")}
                                 />
+                                <div className={cx("button-order")}>
+                                    <span>Забронировать</span>
+                                    <IcArrowRight />
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        )}
+                    </SiteContentBlock>
+                    {/* {isDesktop && (*/}
+                    {/*    <div className={cx("base-photo")}>*/}
+                    {/*        <Image*/}
+                    {/*            src="https://i.ibb.co/KLPycBz/room-template-about-us.png"*/}
+                    {/*            alt="flowers"*/}
+                    {/*            width={400}*/}
+                    {/*            height={600}*/}
+                    {/*        />*/}
+                    {/*    </div>*/}
+                    {/* )}*/}
+                    {/* <div className={cx("description")}>*/}
+                    {/*    <p className={cx("description-text")}>{roomData.description}</p>*/}
+                    {/*    <Button className={cx("button")} onClick={openCreateOrderModal}>*/}
+                    {/*        Забронировать*/}
+                    {/*    </Button>*/}
+                    {/*    <div className={cx("description-img")}>*/}
+                    {/*        {!isDesktop && (*/}
+                    {/*            <Image*/}
+                    {/*                className={cx("shadow-img")}*/}
+                    {/*                src="https://i.ibb.co/KLPycBz/room-template-about-us.png"*/}
+                    {/*                alt="flowers"*/}
+                    {/*                width={400}*/}
+                    {/*                height={600}*/}
+                    {/*            />*/}
+                    {/*        )}*/}
+                    {/*        <Image*/}
+                    {/*            src={roomData.phonePhoto.src}*/}
+                    {/*            alt={roomData.phonePhoto.src}*/}
+                    {/*            width={400}*/}
+                    {/*            height={600}*/}
+                    {/*        />*/}
+                    {/*    </div>*/}
+                    {/* </div>*/}
                     <BlockRoomAmenities withMap={false} containerClassName={cx("room-amenities")} />
                     <div className={cx("rent-banner-wrapper")}>
                         <RentBanner
                             className={cx("rent-banner")}
-                            weekdayPrice={rooms[roomName].weekdayPrice}
-                            weekendsPrice={rooms[roomName].weekendsPrice}
-                            weekPrice={rooms[roomName].weekPrice}
+                            weekdayPrice={roomData.weekdayPrice}
+                            weekendsPrice={roomData.weekendsPrice}
+                            weekPrice={roomData.weekPrice}
                             onRentButtonClick={openCreateOrderModal}
                         />
                     </div>
@@ -111,3 +140,17 @@ export default function Page() {
         </PageLayout>
     );
 }
+
+// eslint-disable-next-line @typescript-eslint/require-await
+export const getStaticPaths: GetStaticPaths = async () => ({
+    paths: Object.keys(rooms).map((el) => ({ params: { room: el } })),
+    fallback: true,
+});
+// eslint-disable-next-line @typescript-eslint/require-await
+export const getStaticProps: GetStaticProps<RoomPageProps> = async ({ params }) => {
+    const id = params?.room as string;
+    const isValidRoom = Object.keys(rooms).includes(id);
+    const roomData = rooms?.[id as keyof typeof rooms] || null;
+
+    return { props: { isValid: isValidRoom, roomData, roomName: id } };
+};

@@ -1,4 +1,4 @@
-.room-page-layout { 
+.room-page-layout {
     &.yellow {
         background: var(--yellow);
     }
@@ -17,7 +17,7 @@
 }
 
 .room-page {
-    padding: 0
+    padding: 0;
 }
 
 .title {
@@ -39,28 +39,14 @@
     }
 }
 
-.info {
-    padding: 0 var(--page-safe-area-horizontal);
-    max-width: calc(var(--page-max-width) + var(--page-safe-area-horizontal) * 2);
-    margin: 0 auto;
-    margin-top: 40px;
-    display: flex;
-    gap: 40px;
-    justify-content: space-evenly;
-
-    @include desktop {
-        margin-top: 150px;
-    }
-}
-
 .room-amenities {
-    background: #FFFFFF;
+    background: #ffffff;
     padding: 50px 0;
     margin-top: 40px;
 
     @include desktop {
         padding: 118px 0;
-        margin-top: 150px;
+        margin-top: 80px;
     }
 }
 
@@ -71,7 +57,7 @@
     @include desktop {
         max-height: 602px;
     }
-    
+
     img {
         object-fit: contain;
         height: 100%;
@@ -117,21 +103,107 @@
     padding-bottom: 30px;
 }
 
-.button {
-    @include desktop {
-        margin-top: 48px;
-    }
-}
-
 .rent-banner-wrapper {
     padding: 0 var(--page-safe-area-horizontal);
 }
 
 .rent-banner {
     @include desktop {
-        margin: 150px auto 70px;
+        margin: 90px auto 70px;
     }
 
     margin: 50px auto 30px;
 }
 
+.about-us {
+    display: flex;
+    gap: 20px;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 200px;
+
+    @include media-max(950px) {
+        flex-direction: column;
+        align-items: flex-end;
+        height: auto;
+        padding: 30px 0;
+    }
+    @include mobile {
+        align-items: center;
+    }
+}
+.about-us-container {
+    margin-top: 80px;
+}
+.description-text {
+    margin: 0;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+        padding: 0 20px;
+        text-align: center;
+    }
+}
+.company-new-order {
+    max-width: 350px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.5s linear;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: linear-gradient(0deg, rgba(77, 74, 62, 0.61), rgba(77, 74, 62, 0.61));
+    }
+}
+.button-order {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    z-index: 2;
+    @include font-cormorant();
+    @include set-icon-color(white);
+}
+.bg {
+    position: absolute;
+    color: transparent;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.button {
+    margin: 0 40px;
+    width: min-content;
+
+    @include mobile {
+        margin: 0;
+    }
+}

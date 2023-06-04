@@ -29,7 +29,7 @@ export const ROSE_ROOM = {
 
     phonePhoto: {
         src: "https://images2.imgbox.com/99/49/r6HCcoLa_o.jpg",
-        alt: "reose",
+        alt: "rose",
     },
 
     description:
