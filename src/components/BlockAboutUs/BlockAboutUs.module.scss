@@ -12,7 +12,7 @@
 
 .content {
     display: grid;
-    justify-items: center;
+    justify-items: stretch;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
     padding: 40px 0;
@@ -20,6 +20,7 @@
 
     @include media-max(950px) {
         grid-template-columns: 1fr;
+        justify-items: center;
         grid-template-rows: min-content min-content;
     }
 }
@@ -48,6 +49,7 @@
 
     @include media-max(950px) {
         width: 100%;
+        object-position: bottom;
     }
 }
 .image-fancy-link {
