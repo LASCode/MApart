@@ -91,39 +91,6 @@ export default function Page({ isValid, roomData, roomName }: RoomPageProps) {
                             </div>
                         )}
                     </SiteContentBlock>
-                    {/* {isDesktop && (*/}
-                    {/*    <div className={cx("base-photo")}>*/}
-                    {/*        <Image*/}
-                    {/*            src="https://i.ibb.co/KLPycBz/room-template-about-us.png"*/}
-                    {/*            alt="flowers"*/}
-                    {/*            width={400}*/}
-                    {/*            height={600}*/}
-                    {/*        />*/}
-                    {/*    </div>*/}
-                    {/* )}*/}
-                    {/* <div className={cx("description")}>*/}
-                    {/*    <p className={cx("description-text")}>{roomData.description}</p>*/}
-                    {/*    <Button className={cx("button")} onClick={openCreateOrderModal}>*/}
-                    {/*        Забронировать*/}
-                    {/*    </Button>*/}
-                    {/*    <div className={cx("description-img")}>*/}
-                    {/*        {!isDesktop && (*/}
-                    {/*            <Image*/}
-                    {/*                className={cx("shadow-img")}*/}
-                    {/*                src="https://i.ibb.co/KLPycBz/room-template-about-us.png"*/}
-                    {/*                alt="flowers"*/}
-                    {/*                width={400}*/}
-                    {/*                height={600}*/}
-                    {/*            />*/}
-                    {/*        )}*/}
-                    {/*        <Image*/}
-                    {/*            src={roomData.phonePhoto.src}*/}
-                    {/*            alt={roomData.phonePhoto.src}*/}
-                    {/*            width={400}*/}
-                    {/*            height={600}*/}
-                    {/*        />*/}
-                    {/*    </div>*/}
-                    {/* </div>*/}
                     <BlockRoomAmenities withMap={false} containerClassName={cx("room-amenities")} />
                     <div className={cx("rent-banner-wrapper")}>
                         <RentBanner
