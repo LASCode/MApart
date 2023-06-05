@@ -10,9 +10,9 @@ import { IcArrowLeft, IcArrowRight } from "@/assets/icon";
 import R6 from "@/assets/rooms/room-blue-2.webp";
 import R5 from "@/assets/rooms/room-green-5.webp";
 import R4 from "@/assets/rooms/room-rose-1.webp";
-import R2 from "@/assets/rooms/room-template-about-us.webp";
-import R3 from "@/assets/rooms/room-template-create-order.webp";
-import R1 from "@/assets/rooms/room-template-hero.webp";
+import R3 from "@/assets/rooms/room-blue-4.webp";
+import R2 from "@/assets/rooms/room-template-hero.webp";
+import R1 from "@/assets/rooms/room-grey-3.webp";
 import { Button } from "@/components/Button";
 
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
