@@ -1,3 +1,5 @@
+/* eslint-disable import/order */
+/* eslint-disable simple-import-sort/imports */
 import { useCallback, useMemo } from "react";
 import { Carousel } from "react-responsive-carousel";
 import cnBind from "classnames/bind";
@@ -5,7 +7,14 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { IcArrowLeft, IcArrowRight } from "@/assets/icon";
+import R6 from "@/assets/rooms/room-blue-2.webp";
+import R5 from "@/assets/rooms/room-green-5.webp";
+import R4 from "@/assets/rooms/room-rose-1.webp";
+import R2 from "@/assets/rooms/room-template-about-us.webp";
+import R3 from "@/assets/rooms/room-template-create-order.webp";
+import R1 from "@/assets/rooms/room-template-hero.webp";
 import { Button } from "@/components/Button";
+
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
 import { BLUR_IMAGE } from "@/constants/stubs";
@@ -21,17 +30,7 @@ export const BlockHero = () => {
     const needToOpenModal = useWindowSizeTo(850);
     const router = useRouter();
     const [createOrderModalIsOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState(false);
-    const items = useMemo<string[]>(
-        () => [
-            "https://images2.imgbox.com/09/4e/JDjTDuU5_o.jpg",
-            "https://images2.imgbox.com/d0/33/BknJHQF7_o.png",
-            "https://images2.imgbox.com/0a/52/HzNQy28i_o.jpg",
-            "https://images2.imgbox.com/50/12/ovgw7FQZ_o.jpg",
-            "https://images2.imgbox.com/de/f4/0hI94O6W_o.jpg",
-            "https://images2.imgbox.com/8b/ed/egNo5NxC_o.jpg",
-        ],
-        [],
-    );
+    const items = useMemo(() => [R1, R2, R3, R4, R5, R6], []);
 
     const handleClick = useCallback(() => {
         if (needToOpenModal) {
@@ -65,8 +64,8 @@ export const BlockHero = () => {
             >
                 {items.map((el) => (
                     <Image
-                        key={el}
-                        src={el}
+                        key={el.src}
+                        src={el.src}
                         className={cx("image")}
                         alt="room image"
                         placeholder="blur"
