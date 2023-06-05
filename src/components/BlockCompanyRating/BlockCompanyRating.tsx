@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { IcArrowRight } from "@/assets/icon";
+import roomGrey_5 from "@/assets/rooms/room-grey-5.webp";
 import { CompanyRating } from "@/components/CompanyRating";
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
@@ -32,13 +33,7 @@ export const BlockCompanyRating = () => {
             <CompanyRating className={cx("item")} companyName="Яндекс" rate={9.7} />
             <CompanyRating className={cx("item")} companyName="Суточно.ру" rate={9.7} />
             <div className={cx("company-new-order", "item")} onClick={handleClick}>
-                <Image
-                    src="https://images2.imgbox.com/09/4e/JDjTDuU5_o.jpg"
-                    alt="Создание заказа"
-                    width={900}
-                    height={300}
-                    className={cx("bg")}
-                />
+                <Image src={roomGrey_5.src} alt="Создание заказа" width={900} height={300} className={cx("bg")} />
                 <div className={cx("button-order")}>
                     <span>Заказать</span>
                     <IcArrowRight />
