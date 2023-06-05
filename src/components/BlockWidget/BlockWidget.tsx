@@ -19,7 +19,7 @@ export const BlockWidget = () => {
             window.Bnovo_Widget.init(() => {
                 window.Bnovo_Widget.open("_test", {
                     type: "horizontal",
-                    uid: "92cc0b2a-ae45-4b0d-b362-30773c002258",
+                    uid: "3a67f48f-c5a6-400f-b77a-f6a6a20d5e12",
                     lang: "ru",
                     width: "100%",
                     width_mobile: "500",

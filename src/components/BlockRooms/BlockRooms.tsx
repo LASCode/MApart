@@ -18,7 +18,7 @@ const sliderItems = [BLUE_ROOM, GREEN_ROOM, GREY_ROOM, ROSE_ROOM, YELLOW_ROOM];
 export const BlockRooms = () => {
     const isMobile = useIsMobile();
     const [isCreateOrderModalOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState(false);
-    const [bgColor, setBgColor] = useState("");
+    const [bgColor, setBgColor] = useState(sliderItems[0].name);
 
     const blockRef = useRef<HTMLDivElement>(null);
 

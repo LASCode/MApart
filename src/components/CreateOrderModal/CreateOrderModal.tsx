@@ -39,7 +39,8 @@ export const CreateOrderModalContent = () => {
             window.Bnovo_Widget.init(() => {
                 window.Bnovo_Widget.open("booking_iframe1", {
                     type: "vertical",
-                    uid: "92cc0b2a-ae45-4b0d-b362-30773c002258",
+                    uid: "3a67f48f-c5a6-400f-b77a-f6a6a20d5e12",
+                    onlyrooms: "372875",
                     lang: "ru",
                     width: "100%",
                     width_mobile: "100%",

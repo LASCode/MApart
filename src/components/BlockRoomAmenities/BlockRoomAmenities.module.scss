@@ -1,5 +1,6 @@
 .block-room-amenities {
     scroll-margin-top: 80px;
+    margin-top: 70px;
 }
 
 .content {
@@ -103,6 +104,6 @@
 }
 .map {
     @include mobile {
-        height: 546px;
+        height: 350px;
     }
 }
