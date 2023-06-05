@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { IcArrowRight } from "@/assets/icon";
+import roomGrey_5 from "@/assets/rooms/room-grey-5.webp";
 import { BlockRoomAmenities } from "@/components/BlockRoomAmenities";
 import { Button } from "@/components/Button";
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
@@ -78,7 +79,7 @@ export default function Page({ isValid, roomData, roomName }: RoomPageProps) {
                         ) : (
                             <div className={cx("company-new-order", "item")} onClick={openCreateOrderModal}>
                                 <Image
-                                    src="https://images2.imgbox.com/09/4e/JDjTDuU5_o.jpg"
+                                    src={roomGrey_5.src}
                                     alt="Создание заказа"
                                     width={900}
                                     height={300}

@@ -2,6 +2,7 @@ import cnBind from "classnames/bind";
 import Image from "next/image";
 
 import { IcVideoPlay } from "@/assets/icon";
+import roomYellow_4 from "@/assets/rooms/room-yellow-4.webp";
 import { Fancybox } from "@/components/Fancy";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
 import { MainAnchorType } from "@/routes";
@@ -28,18 +29,8 @@ export const BlockAboutUs = () => {
                             двуспальная кровать, личный санузел и ТВ.
                         </span>
                     </div>
-                    <a
-                        className={cx("header-image")}
-                        data-fancybox="gallery"
-                        href="https://images2.imgbox.com/8c/69/1uPNnic9_o.jpg"
-                    >
-                        <Image
-                            className={cx("image")}
-                            src="https://images2.imgbox.com/8c/69/1uPNnic9_o.jpg"
-                            alt="1"
-                            height={600}
-                            width={600}
-                        />
+                    <a className={cx("header-image")} data-fancybox="gallery" href={roomYellow_4.src}>
+                        <Image className={cx("image")} src={roomYellow_4.src} alt="1" height={600} width={600} />
                         <IcVideoPlay className={cx("button-play")} />
                     </a>
                 </div>
