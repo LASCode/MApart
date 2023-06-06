@@ -4,8 +4,9 @@ export interface RoomCardProps {
     images: CarouselProps["images"];
     name: string;
     price: number;
+    color: string;
     onRentButtonCLick?: () => void;
-    onMouseEnter?: (name: string) => void;
-    onMouseLeave?: (name: string) => void;
+    onMouseEnter?: (name: string, color: string) => void;
+    onMouseLeave?: (name: string, color: string) => void;
     className?: string;
 }

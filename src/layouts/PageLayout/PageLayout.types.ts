@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 import type { HeaderProps } from "@/components/Header/Header.types";
 
@@ -9,4 +9,5 @@ export interface PageLayoutProps {
     layoutClassName?: string;
     headerProps?: HeaderProps;
     children: ReactNode;
+    layoutStyles?: CSSProperties;
 }

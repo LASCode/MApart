@@ -5,10 +5,11 @@ import type { ArgumentArray } from "classnames";
 import cnBind from "classnames/bind";
 import Link from "next/link";
 
-import { HEADER_TEL_NUMBER } from "@/components/Header/Header.constants";
 import type { HeaderMenuMobileProps } from "@/components/Header/HeaderMenuMobile/HeaderMenuMobile.types";
 import { HeaderNavigation } from "@/components/Header/HeaderNavigation";
 import { Socials } from "@/components/Socials/Socials";
+import { GLOBAL_CONFIG } from "@/configs";
+import { TEL_NUMBER } from "@/constants/other";
 
 import styles from "./HeaderMenuMobile.module.scss";
 
@@ -30,8 +31,8 @@ export const HeaderMenuMobile = ({ onClose, isOpen, className }: HeaderMenuMobil
                 <div className={cx("content")}>
                     <HeaderNavigation className={cx("navigation")} vertical onClick={onClose} />
                     <div className={cx("additional")}>
-                        <Link className={cx("tel")} href={`tel:${HEADER_TEL_NUMBER.trim()}`}>
-                            {HEADER_TEL_NUMBER}
+                        <Link className={cx("tel")} href={`tel:${GLOBAL_CONFIG.TEL_NUMBER}`}>
+                            {TEL_NUMBER}
                         </Link>
                         <Socials />
                     </div>

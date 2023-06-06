@@ -117,11 +117,12 @@
 
 .about-us {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
     background: white;
     border-radius: 6px;
     overflow: hidden;
-    height: 200px;
+    min-height: 200px;
 
     @include media-max(950px) {
         flex-direction: column;
@@ -138,18 +139,21 @@
 }
 .description-text {
     margin: 0;
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
+    padding: 18px 40px;
+    max-width: 800px;
+    white-space: break-spaces;
 
     @include mobile {
         padding: 0 20px;
         text-align: center;
     }
+    @include media-max(950px) {
+        max-width: unset;
+    }
 }
 .company-new-order {
+    min-width: 250px;
     max-width: 350px;
-    height: 100%;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     display: flex;

@@ -3,6 +3,7 @@ import cnBind from "classnames/bind";
 
 import type { CreateOrderModalProps } from "@/components/CreateOrderModal/CreateOrderModal.types";
 import { Modal } from "@/components/Modal";
+import { GLOBAL_CONFIG } from "@/configs";
 import useScript from "@/hooks/useScript";
 
 import styles from "./CreateOrderModal.module.scss";
@@ -39,7 +40,7 @@ export const CreateOrderModalContent = ({ roomId }: { roomId?: string }) => {
             window.Bnovo_Widget.init(() => {
                 window.Bnovo_Widget.open("booking_iframe1", {
                     type: "vertical",
-                    uid: "3a67f48f-c5a6-400f-b77a-f6a6a20d5e12",
+                    uid: GLOBAL_CONFIG.BNOVO_WIDGET_TOKEN,
                     onlyrooms: roomId ?? undefined,
                     lang: "ru",
                     width: "100%",

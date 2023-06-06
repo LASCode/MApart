@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import cnBind from "classnames/bind";
 
 import { SiteContentBlock } from "@/components/SiteContentBlock";
+import { GLOBAL_CONFIG } from "@/configs";
 import useScript from "@/hooks/useScript";
 import { MainAnchorType } from "@/routes";
 
@@ -19,7 +20,7 @@ export const BlockWidget = () => {
             window.Bnovo_Widget.init(() => {
                 window.Bnovo_Widget.open("_test", {
                     type: "horizontal",
-                    uid: "3a67f48f-c5a6-400f-b77a-f6a6a20d5e12",
+                    uid: GLOBAL_CONFIG.BNOVO_WIDGET_TOKEN,
                     lang: "ru",
                     width: "100%",
                     width_mobile: "500",

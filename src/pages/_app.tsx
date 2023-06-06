@@ -18,7 +18,7 @@ function MyApp({ Component, ...rest }: AppProps) {
     return (
         <>
             <Head>
-                <title>M-Apart | Апартаменты в центре Петербурга</title>
+                <title>M Apart | Апартаменты в центре Петербурга</title>
                 <meta name="theme-color" content="#e9e1c9" />
             </Head>
             <Provider store={result.store}>

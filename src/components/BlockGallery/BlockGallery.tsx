@@ -6,7 +6,7 @@ import Image from "next/image";
 import { IcArrowRight } from "@/assets/icon";
 import { Button } from "@/components/Button";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
-import { galleryPhotos } from "@/constants/gallery";
+import { HOMEPAGE_CONFIG } from "@/configs";
 import { BLUR_IMAGE } from "@/constants/stubs";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { MainAnchorType } from "@/routes";
@@ -26,7 +26,7 @@ export const BlockGallery = () => {
     const [numberBlock, setNumberBlock] = useState(1);
 
     const galleryBlocks = useMemo(() => {
-        return makeNestedArray(galleryPhotos, 6);
+        return makeNestedArray(HOMEPAGE_CONFIG.GALLERY, 6);
     }, []);
 
     const onShowMoreButtonClick = useCallback(() => {
@@ -50,7 +50,7 @@ export const BlockGallery = () => {
                                 centerMode
                                 emulateTouch
                             >
-                                {galleryPhotos.map((image, index) => (
+                                {HOMEPAGE_CONFIG.GALLERY.map((image, index) => (
                                     <a className={cx("mobile-slide")} key={index} data-fancybox="gallery" href={image}>
                                         <Image
                                             src={image}

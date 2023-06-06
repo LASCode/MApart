@@ -17,6 +17,7 @@ export const RoomCard = ({
     images,
     name,
     price,
+    color,
     onRentButtonCLick,
     className,
     onMouseEnter,
@@ -25,12 +26,12 @@ export const RoomCard = ({
     const isMobile = useIsMobile();
 
     const handleMouseEnter = useCallback(() => {
-        onMouseEnter?.(name);
-    }, [name, onMouseEnter]);
+        onMouseEnter?.(name, color);
+    }, [color, name, onMouseEnter]);
 
     const handleMouseLeave = useCallback(() => {
-        onMouseLeave?.(name);
-    }, [name, onMouseLeave]);
+        onMouseLeave?.(name, color);
+    }, [color, name, onMouseLeave]);
 
     return (
         <div

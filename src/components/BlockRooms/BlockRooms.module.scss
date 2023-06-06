@@ -45,21 +45,12 @@
 }
 
 .room {
-    margin-bottom: 80px
+    margin-bottom: 80px;
+    max-width: 592px;
 }
 
 .room-mobile {
     position: relative;
     z-index: 100;
     margin: 0 5px;
-}
-
-.room-rose,
-.room-green,
-.room-grey {
-    max-width: 592px;
-}
-
-.room-yellow {
-    max-width: 543px;
 }

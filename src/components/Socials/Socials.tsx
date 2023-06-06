@@ -3,20 +3,28 @@ import * as React from "react";
 import cnBind from "classnames/bind";
 import Link from "next/link";
 
-import { IcTelegram, IcWhatsUp } from "@/assets/icon";
+import { IcTelegram, IcVkontakte, IcWhatsUp } from "@/assets/icon";
 import type { SocialsProps } from "@/components/Socials/Socials.types";
+import { GLOBAL_CONFIG } from "@/configs";
 
 import styles from "./Socials.module.scss";
 
 const cx = cnBind.bind(styles);
 
 export const Socials = ({ className }: SocialsProps) => {
-    const items = useMemo(
-        () => [
-            { icon: IcWhatsUp, title: "WhatsUp", href: "https://wa.me/79313555551" },
-            { icon: IcTelegram, title: "Телеграм", href: "https://t.me/m_apartments" },
-            // { icon: IcVkontakte, title: "Вконтакте", href: "https://vk.com/" },
-        ],
+    const items = useMemo<{ icon: React.FC<React.SVGAttributes<SVGElement>>; title: string; href: string }[]>(
+        () =>
+            [
+                GLOBAL_CONFIG.SOCIALS_WHATSUP
+                    ? { icon: IcWhatsUp, title: "WhatsUp", href: GLOBAL_CONFIG.SOCIALS_WHATSUP }
+                    : undefined,
+                GLOBAL_CONFIG.SOCIALS_TELEGRAM
+                    ? { icon: IcTelegram, title: "Телеграм", href: GLOBAL_CONFIG.SOCIALS_TELEGRAM }
+                    : undefined,
+                GLOBAL_CONFIG.SOCIALS_VKONTAKTE
+                    ? { icon: IcVkontakte, title: "Вконтакте", href: GLOBAL_CONFIG.SOCIALS_VKONTAKTE }
+                    : undefined,
+            ].filter(Boolean) as { icon: React.FC<React.SVGAttributes<SVGElement>>; title: string; href: string }[],
         [],
     );
 

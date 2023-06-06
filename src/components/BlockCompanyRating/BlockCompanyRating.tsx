@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { IcArrowRight } from "@/assets/icon";
-import roomGrey_5 from "@/assets/rooms/room-grey-5.webp";
+import roomGrey_5 from "@/assets/rooms/grey/room-grey-5.webp";
 import { CompanyRating } from "@/components/CompanyRating";
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
 import { SiteContentBlock } from "@/components/SiteContentBlock";

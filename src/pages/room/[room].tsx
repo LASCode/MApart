@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import cnBind from "classnames/bind";
+import parceToHtml from "html-react-parser";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { IcArrowRight } from "@/assets/icon";
-import roomGrey_5 from "@/assets/rooms/room-grey-5.webp";
+import roomGrey_5 from "@/assets/rooms/grey/room-grey-5.webp";
 import { BlockRoomAmenities } from "@/components/BlockRoomAmenities";
 import { Button } from "@/components/Button";
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
@@ -13,29 +14,21 @@ import { Fancybox } from "@/components/Fancy";
 import { FancyCarousel } from "@/components/FancyCarousel";
 import { RentBanner } from "@/components/RentBanner";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
-import { BLUE_ROOM, GREEN_ROOM, GREY_ROOM, ROSE_ROOM, YELLOW_ROOM } from "@/constants/rooms";
+import { ROOMS_CONFIG } from "@/configs/rooms";
 import { useBooleanState } from "@/hooks/useBooleanState";
 import { useIsDesktop } from "@/hooks/useIsDesktop";
 import { useWindowSizeTo } from "@/hooks/useWindowSizeTo";
 import { PageLayout } from "@/layouts/PageLayout";
 import styles from "@/styles/pages/roomPage.module.scss";
+import type { RoomConfig } from "@/types/configs";
 
 const cx = cnBind.bind(styles);
 
-const rooms = {
-    yellow: YELLOW_ROOM,
-    green: GREEN_ROOM,
-    grey: GREY_ROOM,
-    rose: ROSE_ROOM,
-    blue: BLUE_ROOM,
-};
-
 interface RoomPageProps {
-    roomName: string;
     isValid: boolean;
-    roomData: (typeof rooms)[keyof typeof rooms] | null;
+    roomData: RoomConfig | null;
 }
-export default function Page({ isValid, roomData, roomName }: RoomPageProps) {
+export default function Page({ isValid, roomData }: RoomPageProps) {
     const router = useRouter();
     const isDesktop = useIsDesktop();
     const showDefaultButton = useWindowSizeTo(950);
@@ -55,12 +48,13 @@ export default function Page({ isValid, roomData, roomName }: RoomPageProps) {
             withHeader
             withFooter
             headerProps={{ onlyModal: true }}
-            layoutClassName={cx("room-page-layout", roomName)}
+            layoutClassName={cx("room-page-layout")}
+            layoutStyles={{ background: roomData?.color }}
             className={cx("room-page")}
         >
             {isValid && roomData ? (
                 <>
-                    <h1 className={cx("title")}>{roomName}</h1>
+                    <h1 className={cx("title")}>{roomData.name}</h1>
                     <Fancybox>
                         <FancyCarousel withThumbs={!isDesktop}>
                             {roomData.photos.map(({ src, alt }) => (
@@ -71,7 +65,7 @@ export default function Page({ isValid, roomData, roomName }: RoomPageProps) {
                         </FancyCarousel>
                     </Fancybox>
                     <SiteContentBlock className={cx("about-us")} containerClassName={cx("about-us-container")}>
-                        <p className={cx("description-text")}>{roomData.description}</p>
+                        <p className={cx("description-text")}>{parceToHtml(roomData.description)}</p>
                         {showDefaultButton ? (
                             <Button className={cx("button")} onClick={openCreateOrderModal}>
                                 Забронировать
@@ -115,14 +109,14 @@ export default function Page({ isValid, roomData, roomName }: RoomPageProps) {
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getStaticPaths: GetStaticPaths = async () => ({
-    paths: Object.keys(rooms).map((el) => ({ params: { room: el } })),
+    paths: ROOMS_CONFIG.map((el) => ({ params: { room: el.name } })),
     fallback: true,
 });
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getStaticProps: GetStaticProps<RoomPageProps> = async ({ params }) => {
-    const id = params?.room as string;
-    const isValidRoom = Object.keys(rooms).includes(id);
-    const roomData = rooms?.[id as keyof typeof rooms] || null;
+    const id = params?.room;
+    const isValidRoom = ROOMS_CONFIG.some((el) => el.name === id);
+    const roomData = ROOMS_CONFIG.find((el) => el.name === id) || null;
 
-    return { props: { isValid: isValidRoom, roomData, roomName: id } };
+    return { props: { isValid: isValidRoom, roomData } };
 };

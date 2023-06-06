@@ -2,9 +2,9 @@ import cnBind from "classnames/bind";
 import Image from "next/image";
 
 import { IcVideoPlay } from "@/assets/icon";
-import roomYellow_4 from "@/assets/rooms/room-yellow-4.webp";
 import { Fancybox } from "@/components/Fancy";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
+import { HOMEPAGE_CONFIG } from "@/configs";
 import { MainAnchorType } from "@/routes";
 
 import styles from "./BlockAboutUs.module.scss";
@@ -12,6 +12,11 @@ import styles from "./BlockAboutUs.module.scss";
 const cx = cnBind.bind(styles);
 
 export const BlockAboutUs = () => {
+    const subtitle = HOMEPAGE_CONFIG.ABOUT_US_SUBTITLE;
+    const description = HOMEPAGE_CONFIG.ABOUT_US_DESCRIPTION;
+    const videoThumbnail = HOMEPAGE_CONFIG.ABOUT_US_VIDEO_THUMBNAIL;
+    const videoLink = HOMEPAGE_CONFIG.ABOUT_US_VIDEO_LINk;
+
     return (
         <SiteContentBlock
             className={cx("block-about-us")}
@@ -22,15 +27,11 @@ export const BlockAboutUs = () => {
                 <div className={cx("content")}>
                     <div className={cx("header-text")}>
                         <h2 className={cx("title")}>О нас</h2>
-                        <h4 className={cx("subtitle")}>Апарт отель в одном из уютнейших уголков Петербурга</h4>
-                        <span className={cx("description")}>
-                            MApart - компактные студии в центре Петербурга по привлекательной цене. В небольшом
-                            пространстве располагается всё необходимое для комфортного проживания: мини кухня, удобная
-                            двуспальная кровать, личный санузел и ТВ.
-                        </span>
+                        {subtitle && <h4 className={cx("subtitle")}>{subtitle}</h4>}
+                        {description && <span className={cx("description")}>{description}</span>}
                     </div>
-                    <a className={cx("header-image")} data-fancybox="gallery" href={roomYellow_4.src}>
-                        <Image className={cx("image")} src={roomYellow_4.src} alt="1" height={600} width={600} />
+                    <a className={cx("header-image")} data-fancybox="gallery" href={videoLink}>
+                        <Image className={cx("image")} src={videoThumbnail} alt="1" height={600} width={600} />
                         <IcVideoPlay className={cx("button-play")} />
                     </a>
                 </div>

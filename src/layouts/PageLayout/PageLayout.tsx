@@ -18,11 +18,12 @@ export const PageLayout = ({
     headerProps,
     className,
     layoutClassName,
+    layoutStyles,
 }: PageLayoutProps) => {
     useAppWindowSize();
 
     return (
-        <div className={cx("page-layout", layoutClassName)}>
+        <div className={cx("page-layout", layoutClassName)} style={layoutStyles}>
             {withHeader && <Header className={cx("header")} {...headerProps} />}
 
             <main className={cx("main", className)}>{children}</main>

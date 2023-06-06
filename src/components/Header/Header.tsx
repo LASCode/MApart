@@ -7,12 +7,13 @@ import { useRouter } from "next/router";
 import { IcMenuClose, IcMenuOpen, IcTel } from "@/assets/icon";
 import { Button } from "@/components/Button/Button";
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
-import { HEADER_TEL_NUMBER } from "@/components/Header/Header.constants";
 import { HeaderMenuMobile } from "@/components/Header/HeaderMenuMobile/HeaderMenuMobile";
 import { HeaderNavigation } from "@/components/Header/HeaderNavigation";
 import { Logo } from "@/components/Logo";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
 import { Socials } from "@/components/Socials/Socials";
+import { GLOBAL_CONFIG } from "@/configs";
+import { TEL_NUMBER } from "@/constants/other";
 import { useBooleanState } from "@/hooks/useBooleanState";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { useWindowSizeFrom } from "@/hooks/useWindowSizeFrom";
@@ -64,8 +65,8 @@ export const Header = ({ onlyModal, className }: HeaderProps) => {
                     {!isMobile && (
                         <div className={cx("header-container-right")}>
                             {showSocials && <Socials />}
-                            <Link href={`tel:${HEADER_TEL_NUMBER.trim()}`} className={cx("link-tel")}>
-                                {showTelButton ? <IcTel className={cx("button-tel-icon")} /> : HEADER_TEL_NUMBER}
+                            <Link href={`tel:${GLOBAL_CONFIG.TEL_NUMBER}`} className={cx("link-tel")}>
+                                {showTelButton ? <IcTel className={cx("button-tel-icon")} /> : TEL_NUMBER}
                             </Link>
                         </div>
                     )}
