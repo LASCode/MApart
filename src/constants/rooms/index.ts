@@ -30,6 +30,7 @@ import roomYellow_4 from "@/assets/rooms/room-yellow-4.webp";
 
 export const ROSE_ROOM = {
     name: "rose",
+    uid: "333892",
     price: 600,
     photos: [
         {
@@ -72,7 +73,8 @@ export const ROSE_ROOM = {
 
 export const YELLOW_ROOM = {
     price: 600,
-    name: 'yellow',
+    uid: "333893",
+    name: "yellow",
     photos: [
         {
             src: roomYellow_1.src,
@@ -122,7 +124,8 @@ export const YELLOW_ROOM = {
 
 export const BLUE_ROOM = {
     price: 600,
-    name: 'blue',
+    uid: "333884",
+    name: "blue",
     photos: [
         {
             src: roomBlue_1.src,
@@ -170,7 +173,8 @@ export const BLUE_ROOM = {
 };
 export const GREEN_ROOM = {
     price: 600,
-    name: 'green',
+    uid: "286748",
+    name: "green",
     photos: [
         {
             src: roomGreen_6.src,
@@ -226,7 +230,8 @@ export const GREEN_ROOM = {
 
 export const GREY_ROOM = {
     price: 600,
-    name: 'grey',
+    uid: "286747",
+    name: "grey",
     photos: [
         {
             src: roomGrey_4.src,

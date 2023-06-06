@@ -1,12 +1,12 @@
 .block-about-us {
-    scroll-margin-top: -50px;
+    scroll-margin-top: 80px;
 
     @include tablet {
-        scroll-margin-top: -30px;
+        scroll-margin-top: 40px;
     }
 
     @include mobile {
-        scroll-margin-top: 50px;
+        scroll-margin-top: 40px;
     }
 }
 

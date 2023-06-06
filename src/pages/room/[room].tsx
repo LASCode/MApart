@@ -102,7 +102,11 @@ export default function Page({ isValid, roomData, roomName }: RoomPageProps) {
                             onRentButtonClick={openCreateOrderModal}
                         />
                     </div>
-                    <CreateOrderModal isOpen={isCreateOrderModalOpen} onClose={closeCreateOrderModal} />
+                    <CreateOrderModal
+                        roomId={roomData.uid}
+                        isOpen={isCreateOrderModalOpen}
+                        onClose={closeCreateOrderModal}
+                    />
                 </>
             ) : null}
         </PageLayout>

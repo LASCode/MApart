@@ -17,15 +17,23 @@ const sliderItems = [BLUE_ROOM, GREEN_ROOM, GREY_ROOM, ROSE_ROOM, YELLOW_ROOM];
 
 export const BlockRooms = () => {
     const isMobile = useIsMobile();
+    const [selectedRoom, setSelectedRoom] = useState<string>();
     const [isCreateOrderModalOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState(false);
     const [bgColor, setBgColor] = useState(sliderItems[0].name);
 
     const blockRef = useRef<HTMLDivElement>(null);
 
+    const handleRoomClick = useCallback(
+        (id: string) => {
+            setSelectedRoom(id);
+            openCreateOrderModal();
+        },
+        [openCreateOrderModal],
+    );
+
     const handleRoomCardMouseEnter = useCallback((name: string) => {
         blockRef.current?.classList.add(name);
     }, []);
-
     const handleRoomCardMouseLeave = useCallback((name: string) => {
         blockRef.current?.classList.remove(name);
     }, []);
@@ -50,7 +58,7 @@ export const BlockRooms = () => {
                                 images={item.photos}
                                 name={item.name}
                                 price={item.price}
-                                onRentButtonCLick={openCreateOrderModal}
+                                onRentButtonCLick={() => handleRoomClick(item.uid)}
                             />
                         </div>
                     ))}
@@ -64,7 +72,7 @@ export const BlockRooms = () => {
                         images={YELLOW_ROOM.photos}
                         name={YELLOW_ROOM.name}
                         price={YELLOW_ROOM.price}
-                        onRentButtonCLick={openCreateOrderModal}
+                        onRentButtonCLick={() => handleRoomClick(YELLOW_ROOM.uid)}
                         onMouseEnter={handleRoomCardMouseEnter}
                         onMouseLeave={handleRoomCardMouseLeave}
                     />
@@ -73,7 +81,7 @@ export const BlockRooms = () => {
                         images={BLUE_ROOM.photos}
                         name={BLUE_ROOM.name}
                         price={BLUE_ROOM.price}
-                        onRentButtonCLick={openCreateOrderModal}
+                        onRentButtonCLick={() => handleRoomClick(BLUE_ROOM.uid)}
                         onMouseEnter={handleRoomCardMouseEnter}
                         onMouseLeave={handleRoomCardMouseLeave}
                     />
@@ -84,7 +92,7 @@ export const BlockRooms = () => {
                         images={ROSE_ROOM.photos}
                         name={ROSE_ROOM.name}
                         price={ROSE_ROOM.price}
-                        onRentButtonCLick={openCreateOrderModal}
+                        onRentButtonCLick={() => handleRoomClick(ROSE_ROOM.uid)}
                         onMouseEnter={handleRoomCardMouseEnter}
                         onMouseLeave={handleRoomCardMouseLeave}
                     />
@@ -93,7 +101,7 @@ export const BlockRooms = () => {
                         images={GREEN_ROOM.photos}
                         name={GREEN_ROOM.name}
                         price={GREEN_ROOM.price}
-                        onRentButtonCLick={openCreateOrderModal}
+                        onRentButtonCLick={() => handleRoomClick(GREEN_ROOM.uid)}
                         onMouseEnter={handleRoomCardMouseEnter}
                         onMouseLeave={handleRoomCardMouseLeave}
                     />
@@ -102,13 +110,13 @@ export const BlockRooms = () => {
                         images={GREY_ROOM.photos}
                         name={GREY_ROOM.name}
                         price={GREY_ROOM.price}
-                        onRentButtonCLick={openCreateOrderModal}
+                        onRentButtonCLick={() => handleRoomClick(GREY_ROOM.uid)}
                         onMouseEnter={handleRoomCardMouseEnter}
                         onMouseLeave={handleRoomCardMouseLeave}
                     />
                 </div>
             </div>
-            <CreateOrderModal isOpen={isCreateOrderModalOpen} onClose={closeCreateOrderModal} />
+            <CreateOrderModal roomId={selectedRoom} isOpen={isCreateOrderModalOpen} onClose={closeCreateOrderModal} />
         </div>
     );
 };

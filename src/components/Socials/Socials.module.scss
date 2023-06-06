@@ -1,8 +1,11 @@
 .socials {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 .item {
-  height: 20px;
+    height: 20px;
+}
+.social-item-icon {
+    height: 100%;
 }

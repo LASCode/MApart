@@ -12,15 +12,15 @@ const cx = cnBind.bind(styles);
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 
-export const CreateOrderModal = ({ ...props }: CreateOrderModalProps) => {
+export const CreateOrderModal = ({ roomId, ...props }: CreateOrderModalProps) => {
     return (
         <Modal {...props} hasHeader title="Заказать номер" className={cx("create-order-modal")}>
-            <CreateOrderModalContent />
+            <CreateOrderModalContent roomId={roomId} />
         </Modal>
     );
 };
 
-export const CreateOrderModalContent = () => {
+export const CreateOrderModalContent = ({ roomId }: { roomId?: string }) => {
     const status = useScript("https://widget.reservationsteps.ru/js/bnovo.js");
     const alreadyRendered = useRef(false);
 
@@ -40,7 +40,7 @@ export const CreateOrderModalContent = () => {
                 window.Bnovo_Widget.open("booking_iframe1", {
                     type: "vertical",
                     uid: "3a67f48f-c5a6-400f-b77a-f6a6a20d5e12",
-                    onlyrooms: "372875",
+                    onlyrooms: roomId ?? undefined,
                     lang: "ru",
                     width: "100%",
                     width_mobile: "100%",
@@ -76,7 +76,7 @@ export const CreateOrderModalContent = () => {
                 });
             });
         }
-    }, [status]);
+    }, [roomId, status]);
 
     return <div id="booking_iframe1" className={cx("iframe-container")} />;
 };
