@@ -30,7 +30,7 @@ export const Footer = ({ className }: FooterProps) => {
                 </div>
             </div>
             <div className={cx("source")}>
-                <span>M-Apart © Все права защищены. 2023.</span>
+                <span>M Apart © Все права защищены. 2023.</span>
                 <span>
                     Разработка: Веб-студия <a href="https://levsha-web.ru/">Левша</a>
                 </span>
