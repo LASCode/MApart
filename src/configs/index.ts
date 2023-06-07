@@ -21,7 +21,7 @@ export const HOMEPAGE_CONFIG = {
     HERO_ITEMS: [roomGrey_3.src, HERO_1.src, roomBlue4.src, roomRose1.src, roomGreen_5.src, roomBlue_2.src],
     ABOUT_US_SUBTITLE: undefined,
     ABOUT_US_DESCRIPTION:
-        "MApart - компактные студии в центре Петербурга по привлекательной цене. В небольшом пространстве располагается всё необходимое для комфортного проживания: мини кухня, удобная двуспальная кровать, личный санузел и ТВ.",
+        "M Apart - современные компактные студии в центре Петербурга по привлекательной цене с уникальным стилем. В небольшом пространстве располагается всё необходимое для комфортного проживания: мини кухня, удобная двуспальная кровать, личный санузел и ТВ.",
     ABOUT_US_VIDEO_LINk: roomYellow_4.src,
     ABOUT_US_VIDEO_THUMBNAIL: roomYellow_4.src,
 
@@ -45,7 +45,7 @@ export const HOMEPAGE_CONFIG = {
 export const GLOBAL_CONFIG: GlobalConfig = {
     BNOVO_WIDGET_TOKEN: "3a67f48f-c5a6-400f-b77a-f6a6a20d5e12",
     SOCIALS_WHATSUP: "https://wa.me/79313555551",
-    SOCIALS_TELEGRAM: "https://t.me/m_apartments",
+    SOCIALS_TELEGRAM: "https://t.me/m_apart_spb",
     SOCIALS_VKONTAKTE: undefined,
     TEL_NUMBER: "79313555551",
 };
