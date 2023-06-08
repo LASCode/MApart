@@ -12,8 +12,6 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import { MainAnchorType } from "@/routes";
 import { makeNestedArray } from "@/utils";
 
-import { Fancybox } from "../Fancy";
-
 import { PhotosBlock } from "./PhotosBlock/PhotosBlock";
 
 import styles from "./BlockGallery.module.scss";
@@ -39,38 +37,38 @@ export const BlockGallery = () => {
                 <h2 className={cx("title")}>Галерея</h2>
                 <div className={cx("gallery")}>
                     {isMobile ? (
-                        <Fancybox>
-                            <Carousel
-                                showThumbs={false}
-                                showArrows={false}
-                                swipeable
-                                showStatus={false}
-                                showIndicators={false}
-                                centerSlidePercentage={80}
-                                centerMode
-                                emulateTouch
-                            >
-                                {HOMEPAGE_CONFIG.GALLERY.map((image, index) => (
-                                    <a className={cx("mobile-slide")} key={index} data-fancybox="gallery" href={image}>
-                                        <Image
-                                            src={image}
-                                            width={170}
-                                            height={220}
-                                            alt="room"
-                                            placeholder="blur"
-                                            blurDataURL={BLUR_IMAGE}
-                                            style={{ objectFit: "cover", padding: "0 5px" }}
-                                        />
-                                    </a>
-                                ))}
-                            </Carousel>
-                        </Fancybox>
-                    ) : (
-                        <Fancybox>
-                            {galleryBlocks.map((images, index) => (
-                                <PhotosBlock isVisible={index + 1 <= numberBlock} key={index} images={images} />
+                        // <Fancybox>
+                        <Carousel
+                            showThumbs={false}
+                            showArrows={false}
+                            swipeable
+                            showStatus={false}
+                            showIndicators={false}
+                            centerSlidePercentage={80}
+                            centerMode
+                            emulateTouch
+                        >
+                            {HOMEPAGE_CONFIG.GALLERY.map((image, index) => (
+                                <a className={cx("mobile-slide")} key={index} data-fancybox="gallery" href={image}>
+                                    <Image
+                                        src={image}
+                                        width={170}
+                                        height={220}
+                                        alt="room"
+                                        placeholder="blur"
+                                        blurDataURL={BLUR_IMAGE}
+                                        style={{ objectFit: "cover", padding: "0 5px" }}
+                                    />
+                                </a>
                             ))}
-                        </Fancybox>
+                        </Carousel>
+                    ) : (
+                        // </Fancybox>
+                        // <Fancybox>
+                        galleryBlocks.map((images, index) => (
+                            <PhotosBlock isVisible={index + 1 <= numberBlock} key={index} images={images} />
+                        ))
+                        // </Fancybox>
                     )}
                 </div>
 

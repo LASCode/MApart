@@ -10,7 +10,6 @@ import roomGrey_5 from "@/assets/rooms/grey/room-grey-5.webp";
 import { BlockRoomAmenities } from "@/components/BlockRoomAmenities";
 import { Button } from "@/components/Button";
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
-import { Fancybox } from "@/components/Fancy";
 import { FancyCarousel } from "@/components/FancyCarousel";
 import { RentBanner } from "@/components/RentBanner";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
@@ -55,15 +54,15 @@ export default function Page({ isValid, roomData }: RoomPageProps) {
             {isValid && roomData ? (
                 <>
                     <h1 className={cx("title")}>{roomData.name}</h1>
-                    <Fancybox>
-                        <FancyCarousel withThumbs={!isDesktop}>
-                            {roomData.photos.map(({ src, alt }) => (
-                                <div key={src} className="f-carousel__slide" data-thumb-src={src}>
-                                    <Image src={src} width={600} height={400} alt={alt} data-fancybox data-rsc={src} />
-                                </div>
-                            ))}
-                        </FancyCarousel>
-                    </Fancybox>
+                    {/* <Fancybox>*/}
+                    <FancyCarousel withThumbs={!isDesktop}>
+                        {roomData.photos.map(({ src, alt }) => (
+                            <div key={src} className="f-carousel__slide" data-thumb-src={src}>
+                                <Image src={src} width={600} height={400} alt={alt} data-fancybox data-rsc={src} />
+                            </div>
+                        ))}
+                    </FancyCarousel>
+                    {/* </Fancybox>*/}
                     <SiteContentBlock className={cx("about-us")} containerClassName={cx("about-us-container")}>
                         <p className={cx("description-text")}>{parceToHtml(roomData.description)}</p>
                         {showDefaultButton ? (
@@ -92,7 +91,6 @@ export default function Page({ isValid, roomData }: RoomPageProps) {
                             className={cx("rent-banner")}
                             weekdayPrice={roomData.weekdayPrice}
                             weekendsPrice={roomData.weekendsPrice}
-                            weekPrice={roomData.weekPrice}
                             onRentButtonClick={openCreateOrderModal}
                         />
                     </div>

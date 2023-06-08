@@ -2,7 +2,7 @@ import type { FC, SVGAttributes } from "react";
 import { useMemo } from "react";
 import cnBind from "classnames/bind";
 
-import { IcCosmetic, IcHairDryer, IcKitchen, IcTowel, IcTv, IcWifi } from "@/assets/icon";
+import { IcAirCondition, IcHairDryer, IcKitchen, IcTowel, IcTv, IcWifi } from "@/assets/icon";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
 import { MainAnchorType } from "@/routes";
 
@@ -19,7 +19,7 @@ export const BlockRoomAmenities = ({ withMap, className, containerClassName }: B
             { icon: IcHairDryer, title: "Фен" },
             { icon: IcKitchen, title: "Мини-кухня" },
             { icon: IcTowel, title: "Набор полотенец" },
-            { icon: IcCosmetic, title: "Косметический набор" },
+            { icon: IcAirCondition, title: "Кондиционер" },
         ],
         [],
     );

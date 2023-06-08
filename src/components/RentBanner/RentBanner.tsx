@@ -10,7 +10,6 @@ const cx = cnBind.bind(styles);
 
 export const RentBanner = ({
     className,
-    weekPrice,
     weekdayPrice,
     weekendsPrice,
     onRentButtonClick,
@@ -20,16 +19,12 @@ export const RentBanner = ({
             <h4 className={cx("title")}>Цены</h4>
             <div className={cx("price")}>
                 <div className={cx("price-item")}>
-                    <div className={cx("price-item-name")}>Выходные</div>
-                    <div className={cx("price-item-value")}>{`${weekendsPrice ?? "-"} руб. / сутки`}</div>
-                </div>
-                <div className={cx("price-item")}>
                     <div className={cx("price-item-name")}>Будние</div>
-                    <div className={cx("price-item-value")}>{`${weekdayPrice ?? "-"} руб. / сутки`}</div>
+                    <div className={cx("price-item-value")}>от {`${weekdayPrice ?? "-"} руб. / сутки`}</div>
                 </div>
                 <div className={cx("price-item")}>
-                    <div className={cx("price-item-name")}>Неделя</div>
-                    <div className={cx("price-item-value")}>{`${weekPrice ?? "-"} руб`}</div>
+                    <div className={cx("price-item-name")}>Выходные</div>
+                    <div className={cx("price-item-value")}>от {`${weekendsPrice ?? "-"} руб. / сутки`}</div>
                 </div>
             </div>
             <div className={cx("button-wrapper")}>

@@ -15,3 +15,4 @@ export { ReactComponent as IcWhatsUp, default as IcWhatsUpPath } from "./ic-what
 export { ReactComponent as IcWifi, default as IcWifiPath } from "./ic-wifi.svg";
 export { ReactComponent as IcTelegram, default as IcTelegramPath } from "./telegram.svg";
 export { ReactComponent as IcVkontakte, default as IcVkontaktePath } from "./vk.svg";
+export { ReactComponent as IcAirCondition, default as IcAirConditionPath } from "./ic-air-condition.svg";
