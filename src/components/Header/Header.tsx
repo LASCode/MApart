@@ -71,7 +71,7 @@ export const Header = ({ onlyModal, className }: HeaderProps) => {
                         </div>
                     )}
                 </div>
-                {needToOpenModal ? (
+                {!needToOpenModal ? (
                     <Link href={appRoute.mainAnchor(MainAnchorType.ORDER)} scroll={false}>
                         <Button className={cx("button")} onClick={noop}>
                             Забронировать
