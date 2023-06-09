@@ -24,7 +24,7 @@ export const FancyCarousel = ({
                 ? {
                       type: "classic",
                       thumbTpl: `
-                        <button type="button" aria-label="{{GOTO}}"><Image class="f-thumbs__slide__img" src="{{%s}}" alt="" width={50} height={50} /></button>
+                        <button class="thumbTpl-button" type="button" aria-label="{{GOTO}}"><img class="f-thumbs__slide__img" src="{{%s}}" alt=""/></button>
                       `,
                   }
                 : false,
