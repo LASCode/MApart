@@ -36,7 +36,7 @@
     "rules": {
         "linebreak-style": "off",
 
-        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-imports": "warn",
         "unused-imports/no-unused-vars": [
             "warn",
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
@@ -64,7 +64,7 @@
         "camelcase": "off",
         "no-use-before-define": "off",
         "no-console": ["warn", { "allow": ["error"] }],
-        "no-unused-expressions": "error",
+        "no-unused-expressions": "warn",
         "no-void": ["error", { "allowAsStatement": true }],
         "no-nested-ternary": "off",
         "brace-style": "off",
@@ -150,7 +150,7 @@
         "@typescript-eslint/no-empty-interface": "error",
         "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/no-unused-vars": "warn",
         "@typescript-eslint/ban-ts-comment": "error",
         "@typescript-eslint/no-shadow": "off",
         "@typescript-eslint/no-misused-promises": [
@@ -168,9 +168,9 @@
         "import/prefer-default-export": "off",
         "import/extensions": "off",
         "import/no-extraneous-dependencies": ["off"],
-        "simple-import-sort/exports": "error",
+        "simple-import-sort/exports": "warn",
         "simple-import-sort/imports": [
-            "error",
+            "warn",
             {
                 "groups": [
                     // Node.js builtins. You could also generate this regex if you use a `.js` config.

@@ -8,12 +8,7 @@ import styles from "./RentBanner.module.scss";
 
 const cx = cnBind.bind(styles);
 
-export const RentBanner = ({
-    className,
-    weekdayPrice,
-    weekendsPrice,
-    onRentButtonClick,
-}: RentBannerProps) => {
+export const RentBanner = ({ className, weekdayPrice, weekendsPrice, onRentButtonClick }: RentBannerProps) => {
     return (
         <div className={cx("rent-banner", className)}>
             <h4 className={cx("title")}>Цены</h4>

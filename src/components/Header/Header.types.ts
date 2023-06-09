@@ -14,5 +14,6 @@ export interface HeaderSocialItem {
 
 export interface HeaderProps {
     onlyModal?: boolean;
+    needScroll?: boolean;
     className?: string;
 }

@@ -71,16 +71,16 @@ export const Header = ({ onlyModal, className }: HeaderProps) => {
                         </div>
                     )}
                 </div>
-                {!needToOpenModal ? (
+                {needToOpenModal || onlyModal ? (
+                    <Button className={cx("button")} onClick={handleClick}>
+                        Забронировать
+                    </Button>
+                ) : (
                     <Link href={appRoute.mainAnchor(MainAnchorType.ORDER)} scroll={false}>
                         <Button className={cx("button")} onClick={noop}>
                             Забронировать
                         </Button>
                     </Link>
-                ) : (
-                    <Button className={cx("button")} onClick={handleClick}>
-                        Забронировать
-                    </Button>
                 )}
             </SiteContentBlock>
             <HeaderMenuMobile isOpen={headerMobileView && isOpen} onClose={close} />

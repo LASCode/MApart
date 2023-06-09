@@ -20,6 +20,7 @@ function MyApp({ Component, ...rest }: AppProps) {
             <Head>
                 <title>M Apart | Апартаменты в центре Петербурга</title>
                 <meta name="theme-color" content="#e9e1c9" />
+                <link href="/favicon-apart.svg" rel="icon" type="image/svg+xml" />
             </Head>
             <Provider store={result.store}>
                 <Component {...rest.pageProps} />
