@@ -8,6 +8,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mobile {
+        align-items: flex-end;
+    }
 }
 .backdrop {
     height: 100%;
@@ -26,6 +30,21 @@
     width: 100%;
     box-sizing: content-box;
     margin: 0 20px;
+
+    @include mobile {
+        margin: 0;
+        max-width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    &.fullscreen {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        height: 100% !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+    }
 }
 .header {
     display: flex;
@@ -40,6 +59,9 @@
 .title {
     @include text-body();
     margin: 0;
+    font-weight: 600 !important;
+    font-size: 24px !important;
+    line-height: 24px !important;
 }
 
 .action {

@@ -80,8 +80,8 @@
     margin-top: -20px;
     padding: 0 var(--page-safe-area-horizontal);
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: flex-start;
     a {
         text-decoration: underline;
         color: var(--base-akcent);
@@ -91,12 +91,34 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 10px;
+        gap: 20px;
     }
     @include mobile {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 10px;
+        gap: 20px;
+    }
+}
+
+.credentials {
+    display: inline-flex;
+    flex-direction: column;
+
+    @include mobile {
+        align-items: center;
+    }
+    @include tablet {
+        align-items: center;
+    }
+}
+
+.credentials-item {
+    width: fit-content;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+        opacity: 0.4;
     }
 }

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
 export interface ModalProps {
+    fullscreen?: boolean;
     isOpen: boolean;
     onClose: () => void;
     title?: string;
