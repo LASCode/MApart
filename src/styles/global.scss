@@ -84,7 +84,9 @@ html {
 .f-thumbs.f-carousel__thumbs.is-classic {
     .f-thumbs__slide {
         width: 33% !important;
-        height: 200px !important;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: #acacac30;
     }
 }
 
