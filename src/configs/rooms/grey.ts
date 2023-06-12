@@ -1,7 +1,8 @@
-import roomGrey_1 from "@/assets/rooms/grey/room-grey-1.webp";
-import roomGrey_2 from "@/assets/rooms/grey/room-grey-2.webp";
-import roomGrey_3 from "@/assets/rooms/grey/room-grey-3.webp";
-import roomGrey_4 from "@/assets/rooms/grey/room-grey-4.webp";
+import roomGrey from "@/assets/rooms/grey/room-grey.jpg";
+import roomGrey_1 from "@/assets/rooms/grey/room-grey-1.jpg";
+import roomGrey_2 from "@/assets/rooms/grey/room-grey-2.jpg";
+import roomGrey_3 from "@/assets/rooms/grey/room-grey-3.jpg";
+import roomGrey_4 from "@/assets/rooms/grey/room-grey-4.jpg";
 import roomGrey_5 from "@/assets/rooms/grey/room-grey-5.webp";
 import type { RoomConfig } from "@/types/configs";
 
@@ -28,10 +29,10 @@ export const GREY_ROOM_CONFIG: RoomConfig = {
     name: "grey",
     uid: "286747",
     photos: [
-        { src: roomGrey_4.src, alt: "grey" },
+        { src: roomGrey.src, alt: "grey" },
+        { src: roomGrey_1.src, alt: "grey" },
         { src: roomGrey_2.src, alt: "grey" },
         { src: roomGrey_3.src, alt: "grey" },
-        { src: roomGrey_1.src, alt: "grey" },
     ],
     description:
         "<span style='font-weight: bold'>M Apart Grey</span>  –  сдержанность с акцентами на роскошь и успех.\n\n" +

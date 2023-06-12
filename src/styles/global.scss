@@ -94,3 +94,27 @@ html {
     border: none;
     background: transparent;
 }
+
+.terms-of-use__block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.terms-of-use__block-title, .terms-of-use__content-title {
+    margin: 0;
+}
+.terms-of-use__content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 6px;
+}
+.terms-of-use__content-item {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 4px;
+
+    &::before {
+        content: " - ";
+        position: relative;
+    }
+}

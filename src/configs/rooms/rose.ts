@@ -1,6 +1,10 @@
 import roomGrey_5 from "@/assets/rooms/grey/room-grey-5.webp";
-import roomRose_2 from "@/assets/rooms/rose/room-rose-2.webp";
-import roomRose_5 from "@/assets/rooms/rose/room-rose-5.webp";
+import roomRose from "@/assets/rooms/rose/room-rose-main.jpg";
+import roomRose_1 from "@/assets/rooms/rose/room-rose-1.jpg";
+import roomRose_2 from "@/assets/rooms/rose/room-rose-2.jpg";
+import roomRose_3 from "@/assets/rooms/rose/room-rose-3.jpg";
+import roomRose_4 from "@/assets/rooms/rose/room-rose-4.jpg";
+import roomRose_5 from "@/assets/rooms/rose/room-rose-5.jpg";
 import type { RoomConfig } from "@/types/configs";
 
 /*
@@ -26,7 +30,11 @@ export const ROSE_ROOM_CONFIG: RoomConfig = {
     name: "rose",
     uid: "333892",
     photos: [
+        { src: roomRose.src, alt: "rose" },
+        { src: roomRose_1.src, alt: "rose" },
         { src: roomRose_2.src, alt: "rose" },
+        { src: roomRose_3.src, alt: "rose" },
+        { src: roomRose_4.src, alt: "rose" },
         { src: roomRose_5.src, alt: "rose" },
     ],
     description:

@@ -1,7 +1,10 @@
-import roomGreen_2 from "@/assets/rooms/green/room-green-2.webp";
-import roomGreen_4 from "@/assets/rooms/green/room-green-4.webp";
-import roomGreen_5 from "@/assets/rooms/green/room-green-5.webp";
-import roomGreen_6 from "@/assets/rooms/green/room-green-6.webp";
+import roomGreen from "@/assets/rooms/green/room-green.jpg";
+import roomGreen_1 from "@/assets/rooms/green/room-green-1.jpg";
+import roomGreen_2 from "@/assets/rooms/green/room-green-2.jpg";
+import roomGreen_3 from "@/assets/rooms/green/room-green-3.jpg";
+import roomGreen_4 from "@/assets/rooms/green/room-green-4.jpg";
+import roomGreen_5 from "@/assets/rooms/green/room-green-5.jpg";
+import roomGreen_6 from "@/assets/rooms/green/room-green-6.jpg";
 import roomGrey_5 from "@/assets/rooms/grey/room-grey-5.webp";
 import type { RoomConfig } from "@/types/configs";
 
@@ -28,10 +31,13 @@ export const GREEN_ROOM_CONFIG: RoomConfig = {
     name: "green",
     uid: "286748",
     photos: [
-        { src: roomGreen_6.src, alt: "green" },
-        { src: roomGreen_5.src, alt: "green" },
-        { src: roomGreen_4.src, alt: "green" },
+        { src: roomGreen.src, alt: "green" },
+        { src: roomGreen_1.src, alt: "green" },
         { src: roomGreen_2.src, alt: "green" },
+        { src: roomGreen_3.src, alt: "green" },
+        { src: roomGreen_4.src, alt: "green" },
+        { src: roomGreen_5.src, alt: "green" },
+        { src: roomGreen_6.src, alt: "green" },
     ],
     description:
         "<span style='font-weight: bold'>M Apart Green</span>  –  апартаменты в расслабляющих оттенках зеленого, " +

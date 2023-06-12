@@ -26,3 +26,8 @@ export interface GlobalConfig {
     SOCIALS_VKONTAKTE: string | undefined;
     TEL_NUMBER: string;
 }
+
+export interface TermsOfUseConfig {
+    blockName?: string;
+    content: { title?: string; items: string[] }[] | string;
+}

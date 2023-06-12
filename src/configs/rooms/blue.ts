@@ -1,7 +1,7 @@
-import roomBlue_1 from "@/assets/rooms/blue/room-blue-1.webp";
-import roomBlue_2 from "@/assets/rooms/blue/room-blue-2.webp";
-import roomBlue_3 from "@/assets/rooms/blue/room-blue-3.webp";
-import roomBlue_4 from "@/assets/rooms/blue/room-blue-4.webp";
+import roomBlue from "@/assets/rooms/blue/room-blue.jpg";
+import roomBlue_1 from "@/assets/rooms/blue/room-blue-1.jpg";
+import roomBlue_2 from "@/assets/rooms/blue/room-blue-2.jpg";
+import roomBlue_3 from "@/assets/rooms/blue/room-blue-3.jpg";
 import roomGrey_5 from "@/assets/rooms/grey/room-grey-5.webp";
 import type { RoomConfig } from "@/types/configs";
 
@@ -28,10 +28,9 @@ export const BLUE_ROOM_CONFIG: RoomConfig = {
     name: "blue",
     uid: "333884",
     photos: [
+        { src: roomBlue.src, alt: "blue" },
         { src: roomBlue_1.src, alt: "blue" },
         { src: roomBlue_2.src, alt: "blue" },
-        { src: roomBlue_3.src, alt: "blue" },
-        { src: roomBlue_4.src, alt: "blue" },
     ],
     description:
         "<span style='font-weight: bold'>M Apart Blue</span>  -  Апартаменты в синих оттенках неба, подарят Вам " +

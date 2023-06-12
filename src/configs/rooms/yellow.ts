@@ -1,8 +1,11 @@
+import roomYellow from "@/assets/rooms/yellow/room-yellow.jpg";
+import roomYellow_1 from "@/assets/rooms/yellow/room-yellow-1.jpg";
+import roomYellow_2 from "@/assets/rooms/yellow/room-yellow-2.jpg";
+import roomYellow_3 from "@/assets/rooms/yellow/room-yellow-3.jpg";
+import roomYellow_4 from "@/assets/rooms/yellow/room-yellow-4.jpg";
+import roomYellow_5 from "@/assets/rooms/yellow/room-yellow-5.jpg";
+import roomYellow_6 from "@/assets/rooms/yellow/room-yellow-6.jpg";
 import roomGrey_5 from "@/assets/rooms/grey/room-grey-5.webp";
-import roomYellow_1 from "@/assets/rooms/yellow/room-yellow-1.webp";
-import roomYellow_2 from "@/assets/rooms/yellow/room-yellow-2.webp";
-import roomYellow_3 from "@/assets/rooms/yellow/room-yellow-3.webp";
-import roomYellow_4 from "@/assets/rooms/yellow/room-yellow-4.webp";
 import type { RoomConfig } from "@/types/configs";
 
 /*
@@ -28,10 +31,13 @@ export const YELLOW_ROOM_CONFIG: RoomConfig = {
     name: "yellow",
     uid: "333893",
     photos: [
+        { src: roomYellow.src, alt: "yellow" },
         { src: roomYellow_1.src, alt: "yellow" },
         { src: roomYellow_2.src, alt: "yellow" },
         { src: roomYellow_3.src, alt: "yellow" },
         { src: roomYellow_4.src, alt: "yellow" },
+        { src: roomYellow_5.src, alt: "yellow" },
+        { src: roomYellow_6.src, alt: "yellow" },
     ],
     description:
         "<span style='font-weight: bold'>M Apart Yellow</span>  –  апартаменты выполнены в дизайнерском стиле в оттенках " +

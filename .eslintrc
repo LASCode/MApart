@@ -3,6 +3,7 @@
         "browser": true,
         "es2020": true
     },
+    "ignorePatterns": ["src/configs", "./trash"],
     "plugins": [
         "@typescript-eslint",
         "react",
@@ -41,22 +42,25 @@
             "warn",
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
         ],
-        "prettier/prettier": ["warn", {
-            "arrowParens": "always",
-            "bracketSpacing": true,
-            "endOfLine": "auto",
-            "jsxBracketSameLine": false,
-            "jsxSingleQuote": false,
-            "parser": "typescript",
-            "printWidth": 120,
-            "proseWrap": "preserve",
-            "semi": true,
-            "singleQuote": false,
-            "tabWidth": 4,
-            "trailingComma": "all",
-            "useTabs": false,
-            "bracketSameLine": false
-        }],
+        "prettier/prettier": [
+            "warn",
+            {
+                "arrowParens": "always",
+                "bracketSpacing": true,
+                "endOfLine": "auto",
+                "jsxBracketSameLine": false,
+                "jsxSingleQuote": false,
+                "parser": "typescript",
+                "printWidth": 120,
+                "proseWrap": "preserve",
+                "semi": true,
+                "singleQuote": false,
+                "tabWidth": 4,
+                "trailingComma": "all",
+                "useTabs": false,
+                "bracketSameLine": false
+            }
+        ],
 
         "no-underscore-dangle": "off",
         "no-debugger": "error",
