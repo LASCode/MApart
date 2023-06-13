@@ -16,7 +16,6 @@ import { RentBanner } from "@/components/RentBanner";
 import { SiteContentBlock } from "@/components/SiteContentBlock";
 import { ROOMS_CONFIG } from "@/configs/rooms";
 import { useBooleanState } from "@/hooks/useBooleanState";
-import { useIsDesktop } from "@/hooks/useIsDesktop";
 import { useWindowSizeTo } from "@/hooks/useWindowSizeTo";
 import { PageLayout } from "@/layouts/PageLayout";
 import styles from "@/styles/pages/roomPage.module.scss";
@@ -30,7 +29,7 @@ interface RoomPageProps {
 }
 export default function Page({ isValid, roomData }: RoomPageProps) {
     const router = useRouter();
-    const isDesktop = useIsDesktop();
+    const showThumbs = useWindowSizeTo(766);
     const showDefaultButton = useWindowSizeTo(950);
 
     const [isCreateOrderModalOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState();
@@ -56,7 +55,7 @@ export default function Page({ isValid, roomData }: RoomPageProps) {
                 <>
                     <h1 className={cx("title")}>{roomData.name}</h1>
                     <Fancybox>
-                        <FancyCarousel withThumbs={!isDesktop}>
+                        <FancyCarousel withThumbs={showThumbs}>
                             {roomData.photos.map(({ src, alt }) => (
                                 <div key={src} className="f-carousel__slide" data-thumb-src={src}>
                                     <Image src={src} width={600} height={400} alt={alt} data-fancybox data-rsc={src} />
