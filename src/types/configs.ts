@@ -21,6 +21,10 @@ export interface RoomConfig {
 
 export interface GlobalConfig {
     BNOVO_WIDGET_TOKEN: string;
+    BNOVO_WIDGET_DEFAULT_GUESTS: number;
+    BNOVO_WIDGET_DEFAULT_ARRIVAL_DATE: number;
+    BNOVO_WIDGET_DEFAULT_DEPARTURE_DATE: number;
+
     SOCIALS_WHATSUP: string | undefined;
     SOCIALS_TELEGRAM: string | undefined;
     SOCIALS_VKONTAKTE: string | undefined;

@@ -22,14 +22,12 @@ export const CompanyDetailsModal = ({ className, ...props }: CompanyDetailsModal
             className={cx("company-details-modal", className)}
             containerClassName={cx("modal-root")}
         >
-            <div>
-                {items.map((el) => (
-                    <div key={el.name} className={cx("item")}>
-                        <span className={cx("item-name")}>{el.name}:</span>
-                        <span className={cx("item-data")}>{el.data}</span>
-                    </div>
-                ))}
-            </div>
+            {items.map((el) => (
+                <div key={el.name} className={cx("item")}>
+                    <span className={cx("item-name")}>{el.name}:</span>
+                    <span className={cx("item-data")}>{el.data}</span>
+                </div>
+            ))}
         </Modal>
     );
 };

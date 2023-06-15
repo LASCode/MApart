@@ -14,7 +14,6 @@ import roomGrey_1 from "@/assets/rooms/grey/room-grey-1.jpg";
 import roomGrey_2 from "@/assets/rooms/grey/room-grey-2.jpg";
 import roomGrey_3 from "@/assets/rooms/grey/room-grey-3.jpg";
 import roomGrey_4 from "@/assets/rooms/grey/room-grey-4.jpg";
-import roomRose_main from "@/assets/rooms/rose/room-rose-main.jpg";
 import roomRose from "@/assets/rooms/rose/room-rose.jpg";
 import roomRose_1 from "@/assets/rooms/rose/room-rose-1.jpg";
 import roomRose_2 from "@/assets/rooms/rose/room-rose-2.jpg";
@@ -28,12 +27,13 @@ import roomYellow_3 from "@/assets/rooms/yellow/room-yellow-3.jpg";
 import roomYellow_4 from "@/assets/rooms/yellow/room-yellow-4.jpg";
 import roomYellow_5 from "@/assets/rooms/yellow/room-yellow-5.jpg";
 import roomYellow_6 from "@/assets/rooms/yellow/room-yellow-6.jpg";
+import rose_main from "@/assets/rooms/rose-main.jpg";
 import type { GlobalConfig } from "@/types/configs";
 
 export const HOMEPAGE_CONFIG = {
     HERO_TITLE: "M Apart",
     HERO_DESCRIPTION: "Апарт отель по доступным ценам в центре Петербурга",
-    HERO_ITEMS: [roomGrey_3.src, roomBlue.src, roomYellow.src, roomRose_main.src, roomGreen.src],
+    HERO_ITEMS: [roomGrey_3.src, rose_main.src, roomBlue.src, roomYellow.src, roomGreen.src],
     ABOUT_US_SUBTITLE: undefined,
     ABOUT_US_DESCRIPTION:
         "M Apart в центре Петербурга - пространство уюта, гармонии и неповторимой атмосферы. Привлекательные цены, уникальность и креатив дизайнерского стиля апартаментов сделают Ваш отдых незабываем и великолепным. В каждом номере созданы все условия для комфортного проживания: мини кухня, холодильник, удобная двуспальная кровать, личный санузел, ванная комната с душем, кондиционер, телевизор, высокоскоростной Wi-Fi интернет.",
@@ -77,8 +77,24 @@ export const HOMEPAGE_CONFIG = {
     ],
 };
 
+/*
+ * BNOVO_WIDGET_TOKEN - Токен бново
+ * BNOVO_WIDGET_DEFAULT_GUESTS - Базовое количество гостей
+ * BNOVO_WIDGET_DEFAULT_ARRIVAL_DATE - Дата заезда (n-дней от текущей даты) (0 - отключено)
+ * BNOVO_WIDGET_DEFAULT_DEPARTURE_DATE - Дата отъезда (n-дней от даты заезда) (0 - отключено)
+ *
+ * !! ВНИМАНИЕ !!
+ * Отключение одной из дат приведет к отключению второй.
+ * Отключить дату отъезда, но оставить дату заезда не получится.
+ * !! ВНИМАНИЕ !!
+ */
+
 export const GLOBAL_CONFIG: GlobalConfig = {
     BNOVO_WIDGET_TOKEN: "3a67f48f-c5a6-400f-b77a-f6a6a20d5e12",
+    BNOVO_WIDGET_DEFAULT_GUESTS: 1,
+    BNOVO_WIDGET_DEFAULT_ARRIVAL_DATE: 0,
+    BNOVO_WIDGET_DEFAULT_DEPARTURE_DATE: 0,
+
     SOCIALS_WHATSUP: "https://wa.me/79313555551",
     SOCIALS_TELEGRAM: "https://t.me/m_apart_spb",
     SOCIALS_VKONTAKTE: undefined,
