@@ -45,8 +45,8 @@ export const ROSE_ROOM_CONFIG: RoomConfig = {
     createOrderButtonImage: roomGrey_5.src,
     color: "#f8e4f0",
 
-    price: 3300,
-    weekdayPrice: 3300,
-    weekendsPrice: 3500,
+    price: 3900,
+    weekdayPrice: 3900,
+    weekendsPrice: 4400,
     weekPrice: 4000,
 };

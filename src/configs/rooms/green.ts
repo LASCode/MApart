@@ -49,8 +49,8 @@ export const GREEN_ROOM_CONFIG: RoomConfig = {
     createOrderButtonImage: roomGrey_5.src,
     color: "#d0dfd2",
 
-    price: 4300,
-    weekdayPrice: 4300,
-    weekendsPrice: 4500,
+    price: 4400,
+    weekdayPrice: 4400,
+    weekendsPrice: 5200,
     weekPrice: 4000,
 };

@@ -42,8 +42,8 @@ export const BLUE_ROOM_CONFIG: RoomConfig = {
     createOrderButtonImage: roomGrey_5.src,
     color: "#ddedff",
 
-    price: 4300,
-    weekdayPrice: 4300,
-    weekendsPrice: 4500,
+    price: 4400,
+    weekdayPrice: 4400,
+    weekendsPrice: 5200,
     weekPrice: 4000,
 };

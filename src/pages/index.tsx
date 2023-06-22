@@ -10,6 +10,7 @@ import { ScrollToTopFab } from "@/components/ScrollToTopFab";
 import { useWindowSizeFrom } from "@/hooks/useWindowSizeFrom";
 import { PageLayout } from "@/layouts/PageLayout";
 import styles from "@/styles/pages/indexPage.module.scss";
+import {BlockInfo} from "@/components/BlockInfo";
 
 const cx = cnBind.bind(styles);
 
@@ -27,6 +28,7 @@ const IndexPage = () => {
                 <BlockRooms />
                 <BlockRoomAmenities withMap />
                 <BlockGallery />
+                <BlockInfo />
             </div>
             <ScrollToTopFab />
         </PageLayout>

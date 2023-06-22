@@ -29,6 +29,9 @@ export interface GlobalConfig {
     SOCIALS_TELEGRAM: string | undefined;
     SOCIALS_VKONTAKTE: string | undefined;
     TEL_NUMBER: string;
+
+    MAP_IFRAME_HREF: string;
+    BLOCK_INFO_CONTENT: string | undefined;
 }
 
 export interface TermsOfUseConfig {

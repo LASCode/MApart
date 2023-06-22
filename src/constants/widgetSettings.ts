@@ -16,7 +16,6 @@ export const WIDGET_SETTINGS = {
     dto_nextday: !datesIsDisabled && dateDeparture === 1 ? "on" : undefined,
     dto_custom: !datesIsDisabled && dateDeparture >= 2 ? "on" : undefined,
     dto_value: !datesIsDisabled && dateDeparture >= 2 ? dateDeparture : undefined,
-    url: "https://m-apart.ru",
 
     cancel_color: "#FFFFFF",
     switch_mobiles: "on",

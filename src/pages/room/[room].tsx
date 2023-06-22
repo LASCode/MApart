@@ -5,10 +5,7 @@ import type { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import { IcArrowRight } from "@/assets/icon";
-import roomGrey_5 from "@/assets/rooms/grey/room-grey-5.webp";
 import { BlockRoomAmenities } from "@/components/BlockRoomAmenities";
-import { Button } from "@/components/Button";
 import { CreateOrderModal } from "@/components/CreateOrderModal/CreateOrderModal";
 import { Fancybox } from "@/components/Fancy";
 import { FancyCarousel } from "@/components/FancyCarousel";
@@ -30,7 +27,7 @@ interface RoomPageProps {
 export default function Page({ isValid, roomData }: RoomPageProps) {
     const router = useRouter();
     const showThumbs = useWindowSizeTo(766);
-    const showDefaultButton = useWindowSizeTo(950);
+    // const showDefaultButton = useWindowSizeTo(950);
 
     const [isCreateOrderModalOpen, openCreateOrderModal, closeCreateOrderModal] = useBooleanState();
 
@@ -65,25 +62,25 @@ export default function Page({ isValid, roomData }: RoomPageProps) {
                     </Fancybox>
                     <SiteContentBlock className={cx("about-us")} containerClassName={cx("about-us-container")}>
                         <p className={cx("description-text")}>{parceToHtml(roomData.description)}</p>
-                        {showDefaultButton ? (
-                            <Button className={cx("button")} onClick={openCreateOrderModal}>
-                                Забронировать
-                            </Button>
-                        ) : (
-                            <div className={cx("company-new-order", "item")} onClick={openCreateOrderModal}>
-                                <Image
-                                    src={roomGrey_5.src}
-                                    alt="Создание заказа"
-                                    width={900}
-                                    height={300}
-                                    className={cx("bg")}
-                                />
-                                <div className={cx("button-order")}>
-                                    <span>Забронировать</span>
-                                    <IcArrowRight />
-                                </div>
-                            </div>
-                        )}
+                        {/* {showDefaultButton ? (*/}
+                        {/*    <Button className={cx("button")} onClick={openCreateOrderModal}>*/}
+                        {/*        Забронировать*/}
+                        {/*    </Button>*/}
+                        {/* ) : (*/}
+                        {/*    <div className={cx("company-new-order", "item")} onClick={openCreateOrderModal}>*/}
+                        {/*        <Image*/}
+                        {/*            src={roomGrey_5.src}*/}
+                        {/*            alt="Создание заказа"*/}
+                        {/*            width={900}*/}
+                        {/*            height={300}*/}
+                        {/*            className={cx("bg")}*/}
+                        {/*        />*/}
+                        {/*        <div className={cx("button-order")}>*/}
+                        {/*            <span>Забронировать</span>*/}
+                        {/*            <IcArrowRight />*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/* )}*/}
                     </SiteContentBlock>
                     <BlockRoomAmenities withMap={false} containerClassName={cx("room-amenities")} />
                     <div className={cx("rent-banner-wrapper")}>
@@ -94,11 +91,7 @@ export default function Page({ isValid, roomData }: RoomPageProps) {
                             onRentButtonClick={openCreateOrderModal}
                         />
                     </div>
-                    <CreateOrderModal
-                        roomId={roomData.uid}
-                        isOpen={isCreateOrderModalOpen}
-                        onClose={closeCreateOrderModal}
-                    />
+                    <CreateOrderModal isOpen={isCreateOrderModalOpen} onClose={closeCreateOrderModal} />
                 </>
             ) : null}
         </PageLayout>

@@ -4,7 +4,6 @@ import roomYellow_2 from "@/assets/rooms/yellow/room-yellow-2.jpg";
 import roomYellow_3 from "@/assets/rooms/yellow/room-yellow-3.jpg";
 import roomYellow_4 from "@/assets/rooms/yellow/room-yellow-4.jpg";
 import roomYellow_5 from "@/assets/rooms/yellow/room-yellow-5.jpg";
-import roomYellow_6 from "@/assets/rooms/yellow/room-yellow-6.jpg";
 import roomGrey_5 from "@/assets/rooms/grey/room-grey-5.webp";
 import type { RoomConfig } from "@/types/configs";
 
@@ -37,7 +36,6 @@ export const YELLOW_ROOM_CONFIG: RoomConfig = {
         { src: roomYellow_3.src, alt: "yellow" },
         { src: roomYellow_4.src, alt: "yellow" },
         { src: roomYellow_5.src, alt: "yellow" },
-        { src: roomYellow_6.src, alt: "yellow" },
     ],
     description:
         "<span style='font-weight: bold'>M Apart Yellow</span>  –  апартаменты выполнены в дизайнерском стиле в оттенках " +
@@ -48,8 +46,8 @@ export const YELLOW_ROOM_CONFIG: RoomConfig = {
     createOrderButtonImage: roomGrey_5.src,
     color: "#fef6ce",
 
-    price: 3300,
-    weekdayPrice: 3300,
-    weekendsPrice: 3500,
+    price: 3900,
+    weekdayPrice: 3900,
+    weekendsPrice: 4400,
     weekPrice: 4000,
 };

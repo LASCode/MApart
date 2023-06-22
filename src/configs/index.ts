@@ -26,7 +26,6 @@ import roomYellow_2 from "@/assets/rooms/yellow/room-yellow-2.jpg";
 import roomYellow_3 from "@/assets/rooms/yellow/room-yellow-3.jpg";
 import roomYellow_4 from "@/assets/rooms/yellow/room-yellow-4.jpg";
 import roomYellow_5 from "@/assets/rooms/yellow/room-yellow-5.jpg";
-import roomYellow_6 from "@/assets/rooms/yellow/room-yellow-6.jpg";
 import rose_main from "@/assets/rooms/rose-main.jpg";
 import type { GlobalConfig } from "@/types/configs";
 
@@ -36,7 +35,7 @@ export const HOMEPAGE_CONFIG = {
     HERO_ITEMS: [roomGrey_3.src, rose_main.src, roomBlue.src, roomYellow.src, roomGreen.src],
     ABOUT_US_SUBTITLE: undefined,
     ABOUT_US_DESCRIPTION:
-        "M Apart в центре Петербурга - пространство уюта, гармонии и неповторимой атмосферы. Привлекательные цены, уникальность и креатив дизайнерского стиля апартаментов сделают Ваш отдых незабываем и великолепным. В каждом номере созданы все условия для комфортного проживания: мини кухня, холодильник, удобная двуспальная кровать, личный санузел, ванная комната с душем, кондиционер, телевизор, высокоскоростной Wi-Fi интернет.",
+        "M Apart на Кременчугской - пространство уюта, гармонии и неповторимой атмосферы. Привлекательные цены, уникальность и креатив дизайнерского стиля апартаментов сделают Ваш отдых незабываем и великолепным. В каждом номере созданы все условия для комфортного проживания: мини кухня, холодильник, удобная двуспальная кровать, личный санузел, ванная комната с душем, кондиционер, телевизор, высокоскоростной Wi-Fi интернет.",
     ABOUT_US_VIDEO_LINk: roomYellow_4.src,
     ABOUT_US_VIDEO_THUMBNAIL: roomYellow_4.src,
 
@@ -73,13 +72,12 @@ export const HOMEPAGE_CONFIG = {
         roomYellow_3.src,
         roomYellow_4.src,
         roomYellow_5.src,
-        roomYellow_6.src,
     ],
 };
 
 /*
  * BNOVO_WIDGET_TOKEN - Токен бново
- * BNOVO_WIDGET_DEFAULT_GUESTS - Базовое количество гостей
+ * BNOVO_WIDGET_DEFAULT_GUESTS - Базовое количество гостей (0 - отключено)
  * BNOVO_WIDGET_DEFAULT_ARRIVAL_DATE - Дата заезда (n-дней от текущей даты) (0 - отключено)
  * BNOVO_WIDGET_DEFAULT_DEPARTURE_DATE - Дата отъезда (n-дней от даты заезда) (0 - отключено)
  *
@@ -99,4 +97,21 @@ export const GLOBAL_CONFIG: GlobalConfig = {
     SOCIALS_TELEGRAM: "https://t.me/m_apart_spb",
     SOCIALS_VKONTAKTE: undefined,
     TEL_NUMBER: "79313555551",
+
+    MAP_IFRAME_HREF:
+        "https://yandex.ru/map-widget/v1/?um=constructor%3Ab9c9d29b0720d9f02d3ac6da1a4a2417302b50add239e1525aabefbc7e972dc8&amp;source=constructor",
+    BLOCK_INFO_CONTENT: `
+        <div style="font-weight: bold">Дорогие гости!</div>
+        <div>
+            Модуль бронирования на сайте может работать не корректно. Когда открываете календарь для выбора
+            дат бронирования и, например показывает, что даты с 10 по 15 число свободны, выбираете эти даты,
+            нажимаете на "Показать наличие", но в результатах выводит сообщение, что ни в одном номере нет
+            свободных мест на эти даты, т.к. свободными будут разные номера на разное количество дней на
+            выбранные даты. Поэтому нужно будет выбирать несколько номеров на эти даты.
+        </div>
+        <div>
+            В таком случае, для получения более точной информации по свободным номерам на нужные вам даты,
+            просим связаться с нами по контактам, которые указаны на сайте. Благодарим!
+        </div>
+    `,
 };

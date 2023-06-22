@@ -2,8 +2,6 @@ import { useCallback } from "react";
 import cnBind from "classnames/bind";
 import Link from "next/link";
 
-import { IcArrowRight } from "@/assets/icon";
-import { Button } from "@/components/Button";
 import { Carousel } from "@/components/Carousel";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
@@ -45,9 +43,13 @@ export const RoomCard = ({
                 <div className={cx("price")}>{`от ${price} руб.`}</div>
             </div>
             <div className={cx("buttons")}>
-                <Button className={cx("button")} onClick={onRentButtonCLick} icon={isMobile ? undefined : IcArrowRight}>
-                    Забронировать
-                </Button>
+                {/* <Button */}
+                {/*    className={cx("button")} */}
+                {/*    onClick={onRentButtonCLick} */}
+                {/*    icon={isMobile ? undefined : IcArrowRight}*/}
+                {/* >*/}
+                {/*    Забронировать*/}
+                {/* </Button>*/}
                 <Link className={cx("link")} href={`room/${name}`} passHref>
                     Подробнее
                 </Link>
