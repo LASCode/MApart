@@ -5,6 +5,7 @@ export { ReactComponent as IcArrowUp, default as IcArrowUpPath } from "./ic-arro
 export { ReactComponent as IcClose, default as IcClosePath } from "./ic-close.svg";
 export { ReactComponent as IcCosmetic, default as IcCosmeticPath } from "./ic-cosmetic.svg";
 export { ReactComponent as IcHairDryer, default as IcHairDryerPath } from "./ic-hair-dryer.svg";
+export { ReactComponent as IcInfo, default as IcInfoPath } from "./ic-info.svg";
 export { ReactComponent as IcKitchen, default as IcKitchenPath } from "./ic-kitchen.svg";
 export { ReactComponent as IcMenuClose, default as IcMenuClosePath } from "./ic-menu-close.svg";
 export { ReactComponent as IcMenuOpen, default as IcMenuOpenPath } from "./ic-menu-open.svg";
@@ -16,4 +17,3 @@ export { ReactComponent as IcWhatsUp, default as IcWhatsUpPath } from "./ic-what
 export { ReactComponent as IcWifi, default as IcWifiPath } from "./ic-wifi.svg";
 export { ReactComponent as IcTelegram, default as IcTelegramPath } from "./telegram.svg";
 export { ReactComponent as IcVkontakte, default as IcVkontaktePath } from "./vk.svg";
-export { ReactComponent as IcInfo, default as IcInfoPath } from "./ic-info.svg";

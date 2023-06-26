@@ -30,6 +30,7 @@ export interface GlobalConfig {
     SOCIALS_VKONTAKTE: string | undefined;
     TEL_NUMBER: string;
 
+    YANDEX_RATING_IFRAME_HREF: string;
     MAP_IFRAME_HREF: string;
     BLOCK_INFO_CONTENT: string | undefined;
 }

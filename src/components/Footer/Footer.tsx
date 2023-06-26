@@ -6,6 +6,7 @@ import type { FooterProps } from "@/components/Footer/Footer.types";
 import { Logo } from "@/components/Logo";
 import { Socials } from "@/components/Socials";
 import { TermsOfUseModal } from "@/components/TermsOfUseModal";
+import { GLOBAL_CONFIG } from "@/configs";
 import { TEL_NUMBER } from "@/constants/other";
 import { useBooleanState } from "@/hooks/useBooleanState";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -45,6 +46,13 @@ export const Footer = ({ className }: FooterProps) => {
                             Реквизиты
                         </span>
                     </div>
+
+                    <iframe
+                        className={cx("iframe")}
+                        src={GLOBAL_CONFIG.YANDEX_RATING_IFRAME_HREF}
+                        width="150"
+                        height="50"
+                    />
 
                     <span>
                         Разработка: Веб-студия <a href="https://levsha-web.ru/">Левша</a>
